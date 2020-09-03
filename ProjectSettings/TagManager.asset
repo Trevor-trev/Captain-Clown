@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Pole
+  - ClosestPole
+  - MakeshiftGround
+  - MakeshiftGround2
+  - Camera
+  - Ground
+  - CameraStopper
+  - CameraPosition
+  - Target
+  - Solid
+  - Slope
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Pole
+  - NotYetDroppable
+  - Droppable
+  - Camera
+  - Platform
+  - Bullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3027257765
+    locked: 0
+  - name: Midground
+    uniqueID: 3128721531
+    locked: 0
+  - name: Pole
+    uniqueID: 194201095
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 1528517111
+    locked: 0
