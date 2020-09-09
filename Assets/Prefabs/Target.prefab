@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569398e2a8c59074d93aa092fe5e102b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 631796267799507459, guid: 68f0abd242894c24ea587f9331d26a94, type: 3}
   health: 100
   deathEffect: {fileID: 0}
 --- !u!212 &2038035099160539684
@@ -115,7 +114,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.010403633, y: 0.00040328503}
   serializedVersion: 2
-  m_Radius: 0.5009903
+  m_Radius: 0.45901206
 --- !u!50 &7994504646320251665
 Rigidbody2D:
   serializedVersion: 4
@@ -124,7 +123,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9121138432427323832}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

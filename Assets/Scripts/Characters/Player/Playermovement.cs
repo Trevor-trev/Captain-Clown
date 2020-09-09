@@ -12,13 +12,14 @@ public class Playermovement : MonoBehaviour
     public NeuralGun neuralGun;
     public RecenterTriggerGround recenterTrigger;
     public SlopeCheck slopeCheck;
+    public bool touchingCeiling;
 
     //MOVEMENT//////
     public bool facingRight;//-------------------Whether or not the character is facing right
     public bool facingLeft;//--------------------Whether or not the character is facing left 
    
     public float xdirection = 0f;//--------------Direction check used for animation and pogo stick acceleration
-    private float xdirForTransitionToPogo = 0f;//Direction check used when activating the pogo stick while running      
+    public float xdirForTransitionToPogo = 0f;//Direction check used when activating the pogo stick while running      
     public float horizontalMove = 0f;//----------Velocity variable used for non pogo stick horizontal movement
     public float topSpeedR = 37.5f;//------------Set speed limit for horizontal movement to the right
     public float topSpeedL = -37.5f;//-----------Set speed limit for horizontal movement to the left
@@ -56,7 +57,7 @@ public class Playermovement : MonoBehaviour
     public bool lookup = false;//----------------Whether or not the character is looking up
     public bool uncrouching;//-------------------Whether or not the character is looking back up from the crouching(lookingdown) position
     
-    public const float ceilingRadius = .1f; //---Radius of the overlap circle to determine if the player can stand up
+    public const float ceilingRadius = .2f; //---Radius of the overlap circle to determine if the player can stand up
    
     public Transform ceilingCheck;//-------------A position marking where to check for ceilings
     public Collider2D lookDownDisableCollider;//-A collider that will be disabled when looking down
@@ -67,7 +68,7 @@ public class Playermovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator.SetBool("FacingRight", true);//Make sure the character is facing right when the game starts
+        animator.SetBool("FacingLeft", true);//Make sure the character is facing left when the game starts
     }
 
     #region COROUTINES
@@ -118,12 +119,14 @@ public class Playermovement : MonoBehaviour
 
         #region LOOKING DOWN CONTROLLER
         ///////////////////////////////////LOOKING DOWN//////////////////////////////////////      
-        if (!onPole){//-------------------------------------------------------------------------------------------------If the character is not on a pole
-            if (!lookDown)//---------------------------------------------------------------------------------------------If the character is not crouching         
-                if (Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling))//-----------If there is an object directly above the characters head
-                    lookDown = true;//-----------------------------------------------------------------------------------Keep crouching            
+        if (!onPole)
+        {//-------------------------------------------------------------------------------------------------If the character is not on a pole                  
+            if (Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling))//-----------If there is an object directly above the characters head
+                touchingCeiling = true;
+            else if (!Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling))
+                touchingCeiling = false;
 
-                if (lookDownDisableCollider != null)//-------------------------------------------------------------------If there is one or more colliders set to disable when crouching
+            if (lookDownDisableCollider != null)//-------------------------------------------------------------------If there is one or more colliders set to disable when crouching
                     lookDownDisableCollider.enabled = false;}//----------------------------------------------------------Disable the collider(s)  
 
             if (!lookDown && !ledgeClimb.ledgeClimb && (!Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling)))//If the chracter is not looking down and there is no cieling above the character's head
@@ -197,16 +200,18 @@ public class Playermovement : MonoBehaviour
 
         if (pogo)//-----------------------------------------------------If the character is on the pogo stick
         {
+            if (xdirForTransitionToPogo != 0)//-------------------------If the character is moving when the pogo stick is activated
+                acceleration = 1000;//------------------------------------Increase acceleration to keep the horizontal velocity constant
+            else//------------------------------------------------------If the character is not moving when the pogo stick is activated
+                acceleration = 15f;//----------------------------------Create slow acceleration
+
+            pogoSpeed += acceleration * xdirection * Time.deltaTime;//---------------accelerate the character in the appropriate direction
+
             jumpTimer = 0;//------------------------------------------Set the jump timer equal to zero
 
             rb.gravityScale = 3f;//-----------------------------------Set a specific gravity scale for the pogo stick
 
-            rb.velocity = new Vector2(pogoSpeed, rb.velocity.y);//------Move the character according to the pogoSpeed variable
-
-            if (!(rising || falling) && xdirForTransitionToPogo != 0)//-------------------------If the character is moving when the pogo stick is activated
-                acceleration = 10;//------------------------------------Increase acceleration to keep the horizontal velocity constant
-            else//------------------------------------------------------If the character is not moving when the pogo stick is activated
-                acceleration = .05f;//----------------------------------Create slow acceleration
+            rb.velocity = new Vector2(pogoSpeed, rb.velocity.y);//------Move the character according to the pogoSpeed variable            
 
             xdirForTransitionToPogo = 0;//------------------------------Reset this variable after it is used
 
@@ -219,8 +224,7 @@ public class Playermovement : MonoBehaviour
             else//------------------------------------------------------If the player is not pressing the jump button while on the pogo stick
                 bounceForce = 12.5f;//---------------------------------Set the bounce force to default value
 
-            if (xdirection != 0)//--------------------------------------If the player is pressing the left or right buttons
-                pogoSpeed += acceleration * xdirection;//---------------accelerate the character in the appropriate direction
+            //if (xdirection != 0)//--------------------------------------If the player is pressing the left or right buttons
 
             if (pogoSpeed > pogoTopSpeedR)//----------------------------If the horizontal speed to the right is about to go over the speed limit
                 pogoSpeed = pogoTopSpeedR;//----------------------------Keep the speed at the limit
