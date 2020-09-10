@@ -21,6 +21,9 @@ public class SlopeCheck : MonoBehaviour
 
     private void Update()
     {
+        //if (pmov.pogo)
+            //onSlope = false;
+
         if (pmov.isJumping){//----------------------------If the character is jumping        
             boxCollider.enabled = false;//----------------Diable the box collider
             rb.drag = .25f;}//----------------------------Reset the rigidbody's drag to the default value
@@ -32,10 +35,10 @@ public class SlopeCheck : MonoBehaviour
             
             rb.gravityScale = 9f;//-----------------------Set the rigidbody's gravity scale to 9 to make sure the character sticks to the ground when running down the slope
 
-            if (pmov.xdirection != 0)//-------------------If the player is inputting horizontal movement
+            if (pmov.xdirection != 0 || pmov.pogo)//-------------------If the player is inputting horizontal movement
                 rb.drag = .25f;//-------------------------Reset the rigidbody's drag to the default value
 
-            if (pmov.xdirection == 0 && !pmov.isJumping)//If the palyer is not inputting horizontal movement
+            if (pmov.xdirection == 0 && !pmov.isJumping && !pmov.pogo)//If the palyer is not inputting horizontal movement
                 rb.drag = 1000000f;}//--------------------Increase the rigidbody's drag to 1,000,000 to make sure the character doesn't slide down the slope
         
     }

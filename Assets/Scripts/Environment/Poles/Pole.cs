@@ -7,12 +7,13 @@ public class Pole : MonoBehaviour
     /*To be attached a gameobject, set as a child of the player. The gameobject could be titled "PoleCheck", tagged as "Player", and on the "Player" layer.
     The PoleCheck object should have a trigger collider on it, placed on the players head.
     This script does two things:
-    Allows the player to walk off the pole when their feet are close to the ground
-    Makes sure that the when the player tries to climb a pole, the character sticks to the correct one
-    For convenience, make the pole a prefab*/
+    -Allows the player to walk off the pole when their feet are close to the ground
+    -Makes sure that the when the player tries to climb a pole, the character sticks to the correct one
+    (For convenience, make the pole a prefab)*/
     public Playermovement pmov;    
     public GroundCheck groundCheck;
 
+    public bool nextToPole;
     public bool makeshiftGrounded = false;//When both of these makeshiftGrounds are true, the character is able to walk off of the pole by moving left or right.
     public bool makeshiftGrounded2 = false;//The trigger colliders that are linked to these variables should be positioned so that when the character is activating both of them, their feet are touching or close to the ground
    //hello muthafucka
@@ -20,6 +21,7 @@ public class Pole : MonoBehaviour
     {
        
         if (other.CompareTag("Pole")){//------------If the character enters the trigger of an object tagged as "Pole"
+            nextToPole = true;
             other.gameObject.tag = "ClosestPole";}//Change that objects tag to "ClosestPole" to specify which pole the character should grab onto
     }
     private void OnTriggerStay2D(Collider2D other)//Execute this code when the character is sitting inside the specified colliders
@@ -33,6 +35,8 @@ public class Pole : MonoBehaviour
 
         if (other.CompareTag("ClosestPole"))
         {
+            nextToPole = true;
+
             if (!pmov.pogo)//------------------------If the character is not on the pogo stick
             {
                 if (groundCheck.grounded)//----------If the character is grounded
@@ -53,8 +57,9 @@ public class Pole : MonoBehaviour
         if (other.CompareTag("MakeshiftGround2"))
             makeshiftGrounded2 = false;//----------------------------------Set to false when the character leaves the "level with the ground" collider
 
-        if (other.CompareTag("ClosestPole"))//-----------------------------If the exited trigger is on an object designated as "ClosestPole"
-            other.gameObject.tag = "Pole";//-------------------------------Change the tag for that object to "Pole" in order to recognize that that pole is no longer close enough to interact with
+        if (other.CompareTag("ClosestPole")){//-----------------------------If the exited trigger is on an object designated as "ClosestPole"
+            nextToPole = false;
+            other.gameObject.tag = "Pole";}//-------------------------------Change the tag for that object to "Pole" in order to recognize that that pole is no longer close enough to interact with
         
         if (GameObject.FindGameObjectsWithTag("ClosestPole").Length == 0)//When the character is not close to any poles
             pmov.onPole = false;//-----------------------------------------Make sure the character does not go senile and grab onto an imaginary pole 
