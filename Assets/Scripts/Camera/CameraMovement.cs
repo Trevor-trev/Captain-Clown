@@ -20,6 +20,7 @@ public class CameraMovement : MonoBehaviour
     public Playermovement pmov;//---------------------A reference to the Player Movement script
     public RecenterTriggerGround recenterTrigger;//---A reference to the Recenter Trigger Ground script
     public GroundCheck groundCheck;//--------A reference to the GroundCheck script
+    public SlopeCheck slopeCheck;
     
     public Transform recenterPointFromDown;//-------------A reference to the recenter point positioned above the character
     public Transform recenterPointFromUp;//---------------A reference to the recenter point positioned below the character
@@ -70,8 +71,10 @@ public class CameraMovement : MonoBehaviour
     }
     void LateUpdate()
     {
-
-        transform.position = new Vector2(character.position.x, transform.position.y);//Make sure the camera's follow target always has the same x value as the character
+        if (slopeCheck.onSlope)
+            transform.position = new Vector2(character.position.x, character.position.y);//If the character is on a slope, make sure the camera's follow target has the same x and y value as the character.
+        else
+            transform.position = new Vector2(character.position.x, transform.position.y);//Otherwise, make sure the camera's follow target always has the same x value as the character
 
         if (Input.GetButton("LookUp")){//-------------------If the player holds down the look up button   
             timer -= Time.deltaTime;//----------------------Start the timer

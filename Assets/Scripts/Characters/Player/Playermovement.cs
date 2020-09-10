@@ -113,7 +113,7 @@ public class Playermovement : MonoBehaviour
                     rb.velocity = Vector2.up * jumpForce;//---------------------Allow the character to jump
                     jumpTimer -= Time.deltaTime;}}//----------------------------Make the timer starts counting down                                
         }
-        if (Input.GetButtonUp("Jump"))//-----------------------------------When the player releases the jump button
+        if (Input.GetButtonUp("Jump") || rb.velocity.y < 0 || touchingCeiling)//-----------------------------------When the player releases the jump button
             isJumping = false;//-------------------------------------------Set the isJumping variable to false 
         #endregion
 
@@ -125,18 +125,18 @@ public class Playermovement : MonoBehaviour
                 touchingCeiling = true;
             else if (!Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling))
                 touchingCeiling = false;
+           
+            if (lookDown && groundCheck.grounded && touchingCeiling)
+                if (lookDownDisableCollider != null)//-------------------------------------------------------------------If there is one or more colliders set to disable when crouching
+                        lookDownDisableCollider.enabled = false;}//----------------------------------------------------------Disable the collider(s)  
 
-            if (lookDownDisableCollider != null)//-------------------------------------------------------------------If there is one or more colliders set to disable when crouching
-                    lookDownDisableCollider.enabled = false;}//----------------------------------------------------------Disable the collider(s)  
-
-            if (!lookDown && !ledgeClimb.ledgeClimb && (!Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling)))//If the chracter is not looking down and there is no cieling above the character's head
+            if ((!lookDown && !ledgeClimb.ledgeClimb && !touchingCeiling) || !groundCheck.grounded)//If the chracter is not looking down and there is no cieling above the character's head
                 if (lookDownDisableCollider != null)//-------------------------------------------------------------------If there is one or more colliders set to disable when crouching
                     lookDownDisableCollider.enabled = true;//------------------------------------------------------------Enable the collider when not crouching
              
             if (groundCheck.grounded && lookDown){//---------------------------------------------------------------------If the character is looking down             
                 topSpeedL = 0;//-----------------------------------------------------------------------------------------Prevent the character from moving to the left
-                topSpeedR = 0;}//----------------------------------------------------------------------------------------Prevent the character from moving to the right
-        
+                topSpeedR = 0;}//----------------------------------------------------------------------------------------Prevent the character from moving to the right        
         #endregion
 
 #region POLE CLIMB CONTROLLER
@@ -307,7 +307,7 @@ public class Playermovement : MonoBehaviour
 #region RISING AND FALLING ANIMATION
 
         ///////////////////RISING AND FALLING ANIMATION/////////////////        
-        if ((!groundCheck.grounded && rb.velocity.y > 0) || (isJumping)){//----------------------------If the character is not grounded and is moving upward
+        if ((!groundCheck.grounded && rb.velocity.y > 0) || Input.GetButtonDown("Jump")){//If the character is not grounded and is moving upward or if the player presses the jump button
             rising = true;//---------------------------------------------------------The character is rising
             falling = false;
             animator.SetBool("IsRising", true);//------------------------------------Set the IsRising animation parameter to true
