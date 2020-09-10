@@ -15,6 +15,7 @@ TagManager:
   - Target
   - Solid
   - Slope
+  - TargetCounter
   layers:
   - Default
   - TransparentFX
