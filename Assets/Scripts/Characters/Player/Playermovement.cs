@@ -201,15 +201,15 @@ public class Playermovement : MonoBehaviour
         if (pogo)//-----------------------------------------------------If the character is on the pogo stick
         {
             if (xdirForTransitionToPogo != 0)//-------------------------If the character is moving when the pogo stick is activated
-                acceleration = 1000;//------------------------------------Increase acceleration to keep the horizontal velocity constant
+                acceleration = 2000;//----------------------------------Increase acceleration to keep the horizontal velocity constant
             else//------------------------------------------------------If the character is not moving when the pogo stick is activated
-                acceleration = 15f;//----------------------------------Create slow acceleration
+                acceleration = 9.75f;//-----------------------------------Create slow acceleration
 
-            pogoSpeed += acceleration * xdirection * Time.deltaTime;//---------------accelerate the character in the appropriate direction
+            pogoSpeed += acceleration * xdirection * Time.deltaTime;//--accelerate the character in the appropriate direction
 
-            jumpTimer = 0;//------------------------------------------Set the jump timer equal to zero
+            jumpTimer = 0;//--------------------------------------------Set the jump timer equal to zero
 
-            rb.gravityScale = 3f;//-----------------------------------Set a specific gravity scale for the pogo stick
+            rb.gravityScale = 3f;//-------------------------------------Set a specific gravity scale for the pogo stick
 
             rb.velocity = new Vector2(pogoSpeed, rb.velocity.y);//------Move the character according to the pogoSpeed variable            
 

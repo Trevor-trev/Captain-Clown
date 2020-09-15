@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TargetCounter : MonoBehaviour
 {
     public int targetsLeft;
-    public Text targetCount;
+    public Text targetsLeftDisplay;
     void Start()
     {
         targetsLeft = 25;
@@ -14,6 +14,6 @@ public class TargetCounter : MonoBehaviour
 
     void Update()
     {
-        targetCount.text = " = " + targetsLeft.ToString();
+        targetsLeftDisplay.text = " = " + targetsLeft.ToString();
     }
 }
