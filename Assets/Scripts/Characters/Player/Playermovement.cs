@@ -201,7 +201,7 @@ public class Playermovement : MonoBehaviour
         if (pogo)//-----------------------------------------------------If the character is on the pogo stick
         {
             if (xdirForTransitionToPogo != 0)//-------------------------If the character is moving when the pogo stick is activated
-                acceleration = 2000;//----------------------------------Increase acceleration to keep the horizontal velocity constant
+                acceleration = 600;//----------------------------------Increase acceleration to keep the horizontal velocity constant
             else//------------------------------------------------------If the character is not moving when the pogo stick is activated
                 acceleration = 9.75f;//-----------------------------------Create slow acceleration
 
@@ -218,13 +218,11 @@ public class Playermovement : MonoBehaviour
             if (groundCheck.grounded)//---------------------------------When the pogo stick hits the ground
                 rb.velocity = new Vector2(rb.velocity.x, bounceForce);//Create a vertical force to bouce the character upward
 
-            if (Input.GetButton("Jump")){//------------------------------If the player presses the jump button while the character is on the pogo stick
-                if (impossiblePogoTimer <= 0)                    
-                    bounceForce = 22.5f;}//-------------------------------Increase the bounce force 
+            if (Input.GetButton("Jump")){//-----------------------------If the player presses or holds the jump button while the character is on the pogo stick
+                if (impossiblePogoTimer <= 0)//-------------------------If the impossible pogo trick timer is not greater than zero
+                    bounceForce = 22.5f;}//-----------------------------Increase the bounce force 
             else//------------------------------------------------------If the player is not pressing the jump button while on the pogo stick
-                bounceForce = 12.5f;//---------------------------------Set the bounce force to default value
-
-            //if (xdirection != 0)//--------------------------------------If the player is pressing the left or right buttons
+                bounceForce = 12.5f;//----------------------------------Set the bounce force to default value
 
             if (pogoSpeed > pogoTopSpeedR)//----------------------------If the horizontal speed to the right is about to go over the speed limit
                 pogoSpeed = pogoTopSpeedR;//----------------------------Keep the speed at the limit

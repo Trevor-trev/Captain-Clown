@@ -10,7 +10,7 @@ public class Target : MonoBehaviour
 
     public int health = 1;//-------------The health of the object 
 
-    public GameObject deathEffect;//-----A game object with a death animation
+    public GameObject targetBreak;//-----A game object with a death animation
 
     public void TakeDamage (int damage)//A function which causes the objects health to decrease
     {
@@ -22,7 +22,7 @@ public class Target : MonoBehaviour
 
     void Die()//-------------------------A fuction to be executed when the objects health reaches or falls below 0
     {
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);//Place the death effect prefab where the object is
+        Instantiate(targetBreak, transform.position, Quaternion.identity);//Place the death effect prefab where the object is
         Destroy(gameObject);//-----------Remove the object from the scene
         targetCounter.targetsLeft -= 1;
     }

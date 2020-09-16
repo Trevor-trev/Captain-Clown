@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2038035099160539684}
   - component: {fileID: 7994504646320251665}
   - component: {fileID: 3241016453864205627}
+  - component: {fileID: 8636990284922874593}
   m_Layer: 0
   m_Name: Target
   m_TagString: Target
@@ -48,7 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetCounter: {fileID: 0}
   health: 100
-  deathEffect: {fileID: 0}
+  targetBreak: {fileID: 2234576218426228099, guid: f89e9181749c4ff46a021bea21aca28b,
+    type: 3}
 --- !u!212 &2038035099160539684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -147,3 +149,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0074501, y: 1.007449}
   m_EdgeRadius: 0
+--- !u!95 &8636990284922874593
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9121138432427323832}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
