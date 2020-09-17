@@ -17,6 +17,7 @@ TagManager:
   - Slope
   - TargetCounter
   - HillVille Border
+  - PoleCheck
   layers:
   - Default
   - TransparentFX
