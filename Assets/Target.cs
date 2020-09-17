@@ -10,7 +10,7 @@ public class Target : MonoBehaviour
 
     public int health = 1;//-------------The health of the object 
 
-    public GameObject targetBreak;//-----A game object with a death animation
+    public GameObject targetBreak;//-----A game object with an explosion animation
 
     public void TakeDamage (int damage)//A function which causes the objects health to decrease
     {
