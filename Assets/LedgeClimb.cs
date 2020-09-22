@@ -7,6 +7,7 @@ public class LedgeClimb : MonoBehaviour
 	private Rigidbody2D rb;
 	public Playermovement pmov;
 	public GroundCheck groundCheck;
+
 	public Animator animator;
 	
 	CapsuleCollider2D capCollider;
@@ -78,7 +79,7 @@ public class LedgeClimb : MonoBehaviour
 			if (pmov.facingRight && !groundCheck.grounded && pmov.xdirection > 0)//-------------------------If the character is not grounded and the player is moving the character toward the ledge
 				ledgeHang = true;//------------------------------------------The character grabs onto the ledge	
 
-			if (pmov.facingLeft && !groundCheck.grounded && pmov.xdirection < 0)
+			if (pmov.facingLeft && !groundCheck.grounded && pmov.xdirection < 0 && !pmov.onPole)
 				ledgeHang = true;
 		}
 
@@ -121,7 +122,7 @@ public class LedgeClimb : MonoBehaviour
 				if (pmov.horizontalMove > 0)//-------------------------------If the player is pressing the right button
 					pmov.horizontalMove = 0;//-------------------------------Keep the horizontal move value at zero
 
-				if (pmov.horizontalMove <= -40)//----------------------------If the horizontal move value is less than or equal to twenty
+				if (pmov.horizontalMove <= -40 && !pmov.onPole)//----------------------------If the horizontal move value is less than or equal to twenty
 					ledgeClimb = true;}//------------------------------------The character climbs the ledge
 
 		}

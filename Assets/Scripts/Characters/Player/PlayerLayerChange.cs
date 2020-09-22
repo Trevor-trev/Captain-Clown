@@ -13,6 +13,7 @@ public class PlayerLayerChange : MonoBehaviour
       This is only relavent if the game is in a tilted, "2.5D" perspective
       much like Commander Keen, in which these scripts were originally intended to mimic.*/
 
+    public LedgeClimb ledgeClimb;
     public PlayerLayerChangeInSecrets inSecret;
     public Playermovement pmov;
     private SpriteRenderer sprite;//--------------------------A reference to the sprite renderer on the same object that this script is attached to
@@ -31,7 +32,7 @@ public class PlayerLayerChange : MonoBehaviour
     }
     void Update()
     {
-
+        
         if (pmov.jumpedFromPole){//---------------If the character has jumped from a pole
             JumpedFromPole();
             StartCoroutine("JumpedFromPole");}//--Start the jumped from pole coroutine
@@ -50,5 +51,8 @@ public class PlayerLayerChange : MonoBehaviour
 
         if (inSecret.insideSecret)
             sprite.sortingOrder = 1;
+
+        if (ledgeClimb.ledgeHang || ledgeClimb.ledgeClimb)
+            sprite.sortingOrder = 0;
     }
 }
