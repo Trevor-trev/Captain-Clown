@@ -68,7 +68,8 @@ public class Playermovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator.SetBool("FacingLeft", true);//Make sure the character is facing left when the game starts
+        animator.SetBool("FacingLeft", true);//Make sure the animator registers the player as facing left when the game starts
+        facingLeft = true;//Make sure the character is facing left when the game starts
     }
 
     #region COROUTINES
