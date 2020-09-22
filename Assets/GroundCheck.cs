@@ -27,9 +27,9 @@ public class GroundCheck : MonoBehaviour
 
 		if (!ledgeClimb.isTouchingWall && !slopeCheck.onSlope)//-----------------------------------------If the wallcheck raycast doesn't detect a wall
 			groundedRadius = .15f;//----------------------------------------Keep the grounded radius at this default size to make sure the character doesn't randomly get declared as not grounded while running
-	}
-    private void LateUpdate()
-	{
+	//}
+    //private void LateUpdate()
+	//{
 		#region CHECKING IF GROUNDED
 		///////////////////////////////////CHECKINGING IF GROUNDED//////////////////////////////////////
 		grounded = false;
