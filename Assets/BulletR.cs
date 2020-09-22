@@ -37,6 +37,8 @@ public class BulletR : MonoBehaviour
             Destroy(gameObject);//----------------------------------------------Remove the bullet from the scene
             Instantiate(impactEffect, transform.position, transform.rotation);//Place the impactEffect prefab where the bullet hit
         }
+        if (hit.CompareTag("OffScreenBoundary"))
+            Destroy(gameObject);
 
     }
 }

@@ -17,14 +17,15 @@ public class MoveFirePointU : MonoBehaviour
         {
             if (pmov.facingRight)
                 firePointUPosition.x = -.624f;
-           
-                if (pmov.facingLeft)
+
+            if (pmov.facingLeft)
                 firePointUPosition.x = .115f;
+        }
 
         if (!pmov.onPole)
             firePointUPosition.x = -.034f;
 
         transform.localPosition = firePointUPosition;
-        }
+        
     }
 }

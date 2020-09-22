@@ -292,6 +292,8 @@ public class Playermovement : MonoBehaviour
         ///////////////////POGO ANIMATION/////////////////
         if (pogo && !ledgeClimb.ledgeClimb)//-----------If the character is on the pogo stick and not climbing a ledge
         {
+            animator.SetBool("LookingDown", false);
+            lookDown = false;//-------------------------Make sure the character doesnt automatically look down if the lookdown button is pressed and pogo is activated before it is let go
             animator.SetBool("IsOnPogo", true);//-------Play the pogo stick animation
 
             if (groundCheck.grounded)//------------------If the character hits the ground

@@ -18,6 +18,7 @@ TagManager:
   - TargetCounter
   - HillVille Border
   - PoleCheck
+  - OffScreenBoundary
   layers:
   - Default
   - TransparentFX
