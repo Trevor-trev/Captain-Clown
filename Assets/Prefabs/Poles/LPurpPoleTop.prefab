@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 7922029040255417958}
   - component: {fileID: 7394547214730880326}
   - component: {fileID: 9106788655441977301}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MovementStopper
   m_TagString: Pole
   m_Icon: {fileID: 0}
