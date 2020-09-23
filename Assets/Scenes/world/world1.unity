@@ -3735,6 +3735,7 @@ GameObject:
   - component: {fileID: 488652632}
   - component: {fileID: 488652631}
   - component: {fileID: 488652634}
+  - component: {fileID: 488652635}
   m_Layer: 8
   m_Name: Pogo Sound
   m_TagString: Untagged
@@ -3805,7 +3806,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23263168, y: -1.0940832}
+  m_Offset: {x: 0.1280098, y: -1.0940832}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3816,7 +3817,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23775482, y: 0.3865273}
+  m_Size: {x: 0.028511047, y: 0.3865273}
   m_EdgeRadius: 0
 --- !u!114 &488652634
 MonoBehaviour:
@@ -3831,6 +3832,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: MakeshiftGround
+  Event: event:/Pogo Bounce
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &488652635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488652629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Slope
   Event: event:/Pogo Bounce
   PlayEvent: 5
   StopEvent: 0
