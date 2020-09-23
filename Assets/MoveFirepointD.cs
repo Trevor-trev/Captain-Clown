@@ -20,12 +20,13 @@ public class MoveFirepointD : MonoBehaviour
 
             if (pmov.facingLeft)
                 firePointDPosition.x = .305f;
-
-            if (!pmov.onPole)
+        }
+            
+        if (!pmov.onPole)
                 firePointDPosition.x = -.172f;
 
             transform.localPosition = firePointDPosition;
-        }
+        
     }
 }
 
