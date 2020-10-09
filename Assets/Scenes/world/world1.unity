@@ -104450,6 +104450,7 @@ MonoBehaviour:
   aimUp: 0
   aimDown: 0
   shoot: 0
+  stopMovement: 0
 --- !u!4 &2052141164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7976588177414916987, guid: c221ab3427fb95041a783fed8104c408,

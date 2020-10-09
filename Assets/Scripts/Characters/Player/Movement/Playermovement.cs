@@ -291,7 +291,7 @@ public class Playermovement : MonoBehaviour
 #region POGO ANIMATION
         ///////////////////POGO ANIMATION/////////////////
         if (pogo && !ledgeClimb.ledgeClimb)//-----------If the character is on the pogo stick and not climbing a ledge
-        {
+        {            
             animator.SetBool("LookingDown", false);
             lookDown = false;//-------------------------Make sure the character doesnt automatically look down if the lookdown button is pressed and pogo is activated before it is let go
             animator.SetBool("IsOnPogo", true);//-------Play the pogo stick animation
@@ -374,7 +374,7 @@ public class Playermovement : MonoBehaviour
 
         if (!pogo && !onPole && !ledgeClimb.ledgeHang && !ledgeClimb.ledgeClimb)//----If the character is not on a pogo stick, not on a pole, not hanging from or climbing a ledge
         {
-            if (groundCheck.grounded && (neuralGun.shoot || lookDown))//--------------If the character is grounded and is shooting or looking down
+            if (groundCheck.grounded && (neuralGun.stopMovement || lookDown))//--------------If the character is grounded and is shooting or looking down
                 rb.velocity = new Vector2(0, 0);//------------------------------------Prevent the character from moving
             else//--------------------------------------------------------------------Otherwise
                 rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime * 10f, rb.velocity.y);//Set the characters horizontal movement according to the horizontal move variable, and vertical movement according to the vertical forces applied to their rigidbody

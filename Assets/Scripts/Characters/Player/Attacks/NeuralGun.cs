@@ -21,6 +21,7 @@ public class NeuralGun : MonoBehaviour
     public bool aimUp = false;
     public bool aimDown = false;
     public bool shoot;
+    public bool stopMovement;
     
     
 
@@ -28,10 +29,12 @@ public class NeuralGun : MonoBehaviour
 
     IEnumerator Shoot()//----------------------------A coroutine labeled "Shoot". Has the ability to pause and resume execution according to specifications
     {
+        stopMovement = true;
+        yield return new WaitForFixedUpdate();
         animator.SetBool("IsShooting", true);//------------------------------------------Set the IsShooting animation parameter to true
         yield return new WaitForSeconds(.05f);//-----------------------------------------Pause execution for .05 seconds
         shoot = true;//------------------------------------------------------------------Set the shoot bool to true
-        yield return new WaitForSeconds(.2f);//------------------------------------------Pause execution for .2 seconds
+        yield return new WaitForSeconds(.15f);//------------------------------------------Pause execution for .2 seconds
 
         if (pmov.facingRight && !(aimUp || aimDown))  //----------------------------------If the character is facing right and not aiming up or down 
             Instantiate(neuralBullet, firePointRight.position, firePointRight.rotation);//Create a bullet from the FirePointRight gameobject              
@@ -44,6 +47,7 @@ public class NeuralGun : MonoBehaviour
 
         if (aimDown && (!groundCheck.grounded || pmov.onPole))//--------------------------If the character is aiming down and either is not grounded or is on a pole
             Instantiate(neuralBullet, firePointDown.position, firePointDown.rotation);//--Create a bullet from the FirePointDown gameobject
+       // yield return new WaitForSeconds(.03f);//------------------------------------------Pause execution for .2 seconds
 
         animator.SetBool("IsShooting", false);//------------------------------------------Set the IsShooting animator parameter to false
         shoot = false;//------------------------------------------------------------------Set the shoot bool to false
@@ -53,6 +57,7 @@ public class NeuralGun : MonoBehaviour
 
         aimDown = false;//----------------------------------------------------------------Set the aimDown bool to false
         animator.SetBool("IsAimingDown", false);//----------------------------------------Set the IsAimingDown animator parameter to false
+        stopMovement = false;
     }
 
     private void Update()

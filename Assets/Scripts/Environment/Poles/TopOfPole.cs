@@ -28,6 +28,7 @@ public class TopOfPole : MonoBehaviour
         }
     }
 
+
     private void OnTriggerStay2D(Collider2D other)//-Execute this code when the specified object enters a trigger placed at the top of the pole
     {
         if (other.CompareTag("Player"))//------------When the character reaches the trigger
