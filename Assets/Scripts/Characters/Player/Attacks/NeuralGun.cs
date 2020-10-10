@@ -9,6 +9,8 @@ public class NeuralGun : MonoBehaviour
     public Playermovement pmov;
     public GroundCheck groundCheck;
     public LedgeClimb ledgeClimb;
+    public PogoController pogo;
+    public PoleClimbController poleClimb;
     public Animator animator;
 
     public GameObject neuralBullet;
@@ -45,7 +47,7 @@ public class NeuralGun : MonoBehaviour
         if (aimUp)//----------------------------------------------------------------------If the character is aiming up
             Instantiate(neuralBullet, firePointUp.position, firePointUp.rotation);//------Create a bullet from the FirePointUp gameobject
 
-        if (aimDown && (!groundCheck.grounded || pmov.onPole))//--------------------------If the character is aiming down and either is not grounded or is on a pole
+        if (aimDown && (!groundCheck.grounded || poleClimb.onPole))//--------------------------If the character is aiming down and either is not grounded or is on a pole
             Instantiate(neuralBullet, firePointDown.position, firePointDown.rotation);//--Create a bullet from the FirePointDown gameobject
        // yield return new WaitForSeconds(.03f);//------------------------------------------Pause execution for .2 seconds
 
@@ -85,10 +87,10 @@ public class NeuralGun : MonoBehaviour
             aimDown = false;//---------------------------------------------------------------Set the aimDown bool to false;
             animator.SetBool("IsAimingDown", false);}//--------------------------------------Set the IsAimingDown animation parameter to false
 
-        if (!(ledgeClimb.ledgeClimb || ledgeClimb.ledgeHang) && !shoot && !pmov.pogo && Input.GetButtonDown("Shoot"))//If the character is not climbing or hanging from a ledge, is not shooting, is not on the pogo, and the player presses the Shoot button                               
+        if (!(ledgeClimb.ledgeClimb || ledgeClimb.ledgeHang) && !shoot && !pogo.onPogo && Input.GetButtonDown("Shoot"))//If the character is not climbing or hanging from a ledge, is not shooting, is not on the pogo, and the player presses the Shoot button                               
             StartCoroutine("Shoot");//---------------------------------------------Start the Shoot coroutine
        
-        if (pmov.falling && pmov.lookDown && !pmov.onPole)//-----------------------If the character is falling and looking down and not on a pole
+        if (pmov.falling && pmov.lookDown && !poleClimb.onPole)//-----------------------If the character is falling and looking down and not on a pole
             neuralBullet.GetComponent<BulletR>().speed += 12.5f * Time.deltaTime;//Increase the bullet speed over time so that the falling character doesn't catch up with it
         else//---------------------------------------------------------------------Otherwise
             neuralBullet.GetComponent<BulletR>().speed = 20.5f;//------------------Set the bullet speed at it's default, static speed

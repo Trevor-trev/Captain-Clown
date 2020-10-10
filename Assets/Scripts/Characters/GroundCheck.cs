@@ -8,6 +8,7 @@ public class GroundCheck : MonoBehaviour
 	public Animator animator;
 	public LedgeClimb ledgeClimb;
 	public SlopeCheck slopeCheck;
+	public PoleClimbController poleClimb;
 
 	public LayerMask whatIsGround;//-----------------------------A layermask that lets you determine what layers are considered ground to the character
 	public LayerMask whatIsCeiling;//----------------------------A layermask that lets you determine what layers are considered ceiling to the character
@@ -20,7 +21,7 @@ public class GroundCheck : MonoBehaviour
     private void Update()
     {
 		if (!ledgeClimb.isTouchingWall && slopeCheck.onSlope)
-			groundedRadius = .5f;
+			groundedRadius = .3f;
 
 		if (ledgeClimb.isTouchingWall)//-----------------------------------------------If the wallcheck raycast detects a wall
 			groundedRadius = .1f;//-----------------------------------------slightly decrease the grounded radius to make sure the character isn't declared as grounded when jumping next to a wall
@@ -42,7 +43,7 @@ public class GroundCheck : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
-				if (!pmov.jumpedFromPole || !ledgeClimb.ledgeHang)
+				if (!poleClimb.jumpedFromPole || !ledgeClimb.ledgeHang)
 				{
 					grounded = true;
 					animator.SetBool("IsGrounded", true);

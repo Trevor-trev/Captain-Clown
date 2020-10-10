@@ -9,9 +9,10 @@ public class Pole : MonoBehaviour
     This script does two things:
     -Allows the player to walk off the pole when their feet are close to the ground
     -Makes sure that the when the player tries to climb a pole, the character sticks to the correct one
-    (For convenience, make the pole a prefab)*/
-    public Playermovement pmov;    
+    (For convenience, make the pole a prefab)*/   
     public GroundCheck groundCheck;
+    public PogoController pogo;
+    public PoleClimbController poleClimb;
 
     public bool nextToPole;
     public bool makeshiftGrounded = false;//When both of these makeshiftGrounds are true, the character is able to walk off of the pole by moving left or right.
@@ -37,14 +38,14 @@ public class Pole : MonoBehaviour
         {
             nextToPole = true;
 
-            if (!pmov.pogo)//------------------------If the character is not on the pogo stick
+            if (!pogo.onPogo)//------------------------If the character is not on the pogo stick
             {
                 if (groundCheck.grounded)//----------If the character is grounded
-                    if (pmov.verticalMove != 0)//----Grab the pole if the player presses the up or down buttons
-                        pmov.onPole = true;
+                    if (poleClimb.verticalMove != 0)//----Grab the pole if the player presses the up or down buttons
+                        poleClimb.onPole = true;
                 if (!groundCheck.grounded)//---------If the character is not grounded
-                    if (pmov.verticalMove > 0)//-----If the player presses the up button
-                        pmov.onPole = true;//--------Grab onto the pole
+                    if (poleClimb.verticalMove > 0)//-----If the player presses the up button
+                        poleClimb.onPole = true;//--------Grab onto the pole
             }
         }
     }
@@ -62,7 +63,7 @@ public class Pole : MonoBehaviour
             other.gameObject.tag = "Pole";}//-------------------------------Change the tag for that object to "Pole" in order to recognize that that pole is no longer close enough to interact with
         
         if (GameObject.FindGameObjectsWithTag("ClosestPole").Length == 0)//When the character is not close to any poles
-            pmov.onPole = false;//-----------------------------------------Make sure the character does not go senile and grab onto an imaginary pole 
+            poleClimb.onPole = false;//-----------------------------------------Make sure the character does not go senile and grab onto an imaginary pole 
     }
 }
 

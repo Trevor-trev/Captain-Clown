@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveFirePointU : MonoBehaviour
 {
     public Playermovement pmov;
+    public PoleClimbController poleClimb;
     Vector2 firePointUPosition;
 
     private void Start()
@@ -13,7 +14,7 @@ public class MoveFirePointU : MonoBehaviour
     }
     private void Update()
     {
-        if (pmov.onPole)
+        if (poleClimb.onPole)
         {
             if (pmov.facingRight)
                 firePointUPosition.x = -.624f;
@@ -22,7 +23,7 @@ public class MoveFirePointU : MonoBehaviour
                 firePointUPosition.x = .115f;
         }
 
-        if (!pmov.onPole)
+        if (!poleClimb.onPole)
             firePointUPosition.x = -.034f;
 
         transform.localPosition = firePointUPosition;

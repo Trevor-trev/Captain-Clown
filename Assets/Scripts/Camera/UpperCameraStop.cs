@@ -14,7 +14,6 @@ public class UpperCameraStop : MonoBehaviour
    the colliders will be designated as belonging to the character, so anytime those colliders are touching a pole, the character
    will be able to climb that pole, even if the character sprite is not touching the pole sprite.*/
 
-    public Playermovement pmov;
     public CameraMovement cam;
 
     private void OnTriggerEnter2D(Collider2D other)//Execute this code when the specified object's collider enters the collider attached to the same game object as this script

@@ -16,6 +16,8 @@ public class PlayerLayerChange : MonoBehaviour
     public LedgeClimb ledgeClimb;
     public PlayerLayerChangeInSecrets inSecret;
     public Playermovement pmov;
+    public PoleClimbController poleClimb;
+
     private SpriteRenderer sprite;//--------------------------A reference to the sprite renderer on the same object that this script is attached to
     private bool dontChangeLayer;//---------------------------A bool that determines when to change the player's sorting layer
     void Start()
@@ -33,20 +35,20 @@ public class PlayerLayerChange : MonoBehaviour
     void Update()
     {
         
-        if (pmov.jumpedFromPole){//---------------If the character has jumped from a pole
+        if (poleClimb.jumpedFromPole){//---------------If the character has jumped from a pole
             JumpedFromPole();
             StartCoroutine("JumpedFromPole");}//--Start the jumped from pole coroutine
 
-        if (pmov.facingRight && !pmov.onPole)//---If the character is facing right while not on a pole
+        if (pmov.facingRight && !poleClimb.onPole)//---If the character is facing right while not on a pole
             sprite.sortingOrder = 1;//------------Set the character's order within it's current layer to 1
 
-        if (pmov.facingLeft && !pmov.onPole && !inSecret.insideSecret)//----If the character is facing left while not on a pole
+        if (pmov.facingLeft && !poleClimb.onPole && !inSecret.insideSecret)//----If the character is facing left while not on a pole
             sprite.sortingOrder = 3;//------------Set the character's order within it's current layer to 3
 
-        if (pmov.onPole || dontChangeLayer)//------------------------If the character is on a pole
+        if (poleClimb.onPole || dontChangeLayer)//------------------------If the character is on a pole
             sprite.sortingLayerName = "Pole";//---Set the character's sorting layer to "Pole"
 
-        if (!pmov.onPole && !dontChangeLayer)//-----------------------If the character is not on a pole
+        if (!poleClimb.onPole && !dontChangeLayer)//-----------------------If the character is not on a pole
             sprite.sortingLayerName = "Default";//Set the character's sorting layer to "Default"
 
         if (inSecret.insideSecret)

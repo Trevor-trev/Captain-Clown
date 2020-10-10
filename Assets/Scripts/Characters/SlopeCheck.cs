@@ -8,8 +8,11 @@ public class SlopeCheck : MonoBehaviour
       The Slope Check object should be set as a child of the player character*/
 {
     public Playermovement pmov;
+    public PogoController pogo;
+    public GroundCheck groundCheck;
 
     public bool onSlope = false;//--------------------Whether or not the character is on a slope
+    public bool bouncing = false;
 
     public Rigidbody2D rb;
     BoxCollider2D boxCollider;
@@ -21,8 +24,8 @@ public class SlopeCheck : MonoBehaviour
 
     private void Update()
     {
-        //if (pmov.pogo)
-            //onSlope = false;
+        if (!pogo.onPogo)
+            bouncing = false;
 
         if (pmov.isJumping){//----------------------------If the character is jumping        
             boxCollider.enabled = false;//----------------Diable the box collider
@@ -35,22 +38,28 @@ public class SlopeCheck : MonoBehaviour
             
             rb.gravityScale = 9f;//-----------------------Set the rigidbody's gravity scale to 9 to make sure the character sticks to the ground when running down the slope
 
-            if (pmov.xdirection != 0 || pmov.pogo)//-------------------If the player is inputting horizontal movement
+            if (pmov.xdirection != 0 || pogo.onPogo)//-------------------If the player is inputting horizontal movement
                 rb.drag = .25f;//-------------------------Reset the rigidbody's drag to the default value
 
-            if (pmov.xdirection == 0 && !pmov.isJumping && !pmov.pogo)//If the palyer is not inputting horizontal movement
+            if (groundCheck.grounded && pmov.xdirection == 0 && !pmov.isJumping && !pogo.onPogo)//If the palyer is not inputting horizontal movement
                 rb.drag = 1000000f;}//--------------------Increase the rigidbody's drag to 1,000,000 to make sure the character doesn't slide down the slope
         
     }
-    private void OnTriggerEnter2D(Collider2D collider)//--Execute this code when the specified object's collider enters the collider attached to the same object as this script
+    private void OnTriggerEnter2D(Collider2D other)//--Execute this code when the specified object's collider enters the collider attached to the same object as this script
     {
-        if (collider.CompareTag("Slope"))//---------------If the object that entered the trigger collider is tagged "Slope"
+        if (other.CompareTag("Slope"))//---------------If the object that entered the trigger collider is tagged "Slope"
             onSlope = true;//-----------------------------The character is on a slope
+
+        if ((other.CompareTag("Slope") || other.CompareTag("Solid") || other.CompareTag("MakeshiftGround")) && pogo.onPogo)
+            bouncing = true;
     }
 
     private void OnTriggerExit2D(Collider2D other) //-----Execute this code when the specified object's collider exits the collider attached to the same object as this script
     {
         if (other.CompareTag("Slope"))//------------------If the object that exited the trigger collider is tagged "Slope"
             onSlope = false;//----------------------------The character is no longer on a slope
+
+        if ((other.CompareTag("Slope") || other.CompareTag("Solid") || other.CompareTag("MakeshiftGround")))
+            bouncing = false;
     }
 }

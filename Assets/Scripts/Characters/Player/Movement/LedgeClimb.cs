@@ -7,6 +7,8 @@ public class LedgeClimb : MonoBehaviour
 	private Rigidbody2D rb;
 	public Playermovement pmov;
 	public GroundCheck groundCheck;
+	public PogoController pogo;
+	public PoleClimbController poleClimb;
 
 	public Animator animator;
 	
@@ -67,7 +69,7 @@ public class LedgeClimb : MonoBehaviour
 	{
 		if (ledgeDetected && !ledgeHang && !pmov.pogo && !ledgeClimb)//If not on the pogo stick, not hanging or climbing a ledge, but a ledge is detected
 		{
-			pmov.acceleration = 1;//-----------------------------------Lower the horizontal acceleration variable
+			pogo.acceleration = 1;//-----------------------------------Lower the horizontal acceleration variable
 
 			if (pmov.facingRight){//-----------------------------------If the character is facing right
 				ledgePos1 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckLength) - ledgeClimbXROffset1, Mathf.Floor(ledgePosBot.y) + ledgeClimbYROffset1);//-Set the character sprite to the appropriate position while hanging
@@ -79,7 +81,7 @@ public class LedgeClimb : MonoBehaviour
 			if (pmov.facingRight && !groundCheck.grounded && pmov.xdirection > 0)//-------------------------If the character is not grounded and the player is moving the character toward the ledge
 				ledgeHang = true;//------------------------------------------The character grabs onto the ledge	
 
-			if (pmov.facingLeft && !groundCheck.grounded && pmov.xdirection < 0 && !pmov.onPole)
+			if (pmov.facingLeft && !groundCheck.grounded && pmov.xdirection < 0 && !poleClimb.onPole)
 				ledgeHang = true;
 		}
 
@@ -96,16 +98,16 @@ public class LedgeClimb : MonoBehaviour
 
 			animator.SetBool("IsHanging", true);//---------------------------Play the ledge hang animation
 
-			if (pmov.verticalMove > 0)//-------------------------------------If the player presses the up button
+			if (poleClimb.verticalMove > 0)//-------------------------------------If the player presses the up button
 				ledgeClimb = true;//-----------------------------------------The character climbs the ledge
 
-			if (pmov.verticalMove < 0){//------------------------------------If the player presses the down button			
+			if (poleClimb.verticalMove < 0){//------------------------------------If the player presses the down button			
 				ledgeHang = false;//-----------------------------------------The character drops off the ledge
 				polyCollider.enabled = true;//-------------------------------Turn on the polygon collider
 				capCollider.enabled = true;}//-------------------------------Turn on the capsule collider
 
 			if (pmov.xdirection != 0)//--------------------------------------If The player presses the left or right buttons
-				pmov.horizontalMove += pmov.acceleration * pmov.xdirection;//Increase the horizontal move value according to the acceleration variable in the direction pressed
+				pmov.horizontalMove += pogo.acceleration * pmov.xdirection;//Increase the horizontal move value according to the acceleration variable in the direction pressed
 			//^^^^^^^^^^^^^^^^^This allows for a brief pause between grabbing the ledge and climbing the ledge if the forward button is continually held down^^^^^^^^^^^^^^^^^^
 
 			if (pmov.xdirection == 0)//--------------------------------------If the player is not pressing the left or right buttons
@@ -122,7 +124,7 @@ public class LedgeClimb : MonoBehaviour
 				if (pmov.horizontalMove > 0)//-------------------------------If the player is pressing the right button
 					pmov.horizontalMove = 0;//-------------------------------Keep the horizontal move value at zero
 
-				if (pmov.horizontalMove <= -40 && !pmov.onPole)//----------------------------If the horizontal move value is less than or equal to twenty
+				if (pmov.horizontalMove <= -40 && !poleClimb.onPole)//----------------------------If the horizontal move value is less than or equal to twenty
 					ledgeClimb = true;}//------------------------------------The character climbs the ledge
 
 		}
@@ -137,7 +139,7 @@ public class LedgeClimb : MonoBehaviour
 				wallCheckLength = -.5f;}//-----------------------------------Set the wallcheck raycast to the appropriate length
 
 		if (ledgeClimb){//---------------------------------------------------If the character is climbing a ledge
-			pmov.pogo = false;//---------------------------------------------Make sure the pogo stick cannot be activated
+			pogo.onPogo = false;//---------------------------------------------Make sure the pogo stick cannot be activated
 			rb.velocity = new Vector2(0, 0);//-------------------------------Make sure the character's rigidbody cannot move due to outside forces
 			rb.gravityScale = 0;//-------------------------------------------Make sure gravity cannot affect the character's rigidbody
 			animator.SetBool("IsClimbingLedge", true);//---------------------Play the ledge climb animation
@@ -145,7 +147,7 @@ public class LedgeClimb : MonoBehaviour
 	}
 	public void IncreaseAccelForLedgeClimb()//-------------------------------A function which is set as an event on a frame of the ledge hang animation clips
 	{
-		pmov.acceleration = 30;//--------------------------------------------Increase the acceleration for horizontal move so that the player only has to tap the forward button once to climb the ledge
+		pogo.acceleration = 30;//--------------------------------------------Increase the acceleration for horizontal move so that the player only has to tap the forward button once to climb the ledge
 	}
 	public void FinishLedgeClimb()//-----------------------------------------A function which is set as an event on a frame of the ledge climb animation clips
 	{

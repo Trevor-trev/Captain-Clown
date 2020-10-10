@@ -17,10 +17,10 @@ public class CameraMovement : MonoBehaviour
     public NeuralGun neuralGun;
     public Rigidbody2D rb;//--------------------------A reference to the rigid body attached to the same game object as this script
     public Rigidbody2D playerRb;//--------------------A reference to the rigid body attached to the character
-    public Playermovement pmov;//---------------------A reference to the Player Movement script
     public RecenterTriggerGround recenterTrigger;//---A reference to the Recenter Trigger Ground script
     public GroundCheck groundCheck;//--------A reference to the GroundCheck script
     public SlopeCheck slopeCheck;
+    public PoleClimbController poleClimb;
     
     public Transform recenterPointFromDown;//-------------A reference to the recenter point positioned above the character
     public Transform recenterPointFromUp;//---------------A reference to the recenter point positioned below the character
@@ -105,10 +105,10 @@ public class CameraMovement : MonoBehaviour
             LookDownRecenter();
             StartCoroutine("LookDownRecenter");}//--------------Start the look down recenter coroutine
 
-        if (pmov.onPole || pmov.jumpedFromPole)//---------------If the character is on a pole or has jumped off of a pole
+        if (poleClimb.onPole || poleClimb.jumpedFromPole)//---------------If the character is on a pole or has jumped off of a pole
             rb.velocity = new Vector2(0, playerRb.velocity.y);//Make the camera's follow target follow the character by moving it's rigid body with the character
 
-        if (!pmov.onPole)//-------------------------------------If the character is not on a pole
+        if (!poleClimb.onPole)//-------------------------------------If the character is not on a pole
             rb.velocity = new Vector2(0, 0);//------------------Dont move the camera's follow target through it's rigidbody
 
         if (lookUpRecenter)//-----------------------------------If the lookUpRecenter variable is true

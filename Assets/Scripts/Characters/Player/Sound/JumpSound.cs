@@ -9,10 +9,11 @@ public class JumpSound : MonoBehaviour
 
     public Playermovement pmov;
     public GroundCheck groundCheck;
+    public PoleClimbController poleClimb;
 
     private void Update()
     {
-        if ((pmov.onPole || groundCheck.grounded) && Input.GetButtonDown("Jump"))
+        if ((poleClimb.onPole || groundCheck.grounded) && Input.GetButtonDown("Jump"))
             FMODUnity.RuntimeManager.PlayOneShot(jumpSound);
     }
 }

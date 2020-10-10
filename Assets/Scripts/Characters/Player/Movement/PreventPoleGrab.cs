@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PreventPoleGrab : MonoBehaviour
 {
-    public Playermovement pmov;
+    public PoleClimbController poleClimb;
 
     public bool cannotGrabPole;
 
@@ -21,7 +21,7 @@ public class PreventPoleGrab : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || pmov.onPole)
+        if (other.CompareTag("Player") || poleClimb.onPole)
             cannotGrabPole = false;
     }
 }

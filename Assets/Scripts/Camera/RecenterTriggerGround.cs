@@ -10,11 +10,13 @@ public class RecenterTriggerGround : MonoBehaviour
       It's purpose is to recenter the camera when the character lands on anything designated as solid*/
    
     public LedgeClimb ledgeClimb;
-    public Playermovement pmov;
+    public PogoController pogo;
+
     public bool touchingDroppablePlatform;
+    public bool justLanded;//---------------------------A bool that returns true when the box collider hits the ground
 
     BoxCollider2D groundTrigger;//----------------------A box collider to be placed just below the character's feet that detects when they hit anything designated as ground
-    public bool justLanded;//---------------------------A bool that returns true when the box collider hits the ground
+
 
     private void Start()
     {
@@ -31,7 +33,7 @@ public class RecenterTriggerGround : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)//---Execute this code when the specified object's collider enters the collider attached to the same object as this script
     {
         if (other.CompareTag("Solid") || other.CompareTag("MakeshiftGround")){//---------------If the object is tagged as "Solid"        
-            if (!pmov.pogo){//---------------------------If the character is not on the pogo stick
+            if (!pogo.onPogo){//---------------------------If the character is not on the pogo stick
                 Recenter();
                 StartCoroutine("Recenter");}}//-----------Start the Recenter coroutine     
 

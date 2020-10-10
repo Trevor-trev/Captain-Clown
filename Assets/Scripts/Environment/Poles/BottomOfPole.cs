@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class BottomOfPole : MonoBehaviour
 {
-    Playermovement pmov;
+    PoleClimbController poleClimb;
     void Start()
     {
-        pmov = FindObjectOfType<Playermovement>();
+        poleClimb = FindObjectOfType<PoleClimbController>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)//Execute this code when the specified object enters a trigger placed at the bottom of the pole
     {
         if (other.CompareTag("Player"))//When an object tagged "Player" reaches the bottom of the pole
-            pmov.onPole = false;//------Make the character let go of the pole
+            poleClimb.onPole = false;//------Make the character let go of the pole
     }
 
     private void OnTriggerStay2D(Collider2D other)//Execute this code when the specified object enters a trigger placed at the bottom of the pole
     {
         if (other.CompareTag("Player"))//When an object tagged "Player" reaches the bottom of the pole
-            pmov.onPole = false;//------Make the character let go of the pole
+            poleClimb.onPole = false;//------Make the character let go of the pole
     }
 }
