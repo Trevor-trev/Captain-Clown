@@ -67,7 +67,7 @@ public class LedgeClimb : MonoBehaviour
 
 	private void CheckLedgeClimb()//-----------------------------------A function which executes a ledge hang and ledge climb when the specified conditions are met
 	{
-		if (ledgeDetected && !ledgeHang && !pmov.pogo && !ledgeClimb)//If not on the pogo stick, not hanging or climbing a ledge, but a ledge is detected
+		if (ledgeDetected && !ledgeHang && !pogo.onPogo && !ledgeClimb)//If not on the pogo stick, not hanging or climbing a ledge, but a ledge is detected
 		{
 			pogo.acceleration = 1;//-----------------------------------Lower the horizontal acceleration variable
 
