@@ -15,7 +15,7 @@ public class PogoController : MonoBehaviour
 
     private float pogoTopSpeedR = 6.65f;//-------Set speed limit for horizontal movement to the right while on pogo stick
     private float pogoTopSpeedL = -6.65f;//------Set speed limit for horizontal movement to the left while on pogo stick
-    public float bounceForce = 11f;//------------The amount of vertical force applied when the pogo stick bounces off of a surface    
+    public float bounceForce;//------------The amount of vertical force applied when the pogo stick bounces off of a surface    
     public float acceleration = .25f;//----------Acceleration variable used for horizontal movement while on pogo stick or transitioning from hanging to climbing a ledge
     public float pogoSpeed = 0;//----------------Velocity variable used for pogo stick horizontal movement
     public float impossiblePogoTimer;//----------A timer that determines the button press timing required to execute the impossible pogo trick
@@ -65,7 +65,7 @@ public class PogoController : MonoBehaviour
 
             pmov.jumpTimer = 0;//--------------------------------------------Set the jump timer equal to zero
 
-            rb.gravityScale = 3f;//-------------------------------------Set a specific gravity scale for the pogo stick
+            rb.gravityScale = 2.5f;//-------------------------------------Set a specific gravity scale for the pogo stick
 
             rb.velocity = new Vector2(pogoSpeed, rb.velocity.y);//------Move the character according to the pogoSpeed variable            
 
@@ -80,7 +80,7 @@ public class PogoController : MonoBehaviour
                     bounceForce = 22.5f;
             }//-----------------------------Increase the bounce force 
             else//------------------------------------------------------If the player is not pressing the jump button while on the pogo stick
-                bounceForce = 12.5f;//----------------------------------Set the bounce force to default value
+                bounceForce = 12f;//----------------------------------Set the bounce force to default value
 
             if (pogoSpeed > pogoTopSpeedR)//----------------------------If the horizontal speed to the right is about to go over the speed limit
                 pogoSpeed = pogoTopSpeedR;//----------------------------Keep the speed at the limit
@@ -104,7 +104,7 @@ public class PogoController : MonoBehaviour
 
             if (Input.GetButton("Jump"))//---------------If the player presses the jump button
                 if (impossiblePogoTimer > 0f && impossiblePogoTimer < .5f)//if the timer is greater than 0 but less than 0.5
-                    bounceForce = 23.75f;//---------------------------------increase the bounce force
+                    bounceForce = 24f;//---------------------------------increase the bounce force
         }
     }
 }

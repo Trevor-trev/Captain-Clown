@@ -95,7 +95,7 @@ public class Playermovement : MonoBehaviour
                     rb.velocity = Vector2.up * jumpForce;//---------------------Allow the character to jump
                     jumpTimer -= Time.deltaTime;}}//----------------------------Make the timer starts counting down                                
         }
-        if (Input.GetButtonUp("Jump") || rb.velocity.y < 0 || touchingCeiling)//-----------------------------------When the player releases the jump button
+        if (Input.GetButtonUp("Jump") || rb.velocity.y < 0 || touchingCeiling || neuralGun.shoot)//-----------------------------------When the player releases the jump button
             isJumping = false;//-------------------------------------------Set the isJumping variable to false 
         #endregion
 

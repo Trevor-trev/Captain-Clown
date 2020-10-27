@@ -10,6 +10,7 @@ public class SlopeCheck : MonoBehaviour
     public Playermovement pmov;
     public PogoController pogo;
     public GroundCheck groundCheck;
+    public NeuralGun neuralGun;
 
     public bool onSlope = false;//--------------------Whether or not the character is on a slope
     public bool bouncing = false;
@@ -41,7 +42,7 @@ public class SlopeCheck : MonoBehaviour
             if (pmov.xdirection != 0 || pogo.onPogo)//-------------------If the player is inputting horizontal movement
                 rb.drag = .25f;//-------------------------Reset the rigidbody's drag to the default value
 
-            if (groundCheck.grounded && pmov.xdirection == 0 && !pmov.isJumping && !pogo.onPogo)//If the palyer is not inputting horizontal movement
+            if (groundCheck.grounded && (pmov.xdirection == 0 || neuralGun.shoot) && !pmov.isJumping && !pogo.onPogo)//If the palyer is not inputting horizontal movement
                 rb.drag = 1000000f;}//--------------------Increase the rigidbody's drag to 1,000,000 to make sure the character doesn't slide down the slope
         
     }
