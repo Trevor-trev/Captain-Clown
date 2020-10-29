@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Pole : MonoBehaviour
 {
@@ -63,7 +61,7 @@ public class Pole : MonoBehaviour
             other.gameObject.tag = "Pole";}//-------------------------------Change the tag for that object to "Pole" in order to recognize that that pole is no longer close enough to interact with
         
         if (GameObject.FindGameObjectsWithTag("ClosestPole").Length == 0)//When the character is not close to any poles
-            poleClimb.onPole = false;//-----------------------------------------Make sure the character does not go senile and grab onto an imaginary pole 
+            poleClimb.onPole = false;//------------------------------------Make sure the character does not go senile and grab onto an imaginary pole 
     }
 }
 

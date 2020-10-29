@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlaceOnCharacter : MonoBehaviour
 {
-    //This script places whatever game object it's attached to a the same position of whichever game object you designate as "gameObj"
+    //This script places whatever game object it's attached to at the same position of whichever game object you designate as "gameObj"
 
     public Transform gameObj;// The game object that you wish for the game object with this script to overlap with
     void Start()

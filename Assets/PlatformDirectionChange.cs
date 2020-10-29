@@ -10,7 +10,7 @@ public class PlatformDirectionChange : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("MovingPlatform"))
+        if (other.CompareTag("MovingPlatform") || other.CompareTag("ClosestMovingPlatform"))
         {
             if (hPlatformMove.movingRight) {
                 moveRight = false;
@@ -26,7 +26,7 @@ public class PlatformDirectionChange : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("MovingPlatform"))
+        if (other.CompareTag("MovingPlatform") || other.CompareTag("ClosestMovingPlatform"))
         {
             moveRight = false;
             moveLeft = false;

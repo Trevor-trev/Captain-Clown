@@ -15,6 +15,7 @@ public class Playermovement : MonoBehaviour
     public PoleClimbController poleClimb;
     public PogoController pogo;
     public MovingPlatformCheck movPlatCheck;
+    public GameObject closestmovPlat;
 
     //MOVEMENT//////
     public bool facingRight;//-------------------Whether or not the character is facing right
@@ -51,6 +52,7 @@ public class Playermovement : MonoBehaviour
 
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         animator.SetBool("FacingLeft", true);//Make sure the animator registers the player as facing left when the game starts
         facingLeft = true;//Make sure the character is facing left when the game starts
@@ -74,7 +76,8 @@ public class Playermovement : MonoBehaviour
     #endregion
     void Update()
     {
-#region JUMP CONTROLLER
+        closestmovPlat = GameObject.FindGameObjectWithTag("ClosestMovingPlatform");
+        #region JUMP CONTROLLER
         ///////////////////////////////////JUMPING//////////////////////////////////////
 
 
@@ -256,8 +259,15 @@ public class Playermovement : MonoBehaviour
                    horizontalMove = Input.GetAxisRaw("Horizontal") * topSpeedL * -1f;//----------------Make snappy movement controls
                 if (movPlatCheck.onMovingPlatform)//---------------------------------------------------If the character is on a moving platform
                 {
-                    topSpeedL = -55f;//----------------------------------------------------------------Set the top speed when moving left
-                    topSpeedR = 55f;//-----------------------------------------------------------------Set the top speed when moving right
+                    if (closestmovPlat.GetComponent<HPlatfomMovement>().movingRight && facingRight)
+                        topSpeedR = 55f;//-----------------------------------------------------------------Set the top speed when moving right
+                    if (closestmovPlat.GetComponent<HPlatfomMovement>().movingRight && facingLeft)
+                        topSpeedL = -15f;//----------------------------------------------------------------Set the top speed when moving left
+                       
+                    if (closestmovPlat.GetComponent<HPlatfomMovement>().movingLeft && facingLeft)                    
+                        topSpeedL = -55f;
+                    if (closestmovPlat.GetComponent<HPlatfomMovement>().movingLeft && facingRight)
+                        topSpeedR = 15f;                                           
                 }
                 if (!movPlatCheck.onMovingPlatform)
                 {

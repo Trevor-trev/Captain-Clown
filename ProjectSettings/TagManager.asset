@@ -20,6 +20,7 @@ TagManager:
   - PoleCheck
   - OffScreenBoundary
   - MovingPlatform
+  - ClosestMovingPlatform
   layers:
   - Default
   - TransparentFX
