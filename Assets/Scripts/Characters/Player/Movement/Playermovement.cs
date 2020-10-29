@@ -260,12 +260,12 @@ public class Playermovement : MonoBehaviour
                 if (movPlatCheck.onMovingPlatform)//---------------------------------------------------If the character is on a moving platform
                 {
                     if (closestmovPlat.GetComponent<HPlatfomMovement>().movingRight && facingRight)
-                        topSpeedR = 55f;//-----------------------------------------------------------------Set the top speed when moving right
+                        topSpeedR = 50f;//-----------------------------------------------------------------Set the top speed when moving right
                     if (closestmovPlat.GetComponent<HPlatfomMovement>().movingRight && facingLeft)
                         topSpeedL = -15f;//----------------------------------------------------------------Set the top speed when moving left
                        
                     if (closestmovPlat.GetComponent<HPlatfomMovement>().movingLeft && facingLeft)                    
-                        topSpeedL = -55f;
+                        topSpeedL = -50f;
                     if (closestmovPlat.GetComponent<HPlatfomMovement>().movingLeft && facingRight)
                         topSpeedR = 15f;                                           
                 }
