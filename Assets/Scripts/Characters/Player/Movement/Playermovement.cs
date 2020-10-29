@@ -14,6 +14,7 @@ public class Playermovement : MonoBehaviour
     public SlopeCheck slopeCheck;    
     public PoleClimbController poleClimb;
     public PogoController pogo;
+    public MovingPlatformCheck movPlatCheck;
 
     //MOVEMENT//////
     public bool facingRight;//-------------------Whether or not the character is facing right
@@ -240,25 +241,37 @@ public class Playermovement : MonoBehaviour
 
         if (!pogo.onPogo && !poleClimb.onPole && !ledgeClimb.ledgeHang && !ledgeClimb.ledgeClimb)//----If the character is not on a pogo stick, not on a pole, not hanging from or climbing a ledge
         {
-            if (groundCheck.grounded && (neuralGun.stopMovement || lookDown))//--------------If the character is grounded and is shooting or looking down
-                rb.velocity = new Vector2(0, 0);//------------------------------------Prevent the character from moving
-            else//--------------------------------------------------------------------Otherwise
+            if (groundCheck.grounded && (neuralGun.stopMovement || lookDown))//------------------------If the character is grounded and is shooting or looking down
+                rb.velocity = new Vector2(0, 0);//-----------------------------------------------------Prevent the character from moving
+            else//-------------------------------------------------------------------------------------Otherwise
                 rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime * 10f, rb.velocity.y);//Set the characters horizontal movement according to the horizontal move variable, and vertical movement according to the vertical forces applied to their rigidbody
            
-            pogo.acceleration = 2f;//-------------------------------------------------------------------Set the acceleration variable           
-            pogo.pogoSpeed = 0;//-----------------------------------------------------------------------Make sure the pogo stick speed is reset to zero
+            pogo.acceleration = 2f;//------------------------------------------------------------------Set the acceleration variable           
+            pogo.pogoSpeed = 0;//----------------------------------------------------------------------Make sure the pogo stick speed is reset to zero
 
-            if (groundCheck.grounded){//------------------------------------------------------------if the character is grounded                                                     
-                horizontalMove = Input.GetAxisRaw("Horizontal") * topSpeedR;//---------------------Make snappy movement controls
-                topSpeedR = 35f;//---------------------------------------------------------------Set the top speed when moving right
-                topSpeedL = -35f;}//-------------------------------------------------------------Set the top speed when moving left
+            if (groundCheck.grounded){//---------------------------------------------------------------if the character is grounded                                                     
+               if (facingRight) 
+                   horizontalMove = Input.GetAxisRaw("Horizontal") * topSpeedR;//----------------------Make snappy movement controls
+               if (facingLeft)
+                   horizontalMove = Input.GetAxisRaw("Horizontal") * topSpeedL * -1f;//----------------Make snappy movement controls
+                if (movPlatCheck.onMovingPlatform)//---------------------------------------------------If the character is on a moving platform
+                {
+                    topSpeedL = -55f;//----------------------------------------------------------------Set the top speed when moving left
+                    topSpeedR = 55f;//-----------------------------------------------------------------Set the top speed when moving right
+                }
+                if (!movPlatCheck.onMovingPlatform)
+                {
+                    topSpeedR = 35f;//-----------------------------------------------------------------Set the top speed when moving right
+                    topSpeedL = -35f;//----------------------------------------------------------------Set the top speed when moving left
+                }
+            }
 
-            if (!groundCheck.grounded)//------------------------------------------------------------When the character is not grounded                                                                            
+            if (!groundCheck.grounded)//-----------------------------------------------------------When the character is not grounded                                                                            
             {
                 topSpeedR = 35f;//-----------------------------------------------------------------Slightly decrease the top speed when moving right
                 topSpeedL = -35f;//----------------------------------------------------------------Slightly decrease the top speed when moving left
                 if (xdirection != 0)//-------------------------------------------------------------When the player is pressing the left or right buttons
-                    horizontalMove += pogo.acceleration * xdirection;//---------------------------------Make horizontal movement less snappy by incorporating the acceleration variable
+                    horizontalMove += pogo.acceleration * xdirection;//----------------------------Make horizontal movement less snappy by incorporating the acceleration variable
 
                 if (horizontalMove > topSpeedR)//--------------------------------------------------Prevent the player from exceeding the top speed in the right direction
                     horizontalMove = topSpeedR;
@@ -269,9 +282,9 @@ public class Playermovement : MonoBehaviour
                 if (xdirection == 0)//-------------------------------------------------------------If the player is not inputting a left or right direction
                 {
                     if (horizontalMove < 0)//------------------------------------------------------If the character was moving to the left  
-                        horizontalMove += pogo.acceleration * .7f;//------------------------------------decelerate the character's movement back to zero by incrementing the horizontal move variable to the right
+                        horizontalMove += pogo.acceleration * .7f;//-------------------------------Decelerate the character's movement back to zero by incrementing the horizontal move variable to the right
                     if (horizontalMove > 0)//------------------------------------------------------If the character was moving to the right
-                        horizontalMove -= pogo.acceleration * .7f;//------------------------------------decelerate the character's movement back to zero by incrementing the horizontal move variable to the left
+                        horizontalMove -= pogo.acceleration * .7f;//-------------------------------decelerate the character's movement back to zero by incrementing the horizontal move variable to the left
                 }
             }
         }

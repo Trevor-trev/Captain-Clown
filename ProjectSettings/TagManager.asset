@@ -19,7 +19,7 @@ TagManager:
   - HillVille Border
   - PoleCheck
   - OffScreenBoundary
-  - HMovingPlatform
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

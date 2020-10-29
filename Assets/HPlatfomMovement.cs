@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +18,8 @@ public class HPlatfomMovement : MonoBehaviour
         rb.velocity = new Vector2(platformSpeed, 0);
         movingRight = true;
     }
-    void Update()
+
+    void FixedUpdate()
     {
         if (directionChangeToR.moveRight)
         {
