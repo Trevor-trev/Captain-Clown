@@ -14,6 +14,7 @@ public class CameraMovement : MonoBehaviour
    
     Vector2 tempPos;//--------------------------------A temporary variable for the position of the game object that this script is attached to
 
+    public MovingPlatformCheck movPlatCheck;
     public NeuralGun neuralGun;
     public Rigidbody2D rb;//--------------------------A reference to the rigid body attached to the same game object as this script
     public Rigidbody2D playerRb;//--------------------A reference to the rigid body attached to the character
@@ -71,7 +72,7 @@ public class CameraMovement : MonoBehaviour
     }
     void LateUpdate()
     {
-        if (slopeCheck.onSlope)
+        if (slopeCheck.onSlope || movPlatCheck.onMovingPlatform)
             transform.position = new Vector2(character.position.x, character.position.y);//If the character is on a slope, make sure the camera's follow target has the same x and y value as the character.
         else
             transform.position = new Vector2(character.position.x, transform.position.y);//Otherwise, make sure the camera's follow target always has the same x value as the character
