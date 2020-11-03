@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5038129231629844785}
   m_Layer: 13
   m_Name: H Moving Platform 1
-  m_TagString: HMovingPlatform
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
