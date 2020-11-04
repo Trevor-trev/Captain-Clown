@@ -43,11 +43,11 @@ public class PlatformDrop : MonoBehaviour
             }
         }
 
-        if ((pmov.rising) && !platformFlip)//-----If the character is rising and the platform is not flipped
+        if (!groundCheck.grounded && pmov.rising && !platformFlip)//-----If the character is rising and the platform is not flipped
             gameObject.layer = 11;//--------------The platform's layer is set to #11 ("droppable") which is not designated as ground, this prevents the idle animation from playing when the character is dropping through the platform
 
 
-            if ((!pmov.rising) && !platformFlip)//if the character is not rising and the platform is not flipped
+            if (!pmov.rising && !platformFlip)//if the character is not rising and the platform is not flipped
             {
             effector.rotationalOffset = 0;//--The collidable surface of the platform is set to it's default angle, 0 degrees
             gameObject.layer = 10;//----------The platform's layer is set to #10 (NotYetDroppable) which is designated as ground, allowing the character to stand on it

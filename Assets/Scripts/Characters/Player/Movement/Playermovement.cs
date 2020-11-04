@@ -30,11 +30,12 @@ public class Playermovement : MonoBehaviour
     //JUMPING//
     public bool isJumping;//---------------------Whether or not the character is jumping
     public bool rising;//------------------------Whether or not the character is moving upward 
-    public bool falling;
+    public bool falling;//-----------------------Whether or not the character is moving downward
    
     public float jumpForce;//--------------------The amount of vertical force applied when the player presses the jump button   
     public float jumpTimer;//--------------------Counts down to 0, at which point the player can no longer jump
     private float jumpTimerStart = 0.31f;//------The starting point for the jumpTimeCounter
+    public float thrust = -5f;
 
     //LOOKING//
     public bool lookDown = false;//--------------Whether or not the character is looking down
@@ -52,7 +53,6 @@ public class Playermovement : MonoBehaviour
 
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
         animator.SetBool("FacingLeft", true);//Make sure the animator registers the player as facing left when the game starts
         facingLeft = true;//Make sure the character is facing left when the game starts
@@ -267,7 +267,13 @@ public class Playermovement : MonoBehaviour
                     if (closestmovPlat.GetComponent<HPlatfomMovement>().movingLeft && facingLeft)                    
                         topSpeedL = -50f;
                     if (closestmovPlat.GetComponent<HPlatfomMovement>().movingLeft && facingRight)
-                        topSpeedR = 15f;                                           
+                        topSpeedR = 15f;     
+                    
+                    if (closestmovPlat.GetComponent<PlatformDrop>().platformFlip)//******"ON MOVING PLATFORM" GETS DISABLED AS SOON AS "PLATFORM FLIP" IS ENABLED"""""
+                    {
+                        Debug.Log("thrust!");
+                        rb.AddForce(transform.up * thrust, ForceMode2D.Impulse);
+                    }
                 }
                 if (!movPlatCheck.onMovingPlatform)
                 {

@@ -37,13 +37,13 @@ public class RecenterTriggerGround : MonoBehaviour
                 Recenter();
                 StartCoroutine("Recenter");}}//-----------Start the Recenter coroutine     
 
-        if (other.CompareTag("MakeshiftGround"))
+        if (other.CompareTag("MakeshiftGround") || other.CompareTag("MovingPlatform") || other.CompareTag("ClosestMovingPlatform"))
             touchingDroppablePlatform = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("MakeshiftGround"))
+        if (other.CompareTag("MakeshiftGround") || other.CompareTag("MovingPlatform") || other.CompareTag("ClosestMovingPlatform"))
             touchingDroppablePlatform = false;
     }
     private void Update()
