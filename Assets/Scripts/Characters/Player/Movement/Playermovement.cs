@@ -35,7 +35,7 @@ public class Playermovement : MonoBehaviour
     public float jumpForce;//--------------------The amount of vertical force applied when the player presses the jump button   
     public float jumpTimer;//--------------------Counts down to 0, at which point the player can no longer jump
     private float jumpTimerStart = 0.31f;//------The starting point for the jumpTimeCounter
-    public float thrust = -5f;
+    public float thrust = -.5f;
 
     //LOOKING//
     public bool lookDown = false;//--------------Whether or not the character is looking down
@@ -252,6 +252,15 @@ public class Playermovement : MonoBehaviour
             pogo.acceleration = 2f;//------------------------------------------------------------------Set the acceleration variable           
             pogo.pogoSpeed = 0;//----------------------------------------------------------------------Make sure the pogo stick speed is reset to zero
 
+            if (movPlatCheck.onMovingPlatform)
+            {
+                if (closestmovPlat.GetComponent<PlatformDrop>().platformFlip && closestmovPlat.GetComponent<VPlatformMovement>().movingDown)
+                {
+                    Debug.Log("thrust!");
+                    rb.AddForce(transform.up * thrust, ForceMode2D.Impulse);
+                }
+            }
+
             if (groundCheck.grounded){//---------------------------------------------------------------if the character is grounded                                                     
                if (facingRight) 
                    horizontalMove = Input.GetAxisRaw("Horizontal") * topSpeedR;//----------------------Make snappy movement controls
@@ -268,12 +277,6 @@ public class Playermovement : MonoBehaviour
                         topSpeedL = -50f;
                     if (closestmovPlat.GetComponent<HPlatfomMovement>().movingLeft && facingRight)
                         topSpeedR = 15f;     
-                    
-                    if (closestmovPlat.GetComponent<PlatformDrop>().platformFlip)//******"ON MOVING PLATFORM" GETS DISABLED AS SOON AS "PLATFORM FLIP" IS ENABLED"""""
-                    {
-                        Debug.Log("thrust!");
-                        rb.AddForce(transform.up * thrust, ForceMode2D.Impulse);
-                    }
                 }
                 if (!movPlatCheck.onMovingPlatform)
                 {

@@ -23,9 +23,10 @@ public class MovingPlatformCheck : MonoBehaviour
     {
         if (other.gameObject.CompareTag("ClosestMovingPlatform"))
         {
+            onMovingPlatform = true;
+
             if (!pmov.rising && !(platformDropV.platformFlip || platformDropH.platformFlip))
-            {
-                onMovingPlatform = true;
+            {                
                 if (pmov.xdirection == 0 || !pogo.onPogo)
                 {
                     rb.isKinematic = true;
@@ -36,8 +37,8 @@ public class MovingPlatformCheck : MonoBehaviour
 
         if (other.gameObject.CompareTag("ClosestMovingPlatform") && (platformDropH.platformFlip || platformDropV.platformFlip))
         {
-            other.gameObject.tag = "MovingPlatform";
-            onMovingPlatform = false;
+            //other.gameObject.tag = "MovingPlatform";
+            //onMovingPlatform = false;
             rb.isKinematic = false;
             player.transform.parent = null;
         }
