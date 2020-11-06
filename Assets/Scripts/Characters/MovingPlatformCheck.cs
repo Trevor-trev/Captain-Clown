@@ -18,6 +18,9 @@ public class MovingPlatformCheck : MonoBehaviour
     {
         if (other.gameObject.CompareTag("MovingPlatform"))
             other.gameObject.tag = "ClosestMovingPlatform";
+
+        if (other.gameObject.CompareTag("ClosestMovingPlatform"))
+            onMovingPlatform = true;
     }
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -54,7 +57,7 @@ public class MovingPlatformCheck : MonoBehaviour
 
     void Update()
     {
-        if (pmov.xdirection != 0 || pogo.onPogo)
+        if (pmov.xdirection != 0 || pogo.onPogo || pmov.isJumping)
         {
             rb.isKinematic = false;
             player.transform.parent = null;

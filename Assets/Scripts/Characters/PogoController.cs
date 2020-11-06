@@ -51,8 +51,7 @@ public class PogoController : MonoBehaviour
         if (!onPogo)
         {//----------------------------------------------------If the character is not on the pogo stick
             impossiblePogoTimer = impPogoTimerStart;
-            pmov.xdirForTransitionToPogo = Input.GetAxisRaw("Horizontal");
-        }//-Set an independent horizontal variable for use with activating the pogo stick
+            pmov.xdirForTransitionToPogo = Input.GetAxisRaw("Horizontal");}//-Set an independent horizontal variable for use with activating the pogo stick
 
         if (onPogo)//-----------------------------------------------------If the character is on the pogo stick
         {

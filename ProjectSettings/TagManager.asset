@@ -23,6 +23,7 @@ TagManager:
   - ClosestMovingPlatform
   - CollapsingPlatformCeiling
   - CollapsingPlatformFloor
+  - PlatformCheck
   layers:
   - Default
   - TransparentFX

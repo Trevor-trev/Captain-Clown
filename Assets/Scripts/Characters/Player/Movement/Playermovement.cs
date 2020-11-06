@@ -255,10 +255,7 @@ public class Playermovement : MonoBehaviour
             if (movPlatCheck.onMovingPlatform)
             {
                 if (closestmovPlat.GetComponent<PlatformDrop>().platformFlip && closestmovPlat.GetComponent<VPlatformMovement>().movingDown)
-                {
-                    Debug.Log("thrust!");
                     rb.AddForce(transform.up * thrust, ForceMode2D.Impulse);
-                }
             }
 
             if (groundCheck.grounded){//---------------------------------------------------------------if the character is grounded                                                     

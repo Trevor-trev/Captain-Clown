@@ -9,6 +9,7 @@ public class GroundCheck : MonoBehaviour
 	public LedgeClimb ledgeClimb;
 	public SlopeCheck slopeCheck;
 	public PoleClimbController poleClimb;
+	public MovingPlatformCheck movPlatCheck;
 
 	public LayerMask whatIsGround;//-----------------------------A layermask that lets you determine what layers are considered ground to the character
 	public LayerMask whatIsCeiling;//----------------------------A layermask that lets you determine what layers are considered ceiling to the character
@@ -20,13 +21,13 @@ public class GroundCheck : MonoBehaviour
 
     private void Update()
     {
-		if (!ledgeClimb.isTouchingWall && slopeCheck.onSlope)
-			groundedRadius = .3f;
+		if (!ledgeClimb.isTouchingWall && (slopeCheck.onSlope || movPlatCheck.onMovingPlatform))
+			groundedRadius = .5f;
 
 		if (ledgeClimb.isTouchingWall)//-----------------------------------------------If the wallcheck raycast detects a wall
 			groundedRadius = .1f;//-----------------------------------------slightly decrease the grounded radius to make sure the character isn't declared as grounded when jumping next to a wall
 
-		if (!ledgeClimb.isTouchingWall && !slopeCheck.onSlope)//-----------------------------------------If the wallcheck raycast doesn't detect a wall
+		if (!ledgeClimb.isTouchingWall && !slopeCheck.onSlope && !movPlatCheck.onMovingPlatform)//-----------------------------------------If the wallcheck raycast doesn't detect a wall
 			groundedRadius = .15f;//----------------------------------------Keep the grounded radius at this default size to make sure the character doesn't randomly get declared as not grounded while running
 	}
     private void LateUpdate()
