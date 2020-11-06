@@ -24,16 +24,16 @@ public class PlatformDrop : MonoBehaviour
         gameObject.layer = 11;//----------The platform's layer is set to #11 ("droppable") which is not designated as ground, this prevents the idle animation from playing when the character is dropping through the platform
         effector.rotationalOffset = 180f;//The collidable surface of the platform is rotated 180 degrees
         platformFlip = true;//-------------The platform is now flipped
-        yield return new WaitForSeconds(.3f);
+        if (this.gameObject.CompareTag("ClosestMovingPlatform"))
+            yield return new WaitForSeconds(1f);
+        else
+            yield return new WaitForSeconds(.3f);
         platformFlip = false;//----------------The platform is not flipped 
         effector.rotationalOffset = 0;//--The collidable surface of the platform is set to it's default angle, 0 degrees
         gameObject.layer = 10;//----------The platform's layer is set to #10 (NotYetDroppable) which is designated as ground, allowing the character to stand on it
     }
     private void Update()
     {
-        //if (groundCheck.grounded)//-----------------If the character is grounded
-
-
         if (pmov.lookDown && groundCheck.grounded)//If the character is looking down and grounded
         {
             if (Input.GetButtonDown("Jump"))//----If the player presses the jump button

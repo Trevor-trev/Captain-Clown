@@ -37,8 +37,6 @@ public class MovingPlatformCheck : MonoBehaviour
 
         if (other.gameObject.CompareTag("ClosestMovingPlatform") && (platformDropH.platformFlip || platformDropV.platformFlip))
         {
-            //other.gameObject.tag = "MovingPlatform";
-            //onMovingPlatform = false;
             rb.isKinematic = false;
             player.transform.parent = null;
         }

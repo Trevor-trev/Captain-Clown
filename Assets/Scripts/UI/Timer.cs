@@ -19,8 +19,10 @@ public class Timer : MonoBehaviour
         if (targetCounter.targetsLeft > 0)
             secondsCount += Time.fixedDeltaTime;
         else
+#pragma warning disable CS1717 // Assignment made to same variable
             secondsCount = secondsCount;
-        
+#pragma warning restore CS1717 // Assignment made to same variable
+
         timerText.text = hourCount + "h:" + minuteCount + "m:" + (int)secondsCount + "s";
         if (secondsCount >= 60)
         {

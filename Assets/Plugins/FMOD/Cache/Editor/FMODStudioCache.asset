@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Jump
   guid: 8addb291b803d849850390086af6528f
   Banks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: event:/Slug Village Song
   guid: 03b60e5b35212147a3c37cede8a978fb
   Banks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   Path: event:/HillVille Song
   guid: 024237a8411a7f499db8b56648e41f8a
   Banks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -289,6 +289,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-1294056753430878789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637401682186744943
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-790061808042057367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,7 +378,7 @@ MonoBehaviour:
   lastModified: 637382010011134641
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-416860059375352910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +394,7 @@ MonoBehaviour:
   Path: event:/Neural Bullet Shot
   guid: b86d5e343dbe4e4797f5ef7c96042c1c
   Banks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -398,7 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 796173274527224097}
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   EditorEvents:
   - {fileID: -7636974837827332822}
   - {fileID: -7615876646424495270}
@@ -410,10 +428,10 @@ MonoBehaviour:
   - {fileID: 1373535511781921669}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   StringsBanks:
   - {fileID: 796173274527224097}
-  stringsBankWriteTime: 637382010011184506
+  stringsBankWriteTime: 637401790773485983
   cacheVersion: 3
 --- !u!114 &796173274527224097
 MonoBehaviour:
@@ -429,7 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637382010011184506
+  lastModified: 637401790773485983
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -468,7 +486,7 @@ MonoBehaviour:
   Path: event:/Helmet Hit
   guid: ddf9a57867d80a46b0fea750c1e12ad1
   Banks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -476,6 +494,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 717
+--- !u!114 &1385772923440987820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637401790773416163
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1620012608470931902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +527,7 @@ MonoBehaviour:
   Path: event:/Neural Bullet Impact
   guid: 8b4dc62382e9fe4287b78329855fad75
   Banks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -514,6 +550,24 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637382002272865332
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3067561575718397768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637401735928944783
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -550,7 +604,7 @@ MonoBehaviour:
   Path: event:/Pogo Bounce
   guid: bb101a9103e1374d8c356b6755101df4
   Banks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -558,6 +612,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 460
+--- !u!114 &4973883168505550833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637401681759756536
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &5031939396242411629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,7 +717,7 @@ MonoBehaviour:
   Path: event:/Target Break
   guid: 67ed432d1bef4149b2e8084b6fa3f4c9
   Banks:
-  - {fileID: -439489989829778089}
+  - {fileID: 1385772923440987820}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

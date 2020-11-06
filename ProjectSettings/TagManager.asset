@@ -21,6 +21,8 @@ TagManager:
   - OffScreenBoundary
   - MovingPlatform
   - ClosestMovingPlatform
+  - CollapsingPlatformCeiling
+  - CollapsingPlatformFloor
   layers:
   - Default
   - TransparentFX
