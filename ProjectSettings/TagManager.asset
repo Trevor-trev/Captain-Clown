@@ -24,6 +24,9 @@ TagManager:
   - CollapsingPlatformCeiling
   - CollapsingPlatformFloor
   - PlatformCheck
+  - OpenDoorway
+  - ClosestOpenDoorway
+  - OtherSideOfDoorway
   layers:
   - Default
   - TransparentFX
