@@ -7,6 +7,8 @@ public class DoorwaySide1 : MonoBehaviour
     public GameObject player;
     public GameObject otherSideOfDoor;
     public Animator animator;
+    public Playermovement pmov;
+
     public bool inDoorway = false;
     public bool walkingThroughDoor;
     public bool warped;
@@ -55,9 +57,10 @@ public class DoorwaySide1 : MonoBehaviour
             arrived = false;
         }
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        if (inDoorway && Input.GetButtonDown("LookUp"))
+ 
+        if (pmov.xdirection == 0 && inDoorway && Input.GetButton("LookUp"))
             StartCoroutine("WalkThroughDoor");
 
         if (otherSideOfDoor.GetComponent<DoorwaySide2>().warped)

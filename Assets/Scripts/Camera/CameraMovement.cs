@@ -91,11 +91,6 @@ public class CameraMovement : MonoBehaviour
 
         if (closestOpenDoorway.GetComponent<DoorwaySide1>().arrived)
             transform.position = new Vector2(character.position.x, recenterPointFromDown.position.y);
-
-
-        // if (closestOpenDoorway.GetComponent<DoorwaySide2>().arrived || closestOpenDoorway.GetComponent<DoorwaySide1>().arrived)
-        // StartCoroutine("WalkedThroughDoor");
-
     }
     void LateUpdate()
     {
@@ -163,7 +158,7 @@ public class CameraMovement : MonoBehaviour
             StartCoroutine("JustLanded");}//------------------------------------------------Start the just landed coroutine     
 
 
-        if (closestOpenDoorway.GetComponent<DoorwaySide2>().inDoorway && doorwayCheck.inDoorway)
+        if (closestOpenDoorway.GetComponent<DoorwaySide2>().arrived && doorwayCheck.inDoorway)
             transform.position = new Vector2(character.position.x, character.position.y);
 
     }
