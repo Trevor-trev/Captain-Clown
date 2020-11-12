@@ -13,7 +13,7 @@ public class DoorwayCheck : MonoBehaviour
     IEnumerator WalkingThroughDoor()
     {
         walkingThroughDoor = true;
-        yield return new WaitForSeconds(.8f);
+        yield return new WaitForSeconds(.75f);
         walkingThroughDoor = false;
     }
     private void OnTriggerStay2D(Collider2D other)
@@ -24,7 +24,7 @@ public class DoorwayCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("OpenDoorway"))
+        if (other.gameObject.CompareTag("OpenDoorway") || other.gameObject.CompareTag("ClosestOpenDoorway"))
             inDoorway = false;
     }
 

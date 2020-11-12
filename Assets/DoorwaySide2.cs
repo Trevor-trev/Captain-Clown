@@ -8,8 +8,9 @@ public class DoorwaySide2 : MonoBehaviour
     public GameObject otherSideOfDoor;
     public Animator animator;
     public Playermovement pmov;
+    public DoorwayCheck doorwayCheck;
 
-    public bool inDoorway = false;
+    public bool inDoorway;
     public bool walkingThroughDoor;
     public bool warped;
     public bool arrived = false;
@@ -40,7 +41,7 @@ public class DoorwaySide2 : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("DoorwayCheck"))
         {
             gameObject.tag = "ClosestOpenDoorway";
             inDoorway = true;
@@ -49,7 +50,7 @@ public class DoorwaySide2 : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("DoorwayCheck"))
         {
             gameObject.tag = "OpenDoorway";
             inDoorway = false;
@@ -59,7 +60,7 @@ public class DoorwaySide2 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (pmov.xdirection == 0 && inDoorway && Input.GetButton("LookUp"))        
+        if (pmov.xdirection == 0 && inDoorway && doorwayCheck.inDoorway && Input.GetButton("LookUp"))        
             StartCoroutine("WalkThroughDoor");
 
         if (otherSideOfDoor.GetComponent<DoorwaySide1>().warped)
