@@ -22,6 +22,12 @@ public class CameraMovement : MonoBehaviour
     public GroundCheck groundCheck;//--------A reference to the GroundCheck script
     public SlopeCheck slopeCheck;
     public PoleClimbController poleClimb;
+    public DoorwaySide1 doorway1;
+    public DoorwaySide2 doorway2;
+    public DoorwayCheck doorwayCheck;
+    public Playermovement pmov;
+
+    public GameObject closestOpenDoorway;
     
     public Transform recenterPointFromDown;//-------------A reference to the recenter point positioned above the character
     public Transform recenterPointFromUp;//---------------A reference to the recenter point positioned below the character
@@ -35,11 +41,12 @@ public class CameraMovement : MonoBehaviour
     
     public bool lookUpRecenter;//---------------------Weather or not the camera should recenter itself from the player looking up
     public bool lookDownRecenter;//-------------------Weather or not the camera should recenter itself from the player looking down
+    public bool walkedThroughDoor;
    
     /*The two different recenter points make sure that the camera centers itself to the same position
      whether it's recentering from the player looking up or recentering from the player looking down
-     The reason this is needed is because the "CameraController" object which is set as the follow target
-     in the Cinemachine Virtual Camera that moves the camera interacts with the virtual camera's deadzones, 
+     The reason this is needed is because the "CameraController" object (which is set as the follow target
+     in the Cinemachine Virtual Camera) that moves the camera interacts with the virtual camera's deadzones, 
      meaning that it will only move the camera when it reaches a deadzone.*/
 
     private void Awake()
@@ -67,17 +74,46 @@ public class CameraMovement : MonoBehaviour
 
     IEnumerator JustLanded()//----------------------------A coroutine labeled "LookDownRecenter". Has the ability to pause and resume execution according to specifications
     {
-        yield return new WaitForSeconds(.1f);//------Wait for the specified amount of time
+        yield return new WaitForSeconds(.1f);//---------Wait for the specified amount of time
         transform.position = Vector2.Lerp(transform.position, recenterPointFromDown.position, Time.deltaTime * recenterSpeed);//Move the camera's follow target to the recenterpoint
+    }
+
+    IEnumerator WalkedThroughDoor()
+    {
+        walkedThroughDoor = true;
+        yield return new WaitForSeconds(.2f);
+        walkedThroughDoor = false;
+    }
+
+     private void Update()
+     {
+        closestOpenDoorway = GameObject.FindGameObjectWithTag("ClosestOpenDoorway");
+
+        if (closestOpenDoorway.GetComponent<DoorwaySide1>().arrived)
+            transform.position = new Vector2(character.position.x, recenterPointFromDown.position.y);
+
+
+        // if (closestOpenDoorway.GetComponent<DoorwaySide2>().arrived || closestOpenDoorway.GetComponent<DoorwaySide1>().arrived)
+        // StartCoroutine("WalkedThroughDoor");
+
     }
     void LateUpdate()
     {
-        if (slopeCheck.onSlope || movPlatCheck.onMovingPlatform)
-            transform.position = new Vector2(character.position.x, character.position.y);//If the character is on a slope, make sure the camera's follow target has the same x and y value as the character.
-        else
-            transform.position = new Vector2(character.position.x, transform.position.y);//Otherwise, make sure the camera's follow target always has the same x value as the character
+        if (!(pmov.lookup || pmov.lookDown))
+        {
+            if (slopeCheck.onSlope || movPlatCheck.onMovingPlatform)
+                transform.position = new Vector2(character.position.x, character.position.y);//If the character is on a slope or a moving platform, make sure the camera's follow target has the same x and y value as the character.
+        }
+        if (((slopeCheck.onSlope || movPlatCheck.onMovingPlatform) && (pmov.lookup || pmov.lookDown)) || !(slopeCheck.onSlope || movPlatCheck.onMovingPlatform))
+            transform.position = new Vector2(character.position.x, transform.position.y);//Otherwise, make sure the camera's follow target always has the same x value as the character        
 
-        if (Input.GetButton("LookUp")){//-------------------If the player holds down the look up button   
+        /*if (doorwayCheck.inDoorway && closestOpenDoorway.GetComponent<DoorwaySide2>().arrived)
+           transform.position = new Vector2(character.position.x, recenterPointFromDown.position.y);
+
+       if (doorwayCheck.inDoorway && closestOpenDoorway.GetComponent<DoorwaySide1>().arrived)
+           transform.position = new Vector2(character.position.x, recenterPointFromUp.position.y);*/
+
+        if (pmov.lookup){//-------------------If the player holds down the look up button   
             timer -= Time.deltaTime;//----------------------Start the timer
             if (timer <= 0){//------------------------------When the timer reaches zero
                 tempPos.y = transform.position.y;//---------Set the y-axis of the temporary position variable to the camera's y-axis position
@@ -85,7 +121,7 @@ public class CameraMovement : MonoBehaviour
                 tempPos.y += Time.deltaTime * cameraSpeed;//Move the temporary variable upward according to the specified speed variable
                 transform.position = tempPos;}}//-----------Set the position of the camera's follow target equal to the position of the temporary variable
 
-        if (Input.GetButton("LookDown")){//-----------------If the player holds down the look down button
+        if (pmov.lookDown){//-----------------If the player holds down the look down button
             timer -= Time.deltaTime;//----------------------Start the timer
             if (timer <= 0){//------------------------------When the timer reaches zero
                 tempPos.y = transform.position.y;//---------Set the y-axis of the temporary position variable to the camera's y-axis position
@@ -101,7 +137,7 @@ public class CameraMovement : MonoBehaviour
         if (neuralGun.shoot)//----------------------------------If the character shoots
             timer = timerStart;//-------------------------------Reset the timer
 
-        if (Input.GetButtonUp("LookDown")){//-------------------If the player releases the look down button
+        if (Input.GetButtonUp("LookDown") /*|| closestOpenDoorway.GetComponent<DoorwaySide1>().arrived*/){//-------------------If the player releases the look down button or goes through a side 1 doorway
             timer = timerStart;//-------------------------------Reset the timer
             LookDownRecenter();
             StartCoroutine("LookDownRecenter");}//--------------Start the look down recenter coroutine
@@ -122,9 +158,13 @@ public class CameraMovement : MonoBehaviour
         if (!groundCheck.grounded)//-----------------------------If the character is not grounded
             transform.position = new Vector2(transform.position.x, character.position.y);//Set the camera's follow target to have the same y value as the character
             
-
         if (recenterTrigger.justLanded){//--------------------------------------------------When the character lands        
             JustLanded();
-            StartCoroutine("JustLanded");}//------------------------------------------------Start the just landed coroutine               
+            StartCoroutine("JustLanded");}//------------------------------------------------Start the just landed coroutine     
+
+
+        if (closestOpenDoorway.GetComponent<DoorwaySide2>().inDoorway && doorwayCheck.inDoorway)
+            transform.position = new Vector2(character.position.x, character.position.y);
+
     }
 }

@@ -15,6 +15,8 @@ public class Playermovement : MonoBehaviour
     public PoleClimbController poleClimb;
     public PogoController pogo;
     public MovingPlatformCheck movPlatCheck;
+    public DoorwayCheck doorwayCheck;
+
     public GameObject closestmovPlat;
 
     //MOVEMENT//////
@@ -224,7 +226,7 @@ public class Playermovement : MonoBehaviour
 #region LOOK UP ANIMATION
         ///////////////////LOOKING UP ANIMATION////////////////       
 
-            if (Input.GetButton("LookUp")){//-------------If the player is pressing the look up button                   
+            if (Input.GetButton("LookUp") && !doorwayCheck.inDoorway){//-------------If the player is pressing the look up button while not standing in an open doorway               
                 lookup = true;//--------------------------The character looks up
                 if (!poleClimb.onPole)
                     animator.SetBool("LookingUp", true);}//---Play the looking up animation
