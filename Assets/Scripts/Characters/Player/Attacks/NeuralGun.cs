@@ -12,6 +12,7 @@ public class NeuralGun : MonoBehaviour
     public PogoController pogo;
     public PoleClimbController poleClimb;
     public Animator animator;
+    public DoorwayCheck doorwayCheck;
 
     public GameObject neuralBullet;
 
@@ -87,7 +88,7 @@ public class NeuralGun : MonoBehaviour
             aimDown = false;//---------------------------------------------------------------Set the aimDown bool to false;
             animator.SetBool("IsAimingDown", false);}//--------------------------------------Set the IsAimingDown animation parameter to false
 
-        if (!(ledgeClimb.ledgeClimb || ledgeClimb.ledgeHang) && !(groundCheck.grounded && pmov.lookDown) && !shoot && !pogo.onPogo && Input.GetButtonDown("Shoot"))//If the character is not climbing or hanging from a ledge, is not shooting, is not on the pogo, and the player presses the Shoot button                               
+        if (!(ledgeClimb.ledgeClimb || ledgeClimb.ledgeHang) && !(groundCheck.grounded && pmov.lookDown) && !shoot && !pogo.onPogo && !doorwayCheck.walkingThroughDoor && Input.GetButtonDown("Shoot"))//If the character is not climbing or hanging from a ledge, is not shooting, is not on the pogo, and the player presses the Shoot button                               
             StartCoroutine("Shoot");//---------------------------------------------Start the Shoot coroutine
        
         if (pmov.falling && pmov.lookDown && !poleClimb.onPole)//-----------------------If the character is falling and looking down and not on a pole

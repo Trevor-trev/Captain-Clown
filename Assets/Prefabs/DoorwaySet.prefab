@@ -73,6 +73,10 @@ MonoBehaviour:
   player: {fileID: 0}
   otherSideOfDoor: {fileID: 0}
   animator: {fileID: 0}
+  pmov: {fileID: 0}
+  doorwayCheck: {fileID: 0}
+  pogo: {fileID: 0}
+  neuralGun: {fileID: 0}
   inDoorway: 0
   walkingThroughDoor: 0
   warped: 0
@@ -88,7 +92,7 @@ GameObject:
   - component: {fileID: 89818030185237509}
   - component: {fileID: 89818030185237507}
   - component: {fileID: 89818030185237508}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Side 2(Below)
   m_TagString: OpenDoorway
   m_Icon: {fileID: 0}
@@ -150,6 +154,10 @@ MonoBehaviour:
   player: {fileID: 0}
   otherSideOfDoor: {fileID: 0}
   animator: {fileID: 0}
+  pmov: {fileID: 0}
+  doorwayCheck: {fileID: 0}
+  pogo: {fileID: 0}
+  neuralGun: {fileID: 0}
   inDoorway: 0
   walkingThroughDoor: 0
   warped: 0

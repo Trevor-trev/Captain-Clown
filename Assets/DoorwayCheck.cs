@@ -6,6 +6,9 @@ public class DoorwayCheck : MonoBehaviour
 {
     public GroundCheck groundCheck;
     public Playermovement pmov;
+    public PogoController pogo;
+    public NeuralGun neuralGun;
+
     public bool inDoorway = false;
     public bool walkingThroughDoor = false;
 
@@ -28,9 +31,9 @@ public class DoorwayCheck : MonoBehaviour
             inDoorway = false;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (pmov.horizontalMove == 0 && inDoorway && Input.GetButton("LookUp"))
+        if (pmov.horizontalMove == 0 && inDoorway && !pogo.onPogo && !neuralGun.shoot && Input.GetButton("LookUp"))
             StartCoroutine("WalkingThroughDoor");
     }
 }

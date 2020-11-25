@@ -1,0 +1,982 @@
+fileFormatVersion: 2
+guid: 64a7856959ebb7543943c268c3a236e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5398948760296749757
+    second: insideDoor_0
+  - first:
+      213: 8313848651894265573
+    second: insideDoor_1
+  - first:
+      213: -2827906679347159310
+    second: insideDoor_2
+  - first:
+      213: 2964272271820962747
+    second: insideDoor_3
+  - first:
+      213: 1428800294237943367
+    second: insideDoor_4
+  - first:
+      213: 1425686552734071280
+    second: insideDoor_5
+  - first:
+      213: -1619149635894836403
+    second: insideDoor_6
+  - first:
+      213: 210861881918376294
+    second: insideDoor_7
+  - first:
+      213: -1662431083815030899
+    second: insideDoor_8
+  - first:
+      213: -1347389323961795918
+    second: insideDoor_9
+  - first:
+      213: 8106635323491430823
+    second: insideDoor_10
+  - first:
+      213: -424684763695787740
+    second: insideDoor_11
+  - first:
+      213: 1417279273252403569
+    second: insideDoor_12
+  - first:
+      213: -3838700368799739033
+    second: insideDoor_13
+  - first:
+      213: 6222798952036005954
+    second: insideDoor_14
+  - first:
+      213: 5824825953662348618
+    second: insideDoor_15
+  - first:
+      213: -7188252588509546168
+    second: insideDoor_16
+  - first:
+      213: 7773653036411601659
+    second: insideDoor_17
+  - first:
+      213: 3021934100942188648
+    second: insideDoor_18
+  - first:
+      213: -864441070746669010
+    second: insideDoor_19
+  - first:
+      213: 4638902309663491010
+    second: insideDoor_20
+  - first:
+      213: 6369597819433182755
+    second: insideDoor_21
+  - first:
+      213: 3639116083647388317
+    second: insideDoor_22
+  - first:
+      213: -602431160815069211
+    second: insideDoor_23
+  - first:
+      213: -4403698139527666703
+    second: insideDoor_24
+  - first:
+      213: -1490343599854955278
+    second: insideDoor_25
+  - first:
+      213: -8301791168964845880
+    second: insideDoor_26
+  - first:
+      213: 7992428559274685339
+    second: insideDoor_27
+  - first:
+      213: 8915919795755038658
+    second: insideDoor_28
+  - first:
+      213: 8911214965910179909
+    second: insideDoor_29
+  - first:
+      213: -7475219073132711420
+    second: insideDoor_30
+  - first:
+      213: -7762094693532715539
+    second: insideDoor_31
+  - first:
+      213: -7832758991046470200
+    second: insideDoor_32
+  - first:
+      213: 6096071799827248073
+    second: insideDoor_33
+  - first:
+      213: -3810245067074179040
+    second: insideDoor_34
+  - first:
+      213: -790323797104098112
+    second: insideDoor_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15.9
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: insideDoor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbaf50aea4becea40800000000000000
+      internalID: 5398948760296749757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6948cdc49b06370800000000000000
+      internalID: 8313848651894265573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fede87abd141c8d0800000000000000
+      internalID: -2827906679347159310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbbd630de5332920800000000000000
+      internalID: 2964272271820962747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746b6092c4e14d310800000000000000
+      internalID: 1428800294237943367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9f3c8bd5e09c310800000000000000
+      internalID: 1425686552734071280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43094a1cff9789e0800000000000000
+      internalID: -1619149635894836403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6694a60b3c12de200800000000000000
+      internalID: 210861881918376294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f23a9bcbbdde8e0800000000000000
+      internalID: -1662431083815030899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba7a137c8c1d4de0800000000000000
+      internalID: -1347389323961795918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1375c30ed808070800000000000000
+      internalID: 8106635323491430823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421546e15773b1af0800000000000000
+      internalID: -424684763695787740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179bbbd6dff2ba310800000000000000
+      internalID: 1417279273252403569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1136
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763d7865a523abac0800000000000000
+      internalID: -3838700368799739033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24877c45da2db5650800000000000000
+      internalID: 6222798952036005954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d2586f750f5d050800000000000000
+      internalID: 5824825953662348618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8493b121b523e3c90800000000000000
+      internalID: -7188252588509546168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf24372004091eb60800000000000000
+      internalID: 7773653036411601659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8607c4dcd0110f920800000000000000
+      internalID: 3021934100942188648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20f2e81d63e004f0800000000000000
+      internalID: -864441070746669010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c34b3b9211b06040800000000000000
+      internalID: 4638902309663491010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_21
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326ea6d187b556850800000000000000
+      internalID: 6369597819433182755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a96361cccb08230800000000000000
+      internalID: 3639116083647388317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7ddf11d0cb3a7f0800000000000000
+      internalID: -602431160815069211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_24
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3a767bfdbe2e2c0800000000000000
+      internalID: -4403698139527666703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_25
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f45e51646c315be0800000000000000
+      internalID: -1490343599854955278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_26
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce1066aaec1acc80800000000000000
+      internalID: -8301791168964845880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_27
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b933140dd6fcaee60800000000000000
+      internalID: 7992428559274685339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c73adfc0d5bbbb70800000000000000
+      internalID: 8915919795755038658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_29
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54098304ccefaab70800000000000000
+      internalID: 8911214965910179909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40233bfbbdfa24890800000000000000
+      internalID: -7475219073132711420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5b9076000874490800000000000000
+      internalID: -7762094693532715539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c59d6782337c4390800000000000000
+      internalID: -7832758991046470200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3baf9e009999450800000000000000
+      internalID: 6096071799827248073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1088
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020fbdd8c4a4f1bc0800000000000000
+      internalID: -3810245067074179040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: insideDoor_35
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1088
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c48210a1b43805f0800000000000000
+      internalID: -790323797104098112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

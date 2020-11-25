@@ -9,6 +9,8 @@ public class DoorwaySide2 : MonoBehaviour
     public Animator animator;
     public Playermovement pmov;
     public DoorwayCheck doorwayCheck;
+    public PogoController pogo;
+    public NeuralGun neuralGun;
 
     public bool inDoorway;
     public bool walkingThroughDoor;
@@ -22,6 +24,7 @@ public class DoorwaySide2 : MonoBehaviour
         yield return new WaitForSeconds(0.67f);
         animator.SetBool("WalkingThroughDoor", false);
         player.transform.position = otherSideOfDoor.transform.position;
+        yield return new WaitForEndOfFrame();
         warped = true;
         walkingThroughDoor = false;
         yield return new WaitForSeconds(.2f);
@@ -58,9 +61,9 @@ public class DoorwaySide2 : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (pmov.xdirection == 0 && inDoorway && doorwayCheck.inDoorway && Input.GetButton("LookUp"))        
+        if (pmov.xdirection == 0 && inDoorway && doorwayCheck.inDoorway && !pogo.onPogo && !neuralGun.shoot && Input.GetButton("LookUp"))        
             StartCoroutine("WalkThroughDoor");
 
         if (otherSideOfDoor.GetComponent<DoorwaySide1>().warped)

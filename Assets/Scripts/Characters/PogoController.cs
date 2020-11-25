@@ -10,6 +10,7 @@ public class PogoController : MonoBehaviour
     public Playermovement pmov;
     public GroundCheck groundCheck;
     public Animator animator;
+    public DoorwayCheck doorwayCheck;
 
     public bool onPogo = false;//------------------Determine whether or not the character is on the pogo stick
 
@@ -45,7 +46,7 @@ public class PogoController : MonoBehaviour
 
         ///////////////////CONTROLLER/////////////////
         
-        if (!ledgeClimb.ledgeHang && !ledgeClimb.ledgeClimb && !poleClimb.onPole && Input.GetButtonDown("Pogo"))//If the character is not on a pole and the player presses the pogo button  
+        if (!ledgeClimb.ledgeHang && !ledgeClimb.ledgeClimb && !poleClimb.onPole && !doorwayCheck.walkingThroughDoor && Input.GetButtonDown("Pogo"))//If the character is not on a pole and the player presses the pogo button  
             onPogo = !onPogo;//---------------------------------------------Activate and deactivate the pogo stick
 
         if (!onPogo)
