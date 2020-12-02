@@ -213,7 +213,7 @@ public class Playermovement : MonoBehaviour
                     animator.SetBool("LookingDown", true);//Play the looking down (crouching) animation
             }
 
-            if (Input.GetButtonUp("LookDown")){//-------If the player releases the look down button          
+            if (!Input.GetButton("LookDown") && lookDown == true){//-------If the player releases the look down button          
                 lookDown = false;//---------------------The lookdown bool becomes false
                 StartCoroutine("UnCrouching");//--------Start the uncrouching coroutine
                 animator.SetBool("LookingDown", false);}//Stop playing the looking down animation
@@ -231,7 +231,7 @@ public class Playermovement : MonoBehaviour
                 if (!poleClimb.onPole)
                     animator.SetBool("LookingUp", true);}//---Play the looking up animation
             
-            if (Input.GetButtonUp("LookUp")){//-----------If the player releases the up button
+            if (!Input.GetButton("LookUp")){//-----------If the player releases the up button
                 lookup = false;//-------------------------The character is no longer looking up
                 animator.SetBool("LookingUp", false);}//--Stop the looking up animation       
 
