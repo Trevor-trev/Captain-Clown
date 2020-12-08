@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7976588177414916984}
   - component: {fileID: 7976588177414916985}
   m_Layer: 9
-  m_Name: PoleW_Platform (1)
+  m_Name: PoleW_Platform (Grass)
   m_TagString: Pole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,9 +421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1520e34350f4e842833c0407e513ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pmov: {fileID: 0}
-  pole: {fileID: 0}
-  groundCheck: {fileID: 0}
   onPoleDisableCollider: {fileID: 7976588178754544502}
 --- !u!1 &7976588179008297276
 GameObject:

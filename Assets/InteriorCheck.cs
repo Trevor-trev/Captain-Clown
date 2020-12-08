@@ -6,6 +6,8 @@ public class InteriorCheck : MonoBehaviour
 {
     public bool isOutside;
     public bool inHouse1;
+    public bool inHouse2;
+    public bool inHouse3;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,11 +15,29 @@ public class InteriorCheck : MonoBehaviour
         {
             isOutside = false;
             inHouse1 = true;
+            inHouse2 = false;
+            inHouse3 = false;
         }
         if (other.gameObject.name == "Outdoors")
         {
             isOutside = true;
             inHouse1 = false;
+            inHouse2 = false;
+            inHouse3 = false;
+        }
+        if (other.gameObject.name == "House 2")
+        {
+            isOutside = false;
+            inHouse1 = false;
+            inHouse2 = true;
+            inHouse3 = false;
+        }
+        if (other.gameObject.name == "House 3")
+        {
+            isOutside = false;
+            inHouse1 = false;
+            inHouse2 = false;
+            inHouse3 = true;
         }
     }
 }

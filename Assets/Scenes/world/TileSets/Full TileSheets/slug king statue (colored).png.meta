@@ -1,0 +1,2503 @@
+fileFormatVersion: 2
+guid: bc098b6ba81476b4b832d0b05da82402
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5162294045275500837
+    second: slug king statue (colored)_0
+  - first:
+      213: 3067766041981260349
+    second: slug king statue (colored)_1
+  - first:
+      213: 7705783645598526944
+    second: slug king statue (colored)_2
+  - first:
+      213: 1214708334069110666
+    second: slug king statue (colored)_3
+  - first:
+      213: -5313398075961172923
+    second: slug king statue (colored)_4
+  - first:
+      213: -1277391591827143310
+    second: slug king statue (colored)_5
+  - first:
+      213: 6266665866810300661
+    second: slug king statue (colored)_6
+  - first:
+      213: -4957100870560937077
+    second: slug king statue (colored)_7
+  - first:
+      213: 3066658933572165760
+    second: slug king statue (colored)_8
+  - first:
+      213: 3837585963625152859
+    second: slug king statue (colored)_9
+  - first:
+      213: -3943793180060401720
+    second: slug king statue (colored)_10
+  - first:
+      213: 6858686113198318877
+    second: slug king statue (colored)_11
+  - first:
+      213: -3407415923689766167
+    second: slug king statue (colored)_12
+  - first:
+      213: 2225307249233286782
+    second: slug king statue (colored)_13
+  - first:
+      213: -8928703758676183003
+    second: slug king statue (colored)_14
+  - first:
+      213: -9153790299672594025
+    second: slug king statue (colored)_15
+  - first:
+      213: 2298973940848473883
+    second: slug king statue (colored)_16
+  - first:
+      213: -4188870682181333881
+    second: slug king statue (colored)_17
+  - first:
+      213: -3785661018739843635
+    second: slug king statue (colored)_18
+  - first:
+      213: -86926375318182948
+    second: slug king statue (colored)_19
+  - first:
+      213: -126139914504590230
+    second: slug king statue (colored)_20
+  - first:
+      213: 4834041346920522531
+    second: slug king statue (colored)_21
+  - first:
+      213: -7073930303042280666
+    second: slug king statue (colored)_22
+  - first:
+      213: -2540135207265479750
+    second: slug king statue (colored)_23
+  - first:
+      213: 3101416828272013295
+    second: slug king statue (colored)_24
+  - first:
+      213: -3276077806872178943
+    second: slug king statue (colored)_25
+  - first:
+      213: 7604156405815040431
+    second: slug king statue (colored)_26
+  - first:
+      213: 3066647522922464275
+    second: slug king statue (colored)_27
+  - first:
+      213: 7122164691230151936
+    second: slug king statue (colored)_28
+  - first:
+      213: 7600156605213633054
+    second: slug king statue (colored)_29
+  - first:
+      213: 7821362147749548389
+    second: slug king statue (colored)_30
+  - first:
+      213: 5698988922106108121
+    second: slug king statue (colored)_31
+  - first:
+      213: -5138658700568831748
+    second: slug king statue (colored)_32
+  - first:
+      213: 7576689705482892415
+    second: slug king statue (colored)_33
+  - first:
+      213: -4804564882134793798
+    second: slug king statue (colored)_34
+  - first:
+      213: -6772541268412223919
+    second: slug king statue (colored)_35
+  - first:
+      213: 6021472267309610909
+    second: slug king statue (colored)_36
+  - first:
+      213: -147102237920030262
+    second: slug king statue (colored)_37
+  - first:
+      213: 687929399483155936
+    second: slug king statue (colored)_38
+  - first:
+      213: 8426912046401531755
+    second: slug king statue (colored)_39
+  - first:
+      213: -7557099507310449066
+    second: slug king statue (colored)_40
+  - first:
+      213: 7480483311445026776
+    second: slug king statue (colored)_41
+  - first:
+      213: -2381247195777966789
+    second: slug king statue (colored)_42
+  - first:
+      213: -5512326977196000080
+    second: slug king statue (colored)_43
+  - first:
+      213: -7855248893701998433
+    second: slug king statue (colored)_44
+  - first:
+      213: -7954634686603270761
+    second: slug king statue (colored)_45
+  - first:
+      213: -3987905360343463189
+    second: slug king statue (colored)_46
+  - first:
+      213: -7442706984717464983
+    second: slug king statue (colored)_47
+  - first:
+      213: -360523018120852089
+    second: slug king statue (colored)_48
+  - first:
+      213: -2877423607413364383
+    second: slug king statue (colored)_49
+  - first:
+      213: -6921716424271834743
+    second: slug king statue (colored)_50
+  - first:
+      213: -4709964533974789584
+    second: slug king statue (colored)_51
+  - first:
+      213: 1430239152549073037
+    second: slug king statue (colored)_52
+  - first:
+      213: -5219683628370384135
+    second: slug king statue (colored)_53
+  - first:
+      213: 8277268895987688434
+    second: slug king statue (colored)_54
+  - first:
+      213: 5060538514416437588
+    second: slug king statue (colored)_55
+  - first:
+      213: 7459257698335849921
+    second: slug king statue (colored)_56
+  - first:
+      213: 7161098728681579595
+    second: slug king statue (colored)_57
+  - first:
+      213: 3995968202069445428
+    second: slug king statue (colored)_58
+  - first:
+      213: -6005863967917273471
+    second: slug king statue (colored)_59
+  - first:
+      213: 8445151685229971257
+    second: slug king statue (colored)_60
+  - first:
+      213: 2565360862046923578
+    second: slug king statue (colored)_61
+  - first:
+      213: -1865226280367727429
+    second: slug king statue (colored)_62
+  - first:
+      213: -3603911773346833248
+    second: slug king statue (colored)_63
+  - first:
+      213: -404781983467076153
+    second: slug king statue (colored)_64
+  - first:
+      213: -5086806778561340784
+    second: slug king statue (colored)_65
+  - first:
+      213: -148735300754550412
+    second: slug king statue (colored)_66
+  - first:
+      213: -5900852845964997342
+    second: slug king statue (colored)_67
+  - first:
+      213: -2122107304300205422
+    second: slug king statue (colored)_68
+  - first:
+      213: 8643859360938802990
+    second: slug king statue (colored)_69
+  - first:
+      213: 5881940982201551700
+    second: slug king statue (colored)_70
+  - first:
+      213: -8301203701197160185
+    second: slug king statue (colored)_71
+  - first:
+      213: 7750267878199985401
+    second: slug king statue (colored)_72
+  - first:
+      213: 3493749448257841611
+    second: slug king statue (colored)_73
+  - first:
+      213: -4777098362150717601
+    second: slug king statue (colored)_74
+  - first:
+      213: -5824685142237160228
+    second: slug king statue (colored)_75
+  - first:
+      213: 177988397812717878
+    second: slug king statue (colored)_76
+  - first:
+      213: -2980145882548162641
+    second: slug king statue (colored)_77
+  - first:
+      213: -2534246731664349884
+    second: slug king statue (colored)_78
+  - first:
+      213: -479307200669405410
+    second: slug king statue (colored)_79
+  - first:
+      213: 2930674605967812265
+    second: slug king statue (colored)_80
+  - first:
+      213: -4701066608994135484
+    second: slug king statue (colored)_0
+  - first:
+      213: 528810289906716981
+    second: slug king statue (colored)_1
+  - first:
+      213: 9072644361132555171
+    second: slug king statue (colored)_2
+  - first:
+      213: -7475935038921077849
+    second: slug king statue (colored)_3
+  - first:
+      213: 37506882708679677
+    second: slug king statue (colored)_4
+  - first:
+      213: 6514808200054429861
+    second: slug king statue (colored)_5
+  - first:
+      213: -982434441331143447
+    second: slug king statue (colored)_6
+  - first:
+      213: 630210394608289076
+    second: slug king statue (colored)_7
+  - first:
+      213: 7391807379434630192
+    second: slug king statue (colored)_8
+  - first:
+      213: -9148485989789051329
+    second: slug king statue (colored)_9
+  - first:
+      213: 3917086580393631447
+    second: slug king statue (colored)_10
+  - first:
+      213: 2840531116729042173
+    second: slug king statue (colored)_11
+  - first:
+      213: -2680655731277307171
+    second: slug king statue (colored)_12
+  - first:
+      213: -4916162276922332867
+    second: slug king statue (colored)_13
+  - first:
+      213: 6745606491591949517
+    second: slug king statue (colored)_14
+  - first:
+      213: -6749312991549814423
+    second: slug king statue (colored)_15
+  - first:
+      213: 2470448867529576539
+    second: slug king statue (colored)_16
+  - first:
+      213: 8578596452056987611
+    second: slug king statue (colored)_17
+  - first:
+      213: -3610593802577689244
+    second: slug king statue (colored)_18
+  - first:
+      213: 7254887250995130569
+    second: slug king statue (colored)_19
+  - first:
+      213: 569060714030497282
+    second: slug king statue (colored)_20
+  - first:
+      213: 1660023502297506517
+    second: slug king statue (colored)_21
+  - first:
+      213: 1444029916525839501
+    second: slug king statue (colored)_22
+  - first:
+      213: -1359343188186725900
+    second: slug king statue (colored)_23
+  - first:
+      213: -5204968446160896804
+    second: slug king statue (colored)_24
+  - first:
+      213: 6202648969033044576
+    second: slug king statue (colored)_25
+  - first:
+      213: 6093357582357491876
+    second: slug king statue (colored)_26
+  - first:
+      213: -4949119062877152861
+    second: slug king statue (colored)_27
+  - first:
+      213: 4730099154164920686
+    second: slug king statue (colored)_28
+  - first:
+      213: 4194241128570523367
+    second: slug king statue (colored)_29
+  - first:
+      213: 7319973287956157057
+    second: slug king statue (colored)_30
+  - first:
+      213: -5293132960823363897
+    second: slug king statue (colored)_31
+  - first:
+      213: -3064847605332182256
+    second: slug king statue (colored)_32
+  - first:
+      213: -2230706257489932911
+    second: slug king statue (colored)_33
+  - first:
+      213: -6311680035427880845
+    second: slug king statue (colored)_34
+  - first:
+      213: 8371234962260021800
+    second: slug king statue (colored)_35
+  - first:
+      213: -5554473678756064418
+    second: slug king statue (colored)_36
+  - first:
+      213: 2570022406272662721
+    second: slug king statue (colored)_37
+  - first:
+      213: -1522355653063909516
+    second: slug king statue (colored)_38
+  - first:
+      213: -3875278852276386519
+    second: slug king statue (colored)_39
+  - first:
+      213: -4114601474627228912
+    second: slug king statue (colored)_40
+  - first:
+      213: 9027056130255199126
+    second: slug king statue (colored)_41
+  - first:
+      213: -4125990232414905212
+    second: slug king statue (colored)_42
+  - first:
+      213: 2450031905826213660
+    second: slug king statue (colored)_43
+  - first:
+      213: 4636506333430682151
+    second: slug king statue (colored)_44
+  - first:
+      213: -1989152891920810736
+    second: slug king statue (colored)_45
+  - first:
+      213: -127818030586288164
+    second: slug king statue (colored)_46
+  - first:
+      213: -1397385127074453861
+    second: slug king statue (colored)_47
+  - first:
+      213: 2421611185966099111
+    second: slug king statue (colored)_48
+  - first:
+      213: -3514746049573720812
+    second: slug king statue (colored)_49
+  - first:
+      213: 8297557172276214821
+    second: slug king statue (colored)_50
+  - first:
+      213: -3573317885956394715
+    second: slug king statue (colored)_51
+  - first:
+      213: 2928051006779514343
+    second: slug king statue (colored)_52
+  - first:
+      213: 2249125529782784057
+    second: slug king statue (colored)_53
+  - first:
+      213: 3740533921155007862
+    second: slug king statue (colored)_54
+  - first:
+      213: 926163604268323959
+    second: slug king statue (colored)_55
+  - first:
+      213: 636718181985430253
+    second: slug king statue (colored)_56
+  - first:
+      213: 6215542880358572943
+    second: slug king statue (colored)_57
+  - first:
+      213: 3577244511462498111
+    second: slug king statue (colored)_58
+  - first:
+      213: 2972927466673426126
+    second: slug king statue (colored)_59
+  - first:
+      213: 1392793302285683134
+    second: slug king statue (colored)_60
+  - first:
+      213: -1957875823096943080
+    second: slug king statue (colored)_61
+  - first:
+      213: 3706070080897639491
+    second: slug king statue (colored)_62
+  - first:
+      213: -6083339365447639727
+    second: slug king statue (colored)_63
+  - first:
+      213: 1030630406815840088
+    second: slug king statue (colored)_64
+  - first:
+      213: -8057485041233392717
+    second: slug king statue (colored)_65
+  - first:
+      213: -7138123639073186203
+    second: slug king statue (colored)_66
+  - first:
+      213: -8345485690739520149
+    second: slug king statue (colored)_67
+  - first:
+      213: -1976559706207933947
+    second: slug king statue (colored)_68
+  - first:
+      213: -6316531576325653048
+    second: slug king statue (colored)_69
+  - first:
+      213: 7005934812656953560
+    second: slug king statue (colored)_70
+  - first:
+      213: 2210338846367757168
+    second: slug king statue (colored)_71
+  - first:
+      213: -2053709094283627080
+    second: slug king statue (colored)_72
+  - first:
+      213: -7882542089192458142
+    second: slug king statue (colored)_73
+  - first:
+      213: -5650820658749902558
+    second: slug king statue (colored)_74
+  - first:
+      213: 5674448605627636202
+    second: slug king statue (colored)_75
+  - first:
+      213: -3523863239739583314
+    second: slug king statue (colored)_76
+  - first:
+      213: 8215960501119228175
+    second: slug king statue (colored)_77
+  - first:
+      213: -4629782070235031605
+    second: slug king statue (colored)_78
+  - first:
+      213: 2532158791776493741
+    second: slug king statue (colored)_79
+  - first:
+      213: -5819776769887307960
+    second: slug king statue (colored)_80
+  - first:
+      213: -6077629358862734
+    second: slug king statue (colored)_81
+  - first:
+      213: 7185597317732924582
+    second: slug king statue (colored)_82
+  - first:
+      213: -6869180700567394376
+    second: slug king statue (colored)_83
+  - first:
+      213: -871271946871534272
+    second: slug king statue (colored)_84
+  - first:
+      213: -4502462507169227301
+    second: slug king statue (colored)_85
+  - first:
+      213: 732250383370325045
+    second: slug king statue (colored)_86
+  - first:
+      213: 5555489979884722613
+    second: slug king statue (colored)_87
+  - first:
+      213: 575441407870431175
+    second: slug king statue (colored)_88
+  - first:
+      213: -1015081083866119518
+    second: slug king statue (colored)_89
+  - first:
+      213: 5872703356554384717
+    second: slug king statue (colored)_90
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slug king statue (colored)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442547193d472ceb0800000000000000
+      internalID: -4701066608994135484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531167b2826b65700800000000000000
+      internalID: 528810289906716981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abb1ce3af188ed70800000000000000
+      internalID: 9072644361132555171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab8639f0b4204890800000000000000
+      internalID: -7475935038921077849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbab74af40458000800000000000000
+      internalID: 37506882708679677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8db008a8f396a50800000000000000
+      internalID: 6514808200054429861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec095da411bd52f0800000000000000
+      internalID: -982434441331143447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435c260d305feb800800000000000000
+      internalID: 630210394608289076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cef4be5a9f49660800000000000000
+      internalID: 7391807379434630192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f365cf9867c0a0180800000000000000
+      internalID: -9148485989789051329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dedfc2cd794c5630800000000000000
+      internalID: 3917086580393631447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4041a30089b6720800000000000000
+      internalID: 2840531116729042173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2e91ca0d56ccad0800000000000000
+      internalID: -2680655731277307171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d396ed1c47846cbb0800000000000000
+      internalID: -4916162276922332867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc38e54d553d9d50800000000000000
+      internalID: 6745606491591949517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_15
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9698eb4f79f9552a0800000000000000
+      internalID: -6749312991549814423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50ddd0f72cc84220800000000000000
+      internalID: 2470448867529576539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd77844950c4d0770800000000000000
+      internalID: 8578596452056987611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_18
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4654129f01894edc0800000000000000
+      internalID: -3610593802577689244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0331944898ea460800000000000000
+      internalID: 7254887250995130569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_20
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20efa6354b5b5e700800000000000000
+      internalID: 569060714030497282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d22e358496990710800000000000000
+      internalID: 1660023502297506517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d844f8bee893a0410800000000000000
+      internalID: 1444029916525839501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1884c8294a22de0800000000000000
+      internalID: -1359343188186725900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_24
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc767b76cc34c7b0800000000000000
+      internalID: -5204968446160896804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06258a1df5c341650800000000000000
+      internalID: 6202648969033044576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_26
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0f9d9ef64ff8450800000000000000
+      internalID: 6093357582357491876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9d7121f62315bb0800000000000000
+      internalID: -4949119062877152861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61306c9e10b4a140800000000000000
+      internalID: 4730099154164920686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_29
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee87ca9510f43a30800000000000000
+      internalID: 4194241128570523367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18299f92ce4c59560800000000000000
+      internalID: 7319973287956157057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c63639cd930b86b0800000000000000
+      internalID: -5293132960823363897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bf77957597775d0800000000000000
+      internalID: -3064847605332182256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d42144a70fa01e0800000000000000
+      internalID: -2230706257489932911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3707560d2786868a0800000000000000
+      internalID: -6311680035427880845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_35
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822d6d078d99c2470800000000000000
+      internalID: 8371234962260021800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53dc773e9b8ae2b0800000000000000
+      internalID: -5554473678756064418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc3dae03cd8aa320800000000000000
+      internalID: 2570022406272662721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_38
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f515d69918fdae0800000000000000
+      internalID: -1522355653063909516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_39
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9258b7c7a6e383ac0800000000000000
+      internalID: -3875278852276386519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_40
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bab8842cff5e6c0800000000000000
+      internalID: -4114601474627228912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b9f5b19bb864d70800000000000000
+      internalID: 9027056130255199126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_42
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c9d2a7eb98db6c0800000000000000
+      internalID: -4125990232414905212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f052b9903400220800000000000000
+      internalID: 2450031905826213660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7221cfae1fd285040800000000000000
+      internalID: 4636506333430682151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_45
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d7e19dbfb1564e0800000000000000
+      internalID: -1989152891920810736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_46
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7a30bad26e93ef0800000000000000
+      internalID: -127818030586288164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96205e61ad7b9ce0800000000000000
+      internalID: -1397385127074453861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_48
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa2f9b1b8a4b9120800000000000000
+      internalID: 2421611185966099111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d637ff61d193fc0800000000000000
+      internalID: -3514746049573720812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_50
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cb40d2948d62370800000000000000
+      internalID: 8297557172276214821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521f402a056096ec0800000000000000
+      internalID: -3573317885956394715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_52
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed515f80e682a820800000000000000
+      internalID: 2928051006779514343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_53
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93017f1c0cf763f10800000000000000
+      internalID: 2249125529782784057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_54
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6754eb878cb09e330800000000000000
+      internalID: 3740533921155007862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_55
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7741f4c14e46adc00800000000000000
+      internalID: 926163604268323959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_56
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea264320d316d800800000000000000
+      internalID: 636718181985430253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_57
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f832bfd715b024650800000000000000
+      internalID: 6215542880358572943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_58
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f107c1eece4a130800000000000000
+      internalID: 3577244511462498111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece421a97c5f14920800000000000000
+      internalID: 2972927466673426126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9084c0122345310800000000000000
+      internalID: 1392793302285683134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_61
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e2bf9ef4a34d4e0800000000000000
+      internalID: -1957875823096943080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_62
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3446b9c5a1b9e6330800000000000000
+      internalID: 3706070080897639491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15dd75af313a39ba0800000000000000
+      internalID: -6083339365447639727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_64
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85779fcf4e88d4e00800000000000000
+      internalID: 1030630406815840088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_65
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb824e9b001e2090800000000000000
+      internalID: -8057485041233392717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_66
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e5932ae5a40fc90800000000000000
+      internalID: -7138123639073186203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d8d550bf0ee2c80800000000000000
+      internalID: -8345485690739520149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_68
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a20226b69d194e0800000000000000
+      internalID: -1976559706207933947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_69
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd329c6ffb2758a0800000000000000
+      internalID: -6316531576325653048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_70
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8e5f3d7941a3160800000000000000
+      internalID: 7005934812656953560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_71
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0733ffa4873bcae10800000000000000
+      internalID: 2210338846367757168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_72
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b53c33b572cf73e0800000000000000
+      internalID: -2053709094283627080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_73
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2683e9ebbb59b9290800000000000000
+      internalID: -7882542089192458142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_74
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221f5c9dc804491b0800000000000000
+      internalID: -5650820658749902558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae955aa31f0bfbe40800000000000000
+      internalID: 5674448605627636202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_76
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4d34ebd09b81fc0800000000000000
+      internalID: -3523863239739583314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_77
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f091ad5bb84f40270800000000000000
+      internalID: 8215960501119228175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_78
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc71b2c9cb5bfbfb0800000000000000
+      internalID: -4629782070235031605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_79
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da068b25109042320800000000000000
+      internalID: 2532158791776493741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_80
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847fbcebcdffb3fa0800000000000000
+      internalID: -5819776769887307960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_81
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e0df4ad686aeff0800000000000000
+      internalID: -6077629358862734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac787680be58b360800000000000000
+      internalID: 7185597317732924582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_83
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b726bc1c84cba0a0800000000000000
+      internalID: -6869180700567394376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_84
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d85ffc7ce98e3f0800000000000000
+      internalID: -871271946871534272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_85
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddd9ad643a0481c0800000000000000
+      internalID: -4502462507169227301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_86
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c8e6318d9792a00800000000000000
+      internalID: 732250383370325045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_87
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b95544d3b0191d40800000000000000
+      internalID: 5555489979884722613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slug king statue (colored)_88
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfea2169e06cf700800000000000000
+      internalID: 575441407870431175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
