@@ -9,7 +9,7 @@ public class TargetCounter : MonoBehaviour
     public Text targetsLeftDisplay;
     void Start()
     {
-        targetsLeft = 25;
+        targetsLeft = 50;
     }
 
     void Update()

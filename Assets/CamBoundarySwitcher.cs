@@ -28,10 +28,16 @@ public class CamBoundarySwitcher : MonoBehaviour
         if (interiorCheck.inHouse1)
             camConfiner.m_BoundingShape2D = house1CamBounds;
 
-        if (interiorCheck.inSlugTemple)
-            camConfiner.m_BoundingShape2D = house2CamBounds;
-
         if (interiorCheck.inHouse2)
             camConfiner.m_BoundingShape2D = house2CamBounds;
+
+        if (interiorCheck.inHouse3)
+            camConfiner.m_BoundingShape2D = house3CamBounds;
+
+        if (interiorCheck.inSlugTemple)
+            camConfiner.m_BoundingShape2D = slugTempleCamBounds;
+
+        if (interiorCheck.inJailCell)
+            camConfiner.m_BoundingShape2D = jailCellCamBounds;
     }
 }
