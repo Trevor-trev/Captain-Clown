@@ -12,6 +12,8 @@ public class CamBoundarySwitcher : MonoBehaviour
     public CompositeCollider2D house1CamBounds;
     public CompositeCollider2D house2CamBounds;
     public CompositeCollider2D house3CamBounds;
+    public CompositeCollider2D slugTempleCamBounds;
+    public CompositeCollider2D jailCellCamBounds;
     void Start()
     {       
         camConfiner = GetComponent <CinemachineConfiner>();
@@ -26,10 +28,10 @@ public class CamBoundarySwitcher : MonoBehaviour
         if (interiorCheck.inHouse1)
             camConfiner.m_BoundingShape2D = house1CamBounds;
 
-        if (interiorCheck.inHouse2)
+        if (interiorCheck.inSlugTemple)
             camConfiner.m_BoundingShape2D = house2CamBounds;
 
-        if (interiorCheck.inHouse3)
-            camConfiner.m_BoundingShape2D = house3CamBounds;
+        if (interiorCheck.inHouse2)
+            camConfiner.m_BoundingShape2D = house2CamBounds;
     }
 }

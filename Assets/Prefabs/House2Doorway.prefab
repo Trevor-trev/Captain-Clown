@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &89818029919373907
+--- !u!1 &4769900098846186689
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,80 +8,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 89818029919373906}
-  - component: {fileID: 89818029919373905}
-  - component: {fileID: 89818029919373904}
-  m_Layer: 2
-  m_Name: Side 1(Above)
-  m_TagString: OpenDoorway
+  - component: {fileID: 5346637055236331477}
+  m_Layer: 0
+  m_Name: House2Doorway
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &89818029919373906
+--- !u!4 &5346637055236331477
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89818029919373907}
+  m_GameObject: {fileID: 4769900098846186689}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -100, y: -105.1, z: -2011.2762}
+  m_LocalPosition: {x: 1.737648, y: -15.986382, z: 2152.8298}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 89818030873796584}
+  m_Children:
+  - {fileID: 5892916513973367039}
+  - {fileID: 2090957926372368182}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &89818029919373905
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89818029919373907}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.23507118, y: 0.30984187}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.4, y: 2.8782992}
-  m_EdgeRadius: 0
---- !u!114 &89818029919373904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89818029919373907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ac27df4f12abf42bfdb048e2cba700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  otherSideOfDoor: {fileID: 0}
-  animator: {fileID: 0}
-  pmov: {fileID: 0}
-  doorwayCheck: {fileID: 0}
-  pogo: {fileID: 0}
-  neuralGun: {fileID: 0}
-  inDoorway: 0
-  walkingThroughDoor: 0
-  warped: 0
-  arrived: 0
---- !u!1 &89818030185237510
+--- !u!1 &5346637055236331478
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,9 +40,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 89818030185237509}
-  - component: {fileID: 89818030185237507}
-  - component: {fileID: 89818030185237508}
+  - component: {fileID: 2090957926372368182}
+  - component: {fileID: 2461286676512627130}
+  - component: {fileID: 2507357427816421579}
   m_Layer: 2
   m_Name: Side 2(Below)
   m_TagString: OpenDoorway
@@ -99,34 +50,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &89818030185237509
+--- !u!4 &2090957926372368182
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89818030185237510}
+  m_GameObject: {fileID: 5346637055236331478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -100, y: -120.7, z: -2011.2762}
+  m_LocalPosition: {x: 3.86, y: 20.613, z: -2011.2762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 89818030873796584}
+  m_Father: {fileID: 5346637055236331477}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &89818030185237507
+--- !u!61 &2461286676512627130
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89818030185237510}
+  m_GameObject: {fileID: 5346637055236331478}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.048431396, y: 0.638504}
+  m_Offset: {x: 0.03, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -139,20 +90,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 2.9732666}
   m_EdgeRadius: 0
---- !u!114 &89818030185237508
+--- !u!114 &2507357427816421579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89818030185237510}
+  m_GameObject: {fileID: 5346637055236331478}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22ef9ad6e68636f47b3e87f5b7f8da77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  otherSideOfDoor: {fileID: 0}
+  otherSideOfDoor: {fileID: 5346637055236331479}
   animator: {fileID: 0}
   pmov: {fileID: 0}
   doorwayCheck: {fileID: 0}
@@ -162,7 +113,7 @@ MonoBehaviour:
   walkingThroughDoor: 0
   warped: 0
   arrived: 0
---- !u!1 &89818030873796585
+--- !u!1 &5346637055236331479
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,27 +121,76 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 89818030873796584}
-  m_Layer: 0
-  m_Name: DoorwaySet
-  m_TagString: Untagged
+  - component: {fileID: 5892916513973367039}
+  - component: {fileID: 2322745297139853720}
+  - component: {fileID: 8993942096723090498}
+  m_Layer: 2
+  m_Name: Side 1(Above)
+  m_TagString: OpenDoorway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &89818030873796584
+--- !u!4 &5892916513973367039
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89818030873796585}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4820256, y: -14.148125, z: 2150.29}
+  m_GameObject: {fileID: 5346637055236331479}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -55.085, y: 147.6, z: -2011.2762}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 89818029919373906}
-  - {fileID: 89818030185237509}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 5346637055236331477}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2322745297139853720
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346637055236331479}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1, y: 0.6}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 2.8782992}
+  m_EdgeRadius: 0
+--- !u!114 &8993942096723090498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346637055236331479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ac27df4f12abf42bfdb048e2cba700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  otherSideOfDoor: {fileID: 5346637055236331478}
+  animator: {fileID: 0}
+  pmov: {fileID: 0}
+  doorwayCheck: {fileID: 0}
+  pogo: {fileID: 0}
+  neuralGun: {fileID: 0}
+  inDoorway: 0
+  walkingThroughDoor: 0
+  warped: 0
+  arrived: 0
