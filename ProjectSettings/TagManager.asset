@@ -28,6 +28,7 @@ TagManager:
   - ClosestOpenDoorway
   - OtherSideOfDoorway
   - DoorwayCheck
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -45,7 +46,7 @@ TagManager:
   - Platform
   - Bullet
   - CameraBoundary
-  - 
+  - Item
   - 
   - 
   - 

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7433296027320954228}
   - component: {fileID: 7433296027320954229}
-  - component: {fileID: 7433296027320954234}
   m_Layer: 2
   m_Name: Collapsing Platform Ceiling
   m_TagString: CollapsingPlatformCeiling
@@ -58,15 +57,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.7147217, y: 0.7805643}
   m_EdgeRadius: 0
---- !u!114 &7433296027320954234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7433296027320954235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd2135ccc9549145a96064e9c1ce40d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

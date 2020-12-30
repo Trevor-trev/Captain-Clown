@@ -24,7 +24,7 @@ public class Playermovement : MonoBehaviour
     public bool facingLeft;//--------------------Whether or not the character is facing left 
    
     public float xdirection = 0f;//--------------Direction check used for animation and pogo stick acceleration
-    public float xdirForTransitionToPogo = 0f;//Direction check used when activating the pogo stick while running      
+    public float xdirForTransitionToPogo = 0f;//-Direction check used when activating the pogo stick while running      
     public float horizontalMove = 0f;//----------Velocity variable used for non pogo stick horizontal movement
     public float topSpeedR = 37.5f;//------------Set speed limit for horizontal movement to the right
     public float topSpeedL = -37.5f;//-----------Set speed limit for horizontal movement to the left
@@ -85,46 +85,46 @@ public class Playermovement : MonoBehaviour
 
         if ((groundCheck.grounded || recenterTrigger.touchingDroppablePlatform) && (lookDown || lookup)){//If the chracter is on the ground or a droppable platform and is looking up or down            
             jumpForce = 0;//---------------------------------------------------Prevent the character from jumping
-            isJumping = false;}//-----------------------------------------------Prevent isJumping from being true, this prevents the character from slowly falling if the jump button is held when dropping through a platform        
+            isJumping = false;}//----------------------------------------------Prevent isJumping from being true, this prevents the character from slowly falling if the jump button is held when dropping through a platform        
         else if (groundCheck.grounded && !lookDown && !lookup)//---------------If the character is grounded, not looking up, and not looking down
             jumpForce = 12f;//-------------------------------------------------Allow the character to jump
 
-        if (!pogo.onPogo && !ledgeClimb.ledgeClimb)//---------------------------------If the character is not on the pogo stick and not climbing a ledge
+        if (!pogo.onPogo && !ledgeClimb.ledgeClimb)//--------------------------If the character is not on the pogo stick and not climbing a ledge
         {
             if (!neuralGun.shoot && (groundCheck.grounded == true) && Input.GetButtonDown("Jump")){//When the character is grounded and the player presses the jump button            
                 rb.velocity = Vector2.up * jumpForce;//------------------------Create vertical force
                 isJumping = true;//--------------------------------------------Set the isJumping variable to true
-                jumpTimer = jumpTimerStart;}//----------------------------------Make sure the counter resets when the character is no longer airborne
+                jumpTimer = jumpTimerStart;}//---------------------------------Make sure the counter resets when the character is no longer airborne
             
-            if (Input.GetButton("Jump") && isJumping == true){//----------------If the jump button is held down and the isJumping variable is true            
-                if (jumpTimer > 0){//-------------------------------------------If the counter is greater than zero                
-                    rb.velocity = Vector2.up * jumpForce;//---------------------Allow the character to jump
-                    jumpTimer -= Time.deltaTime;}}//----------------------------Make the timer starts counting down                                
+            if (Input.GetButton("Jump") && isJumping == true){//---------------If the jump button is held down and the isJumping variable is true            
+                if (jumpTimer > 0){//------------------------------------------If the counter is greater than zero                
+                    rb.velocity = Vector2.up * jumpForce;//--------------------Allow the character to jump
+                    jumpTimer -= Time.deltaTime;}}//---------------------------Make the timer starts counting down                                
         }
         if (Input.GetButtonUp("Jump") || rb.velocity.y < 0 || touchingCeiling || neuralGun.shoot)//-----------------------------------When the player releases the jump button
-            isJumping = false;//-------------------------------------------Set the isJumping variable to false 
+            isJumping = false;//-----------------------------------------------Set the isJumping variable to false 
         #endregion
 
 #region LOOKING DOWN CONTROLLER
         ///////////////////////////////////LOOKING DOWN//////////////////////////////////////      
         if (!poleClimb.onPole)
         {//-------------------------------------------------------------------------------------------------If the character is not on a pole                  
-            if (Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling))//-----------If there is an object directly above the characters head
+            if (Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling))//-If there is an object directly above the characters head
                 touchingCeiling = true;
             else if (!Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, groundCheck.whatIsCeiling))
                 touchingCeiling = false;
            
             if (lookDown && groundCheck.grounded && touchingCeiling)
-                if (lookDownDisableCollider != null)//-------------------------------------------------------------------If there is one or more colliders set to disable when crouching
+                if (lookDownDisableCollider != null)//------------------------------------------------------If there is one or more colliders set to disable when crouching
                         lookDownDisableCollider.enabled = false;}//----------------------------------------------------------Disable the collider(s)  
 
-            if ((!lookDown && !ledgeClimb.ledgeClimb && !touchingCeiling) || !groundCheck.grounded)//If the chracter is not looking down and there is no cieling above the character's head
-                if (lookDownDisableCollider != null)//-------------------------------------------------------------------If there is one or more colliders set to disable when crouching
-                    lookDownDisableCollider.enabled = true;//------------------------------------------------------------Enable the collider when not crouching
+            if ((!lookDown && !ledgeClimb.ledgeClimb && !touchingCeiling) || !groundCheck.grounded)//-------If the chracter is not looking down and there is no cieling above the character's head
+                if (lookDownDisableCollider != null)//------------------------------------------------------If there is one or more colliders set to disable when crouching
+                    lookDownDisableCollider.enabled = true;//-----------------------------------------------Enable the collider when not crouching
              
-            if (groundCheck.grounded && lookDown){//---------------------------------------------------------------------If the character is looking down             
-                topSpeedL = 0;//-----------------------------------------------------------------------------------------Prevent the character from moving to the left
-                topSpeedR = 0;}//----------------------------------------------------------------------------------------Prevent the character from moving to the right        
+            if (groundCheck.grounded && lookDown){//--------------------------------------------------------If the character is looking down             
+                topSpeedL = 0;//----------------------------------------------------------------------------Prevent the character from moving to the left
+                topSpeedR = 0;}//---------------------------------------------------------------------------Prevent the character from moving to the right        
         #endregion
 
 #region ANIMATION CONTROLLER
@@ -160,9 +160,9 @@ public class Playermovement : MonoBehaviour
                 animator.SetBool("FacingRight", false);}//-----------------------------Do not play right facing animations
         }
 
-        if (pogo.onPogo)//--------------------------------------------------------------------If the character is on the pogo stick
+        if (pogo.onPogo)//-------------------------------------------------------------If the character is on the pogo stick
         {
-            if (pogo.pogoSpeed > 0)//-------------------------------------------------------If the character is moving to the right 
+            if (pogo.pogoSpeed > 0)//--------------------------------------------------If the character is moving to the right 
             {
                 facingRight = true;//--------------------------------------------------The character is facing right
                 facingLeft = false;//--------------------------------------------------The character is not facing left
@@ -170,7 +170,7 @@ public class Playermovement : MonoBehaviour
                 animator.SetBool("FacingLeft", false);//-------------------------------Do not play the left facing animations
             }
 
-            if (pogo.pogoSpeed < 0)//-------------------------------------------------------If the character is moving to the left
+            if (pogo.pogoSpeed < 0)//--------------------------------------------------If the character is moving to the left
             {       
                 facingRight = false;//-------------------------------------------------The character is not facing right
                 facingLeft = true;//---------------------------------------------------The character is facing left
@@ -188,7 +188,7 @@ public class Playermovement : MonoBehaviour
             falling = false;
             animator.SetBool("IsRising", true);//------------------------------------Set the IsRising animation parameter to true
             animator.SetBool("IsFalling", false);}//---------------------------------Set the IsFalling animation parameter false
-        else if (!groundCheck.grounded && rb.velocity.y < 0){//-----------------------If the character is not grounded and is moving downward
+        else if (!groundCheck.grounded && rb.velocity.y < 0){//----------------------If the character is not grounded and is moving downward
             rising = false;//--------------------------------------------------------The character is not rising
             falling = true; 
             animator.SetBool("IsRising", false);//-----------------------------------Set the IsRising animation parameter to false
@@ -206,46 +206,47 @@ public class Playermovement : MonoBehaviour
 
         if (!pogo.onPogo)//-----------------------------------If the character is not on the pogo stick
         {
-            if (!uncrouching && Input.GetButton("LookDown"))//----------If the player presses the down button
+            if (!uncrouching && Input.GetButton("LookDown"))//If the player presses the down button
             {
-                lookDown = true;//------------------The character is looking down
+                lookDown = true;//----------------------------The character is looking down
                 if (!poleClimb.onPole)//----------------------If the character is not on a pole
-                    animator.SetBool("LookingDown", true);//Play the looking down (crouching) animation
+                    animator.SetBool("LookingDown", true);//--Play the looking down (crouching) animation
             }
 
-            if (!Input.GetButton("LookDown") && lookDown == true){//-------If the player releases the look down button          
-                lookDown = false;//---------------------The lookdown bool becomes false
-                StartCoroutine("UnCrouching");//--------Start the uncrouching coroutine
-                animator.SetBool("LookingDown", false);}//Stop playing the looking down animation
+            if (!Input.GetButton("LookDown") && lookDown == true){//If the player releases the look down button          
+                lookDown = false;//---------------------------------The lookdown bool becomes false
+                StartCoroutine("UnCrouching");//--------------------Start the uncrouching coroutine
+                animator.SetBool("LookingDown", false);}//----------Stop playing the looking down animation
         }
 
         if (poleClimb.onPole){//------------------------------------If the character is on a pole           
-            animator.SetBool("LookingDown", false);}//----Prevent the looking down animation from playing
+            animator.SetBool("LookingDown", false);}//--------------Prevent the looking down animation from playing
         #endregion
 
 #region LOOK UP ANIMATION
         ///////////////////LOOKING UP ANIMATION////////////////       
 
-            if (Input.GetButton("LookUp") && !doorwayCheck.inDoorway){//-------------If the player is pressing the look up button while not standing in an open doorway               
-                lookup = true;//--------------------------The character looks up
+            if (Input.GetButton("LookUp") && !doorwayCheck.inDoorway){//If the player is pressing the look up button while not standing in an open doorway               
+                lookup = true;//----------------------------------------The character looks up
                 if (!poleClimb.onPole)
-                    animator.SetBool("LookingUp", true);}//---Play the looking up animation
+                    animator.SetBool("LookingUp", true);}//-------------Play the looking up animation
             
-            if (!Input.GetButton("LookUp")){//-----------If the player releases the up button
-                lookup = false;//-------------------------The character is no longer looking up
-                animator.SetBool("LookingUp", false);}//--Stop the looking up animation       
+            if (!Input.GetButton("LookUp")){//--------------------------If the player releases the up button
+                lookup = false;//---------------------------------------The character is no longer looking up
+                animator.SetBool("LookingUp", false);}//----------------Stop the looking up animation       
 
-        if (poleClimb.onPole){//----------------------------------------------If the character is on a pole          
-            animator.SetBool("LookingUp", false);}//----------------Prevent the looking up animation from playing
+        if (poleClimb.onPole){//----------------------------------------If the character is on a pole          
+            animator.SetBool("LookingUp", false);}//--------------------Prevent the looking up animation from playing
         #endregion
         #endregion
     }
     void FixedUpdate()
     {
+#region Movement
         ///////////////////////////////////Movement//////////////////////////////////////               
         if (!pogo.onPogo && !poleClimb.onPole && !ledgeClimb.ledgeHang && !ledgeClimb.ledgeClimb)//----If the character is not on a pogo stick, not on a pole, not hanging from or climbing a ledge
             {
-            if (groundCheck.grounded && (neuralGun.stopMovement || lookDown || doorwayCheck.walkingThroughDoor))//------------------------If the character is grounded and is shooting, looking down, or walking through a doorway
+            if (groundCheck.grounded && (neuralGun.stopMovement || lookDown || doorwayCheck.walkingThroughDoor))//If the character is grounded and is shooting, looking down, or walking through a doorway
                 rb.velocity = new Vector2(0, 0);//-----------------------------------------------------Prevent the character from moving
             else//-------------------------------------------------------------------------------------Otherwise
                 rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime * 10f, rb.velocity.y);//Set the characters horizontal movement according to the horizontal move variable, and vertical movement according to the vertical forces applied to their rigidbody
@@ -260,17 +261,17 @@ public class Playermovement : MonoBehaviour
                 }
 
             if (groundCheck.grounded)
-                {//---------------------------------------------------------------if the character is grounded                                                     
+                {//-----------------------------------------------------------------------------------------if the character is grounded                                                     
                     if (facingRight)
                         horizontalMove = Input.GetAxisRaw("Horizontal") * topSpeedR;//----------------------Make snappy movement controls
                     if (facingLeft)
                         horizontalMove = Input.GetAxisRaw("Horizontal") * topSpeedL * -1f;//----------------Make snappy movement controls
-                    if (movPlatCheck.onMovingPlatform)//---------------------------------------------------If the character is on a moving platform
+                    if (movPlatCheck.onMovingPlatform)//----------------------------------------------------If the character is on a moving platform
                     {
                         if (closestmovPlat.GetComponent<HPlatfomMovement>().movingRight && facingRight)
-                            topSpeedR = 50f;//-----------------------------------------------------------------Set the top speed when moving right
+                            topSpeedR = 50f;//--------------------------------------------------------------Set the top speed when moving right
                         if (closestmovPlat.GetComponent<HPlatfomMovement>().movingRight && facingLeft)
-                            topSpeedL = -15f;//----------------------------------------------------------------Set the top speed when moving left
+                            topSpeedL = -15f;//-------------------------------------------------------------Set the top speed when moving left
 
                         if (closestmovPlat.GetComponent<HPlatfomMovement>().movingLeft && facingLeft)
                             topSpeedL = -50f;
@@ -279,8 +280,8 @@ public class Playermovement : MonoBehaviour
                     }
                     if (!movPlatCheck.onMovingPlatform)
                     {
-                        topSpeedR = 35f;//-----------------------------------------------------------------Set the top speed when moving right
-                        topSpeedL = -35f;//----------------------------------------------------------------Set the top speed when moving left
+                        topSpeedR = 35f;//------------------------------------------------------------Set the top speed when moving right
+                        topSpeedL = -35f;//-----------------------------------------------------------Set the top speed when moving left
                     }
                 }
 
@@ -306,5 +307,6 @@ public class Playermovement : MonoBehaviour
                     }
                 }
             }
+        #endregion
     }
 }

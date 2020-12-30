@@ -10,8 +10,7 @@ public class PlayerLayerChange : MonoBehaviour
       to keep their sprite from looking funny when standing next to a wall
       This will only work if the character is on the default layer
       and the wall is on the default layer with it's default sorting order set to 2
-      This is only relavent if the game is in a tilted, "2.5D" perspective
-      much like Commander Keen, in which these scripts were originally intended to mimic.*/
+      This is only relavent if the game is in a tilted, "2.5D" perspective.*/
 
     public LedgeClimb ledgeClimb;
     public PlayerLayerChangeInSecrets inSecret;

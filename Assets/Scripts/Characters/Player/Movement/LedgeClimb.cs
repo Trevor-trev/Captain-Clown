@@ -36,7 +36,7 @@ public class LedgeClimb : MonoBehaviour
 	[SerializeField] public float wallCheckLength;//-------------The length of the raycast used to check for walls 
 	[SerializeField] private bool isTouchingLedge;//-------------1st variable for weather or not the character is touching something designated as climbable
 	public bool isTouchingWall;//--------------------------------2nd variable for weather or not the character is touching something designated as climbable
-	public bool ledgeDetected;//---------------Weather or not the character is touching a ledge. Becomes true when isTouchingWall is true but isTouchingLedge is false
+	public bool ledgeDetected;//---------------------------------Weather or not the character is touching a ledge. Becomes true when isTouchingWall is true but isTouchingLedge is false
 	public bool ledgeHang = false;//-----------------------------Weather or not the character is hanging from a ledge	
 	public bool ledgeClimb;//------------------------------------Weather or not the character is climbing a ledge
 
@@ -79,7 +79,7 @@ public class LedgeClimb : MonoBehaviour
 				ledgePos2 = new Vector2(Mathf.Ceil(ledgePosBot.x - wallCheckLength) - ledgeClimbXLOffset2, Mathf.Floor(ledgePosBot.y) + ledgeClimbYLOffset2);}//Set the character sprite to the appropriate position when the ledge climb is finished
 
 			if (pmov.facingRight && !groundCheck.grounded && pmov.xdirection > 0)//-------------------------If the character is not grounded and the player is moving the character toward the ledge
-				ledgeHang = true;//------------------------------------------The character grabs onto the ledge	
+				ledgeHang = true;//-------------------------------------------------------------------------The character grabs onto the ledge	
 
 			if (pmov.facingLeft && !groundCheck.grounded && pmov.xdirection < 0 && !poleClimb.onPole)
 				ledgeHang = true;
@@ -98,10 +98,10 @@ public class LedgeClimb : MonoBehaviour
 
 			animator.SetBool("IsHanging", true);//---------------------------Play the ledge hang animation
 
-			if (poleClimb.verticalMove > 0)//-------------------------------------If the player presses the up button
+			if (poleClimb.verticalMove > 0)//--------------------------------If the player presses the up button
 				ledgeClimb = true;//-----------------------------------------The character climbs the ledge
 
-			if (poleClimb.verticalMove < 0){//------------------------------------If the player presses the down button			
+			if (poleClimb.verticalMove < 0){//-------------------------------If the player presses the down button			
 				ledgeHang = false;//-----------------------------------------The character drops off the ledge
 				polyCollider.enabled = true;//-------------------------------Turn on the polygon collider
 				capCollider.enabled = true;}//-------------------------------Turn on the capsule collider
@@ -124,7 +124,7 @@ public class LedgeClimb : MonoBehaviour
 				if (pmov.horizontalMove > 0)//-------------------------------If the player is pressing the right button
 					pmov.horizontalMove = 0;//-------------------------------Keep the horizontal move value at zero
 
-				if (pmov.horizontalMove <= -40 && !poleClimb.onPole)//----------------------------If the horizontal move value is less than or equal to twenty
+				if (pmov.horizontalMove <= -40 && !poleClimb.onPole)//-------If the horizontal move value is less than or equal to twenty
 					ledgeClimb = true;}//------------------------------------The character climbs the ledge
 
 		}
@@ -139,7 +139,7 @@ public class LedgeClimb : MonoBehaviour
 				wallCheckLength = -.5f;}//-----------------------------------Set the wallcheck raycast to the appropriate length
 
 		if (ledgeClimb){//---------------------------------------------------If the character is climbing a ledge
-			pogo.onPogo = false;//---------------------------------------------Make sure the pogo stick cannot be activated
+			pogo.onPogo = false;//-------------------------------------------Make sure the pogo stick cannot be activated
 			rb.velocity = new Vector2(0, 0);//-------------------------------Make sure the character's rigidbody cannot move due to outside forces
 			rb.gravityScale = 0;//-------------------------------------------Make sure gravity cannot affect the character's rigidbody
 			animator.SetBool("IsClimbingLedge", true);//---------------------Play the ledge climb animation

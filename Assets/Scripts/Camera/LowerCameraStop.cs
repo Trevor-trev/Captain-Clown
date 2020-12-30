@@ -16,7 +16,7 @@ public class LowerCameraStop : MonoBehaviour
 
     public CameraMovement cam;
 
-    private void OnTriggerEnter2D(Collider2D other)//Execute this code when the specified object's collider enters the collider attached to the same object as this script
+    private void OnTriggerEnter2D(Collider2D other)//-Execute this code when the specified object's collider enters the collider attached to the same object as this script
     {
         if (other.CompareTag("CameraPosition"))//-----If the object is tagged as "CameraPosition"
         {
@@ -28,7 +28,7 @@ public class LowerCameraStop : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)//-Execute this code when the specified object's collider stays in the collider attached to the same game object as this script
     {
-        if (other.CompareTag("CameraPosition"))//-----If the oject is tagged as "CameraPosition"
+        if (other.CompareTag("CameraPosition"))//----If the oject is tagged as "CameraPosition"
         {
             if (Input.GetButton("LookDown"))//-------If the player presses the LookDown button
                 cam.cameraSpeed = 0;//---------------Set the camera's speed to 0 so it cannot move any farther up.
@@ -39,7 +39,7 @@ public class LowerCameraStop : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)//Execute this code when the specified object's collider leaves the collider attached to the smae object as this script
     {
-        if (other.CompareTag("CameraPosition"))//----If the object is tagged as "Camera Position"
+        if (other.CompareTag("CameraPosition"))//---If the object is tagged as "Camera Position"
             cam.cameraSpeed = 15;//-----------------Set the camera's speed to 15 so it may move
     }
 }

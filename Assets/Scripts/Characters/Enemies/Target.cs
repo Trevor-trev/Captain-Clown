@@ -20,10 +20,10 @@ public class Target : MonoBehaviour
             Die();//---------------------Execute the Die function
     }
 
-    void Die()//-------------------------A fuction to be executed when the objects health reaches or falls below 0
+    void Die()//------------------------------------------------------------A fuction to be executed when the objects health reaches or falls below 0
     {
         Instantiate(targetBreak, transform.position, Quaternion.identity);//Place the death effect prefab where the object is
-        Destroy(gameObject);//-----------Remove the object from the scene
+        Destroy(gameObject);//----------------------------------------------Remove the object from the scene
         targetCounter.targetsLeft -= 1;
     }
 }

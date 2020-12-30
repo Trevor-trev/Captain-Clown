@@ -76,21 +76,11 @@ public class CollapsingPlatform : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
 
         if (!touchingCeiling && !touchingFloor)
-        {
-            /*if (!playerOn)
-            {
-                moveUp = true;
-                moveDown = false;
-            }*/
-
+        {       
             if (playerOn && !pmov.rising)
             {
                 moveUp = false;
-
-                /*if (platformDrop.platformFlip)
-                    moveDown = false;*/
-                //if (!platformDrop.platformFlip)
-                    moveDown = true;
+                moveDown = true;
             }
         }
 

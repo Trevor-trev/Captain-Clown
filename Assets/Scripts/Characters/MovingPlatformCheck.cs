@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-//Top Speed change to 55
 public class MovingPlatformCheck : MonoBehaviour
 {
     public Playermovement pmov;

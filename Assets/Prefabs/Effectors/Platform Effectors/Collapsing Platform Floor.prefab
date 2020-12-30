@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5068532144213387025}
   - component: {fileID: 5068532144213387026}
-  - component: {fileID: 5068532144213387027}
   m_Layer: 2
   m_Name: Collapsing Platform Floor
   m_TagString: CollapsingPlatformFloor
@@ -58,15 +57,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.5085297, y: 1.0692225}
   m_EdgeRadius: 0
---- !u!114 &5068532144213387027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5068532144213387028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c51d6476953e86048b176a89366f530e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

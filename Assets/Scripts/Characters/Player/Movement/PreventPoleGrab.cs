@@ -10,12 +10,12 @@ public class PreventPoleGrab : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player")/* && !pmov.onPole*/)
+        if (other.CompareTag("Player"))
             cannotGrabPole = true;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") /*&& !pmov.onPole*/)
+        if (other.CompareTag("Player"))
             cannotGrabPole = true;
     }
 

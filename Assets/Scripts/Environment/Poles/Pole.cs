@@ -13,9 +13,9 @@ public class Pole : MonoBehaviour
     public PoleClimbController poleClimb;
 
     public bool nextToPole;
-    public bool makeshiftGrounded = false;//When both of these makeshiftGrounds are true, the character is able to walk off of the pole by moving left or right.
+    public bool makeshiftGrounded = false;//-When both of these makeshiftGrounds are true, the character is able to walk off of the pole by moving left or right.
     public bool makeshiftGrounded2 = false;//The trigger colliders that are linked to these variables should be positioned so that when the character is activating both of them, their feet are touching or close to the ground
-   //hello muthafucka
+
     private void OnTriggerEnter2D(Collider2D other)//Execute this code when the character enters the specified trigger collider which is attached to the pole
     {
        
@@ -36,14 +36,14 @@ public class Pole : MonoBehaviour
         {
             nextToPole = true;
 
-            if (!pogo.onPogo)//------------------------If the character is not on the pogo stick
+            if (!pogo.onPogo)//-----------------------If the character is not on the pogo stick
             {
-                if (groundCheck.grounded)//----------If the character is grounded
-                    if (poleClimb.verticalMove != 0)//----Grab the pole if the player presses the up or down buttons
+                if (groundCheck.grounded)//-----------If the character is grounded
+                    if (poleClimb.verticalMove != 0)//Grab the pole if the player presses the up or down buttons
                         poleClimb.onPole = true;
-                if (!groundCheck.grounded)//---------If the character is not grounded
-                    if (poleClimb.verticalMove > 0)//-----If the player presses the up button
-                        poleClimb.onPole = true;//--------Grab onto the pole
+                if (!groundCheck.grounded)//----------If the character is not grounded
+                    if (poleClimb.verticalMove > 0)//-If the player presses the up button
+                        poleClimb.onPole = true;//----Grab onto the pole
             }
         }
     }
