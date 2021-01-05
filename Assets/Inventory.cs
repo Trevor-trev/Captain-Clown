@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public GemHolderCheck gemHolderCheck;
+
     public bool hasBlueGem;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Blue Gem")
         {
-            hasBlueGem = true;
-            Debug.Log("yep");
+            hasBlueGem = true;         
         }
+    }
+
+    private void Update()
+    {
+        if (gemHolderCheck.placingBlueGem)
+            hasBlueGem = false;
     }
 }

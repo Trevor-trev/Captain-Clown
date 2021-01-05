@@ -29,6 +29,9 @@ TagManager:
   - OtherSideOfDoorway
   - DoorwayCheck
   - Item
+  - Inventory
+  - GemHolder
+  - ClosestGemHolder
   layers:
   - Default
   - TransparentFX

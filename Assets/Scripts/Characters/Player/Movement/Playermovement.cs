@@ -16,7 +16,9 @@ public class Playermovement : MonoBehaviour
     public PogoController pogo;
     public MovingPlatformCheck movPlatCheck;
     public DoorwayCheck doorwayCheck;
+    public GemHolderCheck gemHolderCheck;
 
+    public GameObject closestGemHolder;
     public GameObject closestmovPlat;
 
     //MOVEMENT//////
@@ -79,6 +81,7 @@ public class Playermovement : MonoBehaviour
     void Update()
     {
         closestmovPlat = GameObject.FindGameObjectWithTag("ClosestMovingPlatform");
+        closestGemHolder = GameObject.FindGameObjectWithTag("ClosestGemHolder");
         #region JUMP CONTROLLER
         ///////////////////////////////////JUMPING//////////////////////////////////////
 
@@ -246,7 +249,7 @@ public class Playermovement : MonoBehaviour
         ///////////////////////////////////Movement//////////////////////////////////////               
         if (!pogo.onPogo && !poleClimb.onPole && !ledgeClimb.ledgeHang && !ledgeClimb.ledgeClimb)//----If the character is not on a pogo stick, not on a pole, not hanging from or climbing a ledge
             {
-            if (groundCheck.grounded && (neuralGun.stopMovement || lookDown || doorwayCheck.walkingThroughDoor))//If the character is grounded and is shooting, looking down, or walking through a doorway
+            if (groundCheck.grounded && (neuralGun.stopMovement || lookDown || doorwayCheck.walkingThroughDoor || gemHolderCheck.placingBlueGem))//If the character is grounded and is shooting, looking down, walking through a doorway, or unlocking a door
                 rb.velocity = new Vector2(0, 0);//-----------------------------------------------------Prevent the character from moving
             else//-------------------------------------------------------------------------------------Otherwise
                 rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime * 10f, rb.velocity.y);//Set the characters horizontal movement according to the horizontal move variable, and vertical movement according to the vertical forces applied to their rigidbody
