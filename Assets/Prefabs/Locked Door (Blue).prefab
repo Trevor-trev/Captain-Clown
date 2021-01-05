@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4472298971350045814}
   - component: {fileID: 4472298971350045815}
   - component: {fileID: 4472298971350045812}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Locked Door (Blue)
   m_TagString: Solid
   m_Icon: {fileID: 0}

@@ -4,27 +4,38 @@ using UnityEngine;
 
 public class BlueGemHolder : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
     public Inventory inventory;
+    public Animator animator;
+    public PogoController pogo;
+
+    public Sprite withGem;
+
     public bool locked;
-    public bool unlockDoor;
 
     private void Start()
     {
         locked = true;
     }
 
+    void ChangeSprite()
+    {
+        spriteRenderer.sprite = withGem;
+    }
     IEnumerator UnlockDoor()
     {
-        unlockDoor = true;
+        animator.SetBool("IsPlacingGem", true);
         yield return new WaitForSeconds(.1f);
         locked = false;
-        unlockDoor = false;
+        ChangeSprite();
+        yield return new WaitForSeconds(.1f);
+        animator.SetBool("IsPlacingGem", false);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if ((other.gameObject.CompareTag("Player")))
         {           
-            if (inventory.hasBlueGem)
+            if ((!pogo.onPogo) && inventory.hasBlueGem)
             {
                 StartCoroutine(UnlockDoor());
             }                

@@ -5,12 +5,13 @@ using UnityEngine;
 public class GemHolderCheck : MonoBehaviour
 {
     public Inventory inventory;
+    public PogoController pogo;
     public bool placingBlueGem;
 
     IEnumerator PlacingBlueGem()
     {
         placingBlueGem = true;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.25f);
         placingBlueGem = false;
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -18,7 +19,7 @@ public class GemHolderCheck : MonoBehaviour
         if (other.gameObject.CompareTag("ClosestGemHolder"))
         {
             Debug.Log("gemholdercheck");
-            if (inventory.hasBlueGem)
+            if ((!pogo.onPogo) && inventory.hasBlueGem)
             {
                 StartCoroutine(PlacingBlueGem());
             }
