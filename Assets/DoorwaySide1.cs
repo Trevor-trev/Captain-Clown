@@ -61,7 +61,7 @@ public class DoorwaySide1 : MonoBehaviour
             arrived = false;
         }
     }
-    private void Update()
+    private void FixedUpdate()
     {
  
         if (pmov.xdirection == 0 && inDoorway && doorwayCheck.inDoorway && !pogo.onPogo && !neuralGun.shoot && Input.GetButton("LookUp"))

@@ -20,7 +20,7 @@ public class CamBoundarySwitcher : MonoBehaviour
         camConfiner.m_BoundingShape2D = outsideCamBounds;
     }
     
-    void Update()
+    void FixedUpdate()
     {
         if (interiorCheck.isOutside)
             camConfiner.m_BoundingShape2D = outsideCamBounds;

@@ -31,7 +31,7 @@ public class DoorwayCheck : MonoBehaviour
             inDoorway = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (pmov.horizontalMove == 0 && inDoorway && !pogo.onPogo && !neuralGun.shoot && Input.GetButton("LookUp"))
             StartCoroutine(WalkingThroughDoor());

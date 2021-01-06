@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3129384565406877819}
   - component: {fileID: 3129384565406877816}
   - component: {fileID: 3129384565406877818}
-  - component: {fileID: 3129384565406877813}
   - component: {fileID: 85258033241118905}
+  - component: {fileID: 1031155405111158020}
+  - component: {fileID: 7215155426501373623}
   m_Layer: 16
   m_Name: 'Blue Gem '
   m_TagString: Item
@@ -101,22 +102,6 @@ CircleCollider2D:
   m_Offset: {x: 0.0002488196, y: 0.02619341}
   serializedVersion: 2
   m_Radius: 0.22183695
---- !u!114 &3129384565406877813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3129384565406877817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6628242b46ea4a4b843358ee99f8bb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 3129384565406877816}
-  collectedSprite: {fileID: 21300000, guid: fe3873ead87d9a64389b266ccb49ea40, type: 3}
-  rb: {fileID: 85258033241118905}
-  speed: 125
 --- !u!50 &85258033241118905
 Rigidbody2D:
   serializedVersion: 4
@@ -138,3 +123,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1031155405111158020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129384565406877817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a4e8ac99698dc49974ac957c3d1f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 3129384565406877816}
+  collectedSprite: {fileID: 21300000, guid: e1b0d93eb439e7d4ba3c1b4078e9b4fa, type: 3}
+  rb: {fileID: 85258033241118905}
+  speed: 125
+  animator: {fileID: 7215155426501373623}
+--- !u!95 &7215155426501373623
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129384565406877817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c9a2835fd37c8d499322bda3ffd10ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
