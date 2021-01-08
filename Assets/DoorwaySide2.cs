@@ -42,12 +42,24 @@ public class DoorwaySide2 : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         otherSideOfDoor = transform.parent.GetChild(0).gameObject;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("DoorwayCheck"))
+        {
+            gameObject.tag = "ClosestOpenDoorway";
+            inDoorway = true;
+            otherSideOfDoor.tag = "OtherSideOfDoorway";
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("DoorwayCheck"))
         {
             gameObject.tag = "ClosestOpenDoorway";
             inDoorway = true;
+            otherSideOfDoor.tag = "OtherSideOfDoorway";
         }
     }
 
@@ -58,6 +70,7 @@ public class DoorwaySide2 : MonoBehaviour
             gameObject.tag = "OpenDoorway";
             inDoorway = false;
             arrived = false;
+            otherSideOfDoor.tag = "OpenDoorway";
         }
     }
 

@@ -32,6 +32,10 @@ TagManager:
   - Inventory
   - GemHolder
   - ClosestGemHolder
+  - Teleporter
+  - Doorway
+  - Doorway Side 1
+  - Doorway Side 2
   layers:
   - Default
   - TransparentFX

@@ -22,12 +22,11 @@ public class CameraMovement : MonoBehaviour
     public GroundCheck groundCheck;//--------A reference to the GroundCheck script
     public SlopeCheck slopeCheck;
     public PoleClimbController poleClimb;
-    public DoorwaySide1 doorway1;
-    public DoorwaySide2 doorway2;
     public DoorwayCheck doorwayCheck;
     public Playermovement pmov;
 
-    public GameObject closestOpenDoorway;
+   // public GameObject closestOpenDoorway;
+   // public GameObject otherSideOfDoorway;
     
     public Transform recenterPointFromDown;//-------------A reference to the recenter point positioned above the character
     public Transform recenterPointFromUp;//---------------A reference to the recenter point positioned below the character
@@ -41,7 +40,6 @@ public class CameraMovement : MonoBehaviour
     
     public bool lookUpRecenter;//---------------------Weather or not the camera should recenter itself from the player looking up
     public bool lookDownRecenter;//-------------------Weather or not the camera should recenter itself from the player looking down
-    public bool walkedThroughDoor;
    
     /*The two different recenter points make sure that the camera centers itself to the same position
      whether it's recentering from the player looking up or recentering from the player looking down
@@ -57,6 +55,8 @@ public class CameraMovement : MonoBehaviour
         tempPos = gameObject.transform.position;//-------------------------------------------------Specify the tempPos as the position of the game object that this script is attached to
         transform.position = new Vector2(character.position.x, recenterPointFromDown.position.y);//When the game starts, set the position of this game object at the character's x position and the recenterPointDown's y position
         timer = timerStart;//----------------------------------------------------------------------When the game starts, set the timer equal to the value of the timer start
+      //  closestOpenDoorway = null;
+       // otherSideOfDoorway = null;
     }
     IEnumerator LookUpRecenter()//------------------------------A coroutine labeled "LookUpRecenter". Has the ability to pause and resume execution according to specifications
     {
@@ -80,18 +80,40 @@ public class CameraMovement : MonoBehaviour
 
     IEnumerator WalkedThroughDoor()
     {
+        //transform.position = new Vector2(character.position.x, character.position.y);
+        yield return new WaitForFixedUpdate();
+        //lookDownRecenter = true;
+        //yield return new WaitForSeconds(recenterTime);
+        transform.position = new Vector2(recenterPointFromDown.position.x, recenterPointFromDown.position.y);
+        //lookDownRecenter = false;
+    }
+
+    /* IEnumerator WalkedThroughDoor()
+    {
         walkedThroughDoor = true;
         yield return new WaitForSeconds(.2f);
         walkedThroughDoor = false;
     }
 
-     private void Update()
+    private void Update()
      {
-        closestOpenDoorway = GameObject.FindGameObjectWithTag("ClosestOpenDoorway");
+        if (doorwayCheck.inDoorway == false)
+        {
+            closestOpenDoorway = null;
+            otherSideOfDoorway = null;
+        }
+        else if (doorwayCheck.inDoorway == true)
+        {
+            closestOpenDoorway = GameObject.FindGameObjectWithTag("ClosestOpenDoorway");
+            otherSideOfDoorway = GameObject.FindGameObjectWithTag("OtherSideOfDoorway");
+        }
 
-        if (closestOpenDoorway.GetComponent<DoorwaySide1>().arrived)
-            transform.position = new Vector2(character.position.x, recenterPointFromDown.position.y);
-    }
+        if (closestOpenDoorway != null)
+        {
+            if (closestOpenDoorway.GetComponent<DoorwaySide1>().arrived)
+                transform.position = new Vector2(character.position.x, recenterPointFromDown.position.y);
+        }
+    }*/
     void LateUpdate()
     {
         if (!(pmov.lookup || pmov.lookDown))
@@ -151,9 +173,20 @@ public class CameraMovement : MonoBehaviour
             JustLanded();
             StartCoroutine("JustLanded");}//---------------------Start the just landed coroutine     
 
-
-        if (closestOpenDoorway.GetComponent<DoorwaySide2>().arrived && doorwayCheck.inDoorway)
+        if (doorwayCheck.arrived)
+            StartCoroutine(WalkedThroughDoor());
+        /*if (doorwayCheck.inDoorway)
+        {
             transform.position = new Vector2(character.position.x, character.position.y);
+        }
+        if (doorwayCheck.arrived)
+            StartCoroutine(LookDownRecenter());
+
+        /* if (closestOpenDoorway != null)
+         {
+             if (closestOpenDoorway.GetComponent<DoorwaySide2>().arrived && doorwayCheck.inDoorway)
+                 transform.position = new Vector2(character.position.x, character.position.y);
+         }*/
 
     }
 }
