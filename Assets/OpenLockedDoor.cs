@@ -8,6 +8,7 @@ public class OpenLockedDoor : MonoBehaviour
     private SpriteRenderer sprite;
     public BlueGemHolder blueGemHolder;
     public Animator animator;
+    public GameObject doorOpenSound;
 
     void Start()
     {
@@ -19,12 +20,15 @@ public class OpenLockedDoor : MonoBehaviour
         doorCollider.enabled = false;
         sprite.sortingLayerName = "Pole";
     }
+    void PlayOpeningSound()
+    {
+        Instantiate(doorOpenSound, transform.position, transform.rotation);
+    }
 
     private void Update()
     {
         if (!blueGemHolder.locked)
             animator.SetBool("IsOpening", true);
-
     }
 }
 

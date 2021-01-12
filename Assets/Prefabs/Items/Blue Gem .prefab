@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 85258033241118905}
   - component: {fileID: 1031155405111158020}
   - component: {fileID: 7215155426501373623}
+  - component: {fileID: 5857434282747537358}
   m_Layer: 16
   m_Name: 'Blue Gem '
   m_TagString: Item
@@ -99,9 +100,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0002488196, y: 0.02619341}
+  m_Offset: {x: -0.005449176, y: 0.02619341}
   serializedVersion: 2
-  m_Radius: 0.22183695
+  m_Radius: 0.3159808
 --- !u!50 &85258033241118905
 Rigidbody2D:
   serializedVersion: 4
@@ -135,8 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a4e8ac99698dc49974ac957c3d1f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 3129384565406877816}
-  collectedSprite: {fileID: 21300000, guid: e1b0d93eb439e7d4ba3c1b4078e9b4fa, type: 3}
   rb: {fileID: 85258033241118905}
   speed: 125
   animator: {fileID: 7215155426501373623}
@@ -159,3 +158,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5857434282747537358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129384565406877817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Inventory
+  Event: event:/GemGrab
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 0
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

@@ -50,7 +50,7 @@ public class PlayerLayerChange : MonoBehaviour
         if (!poleClimb.onPole && !dontChangeLayer)//-----------------------If the character is not on a pole
             sprite.sortingLayerName = "Default";//Set the character's sorting layer to "Default"
 
-        if (inSecret.insideSecret)
+        if (inSecret.insideSecret || (pmov.facingRight && pmov.isJumping))
             sprite.sortingOrder = 1;
 
         if (ledgeClimb.ledgeHang || ledgeClimb.ledgeClimb)

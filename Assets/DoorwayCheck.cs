@@ -9,11 +9,13 @@ public class DoorwayCheck : MonoBehaviour
     public PogoController pogo;
     public NeuralGun neuralGun;
     public Animator animator;
+    public Doorway doorway;
 
     public Transform destination;
 
     public GameObject player;
 
+    public bool goesToAboveDoorway;
     public bool arrived;
     public bool inDoorway = false;
     public bool walkingThroughDoor = false;
@@ -27,15 +29,11 @@ public class DoorwayCheck : MonoBehaviour
     {
         walkingThroughDoor = true;
         yield return new WaitForSeconds(.7f);
-        // player.transform.position = destination.transform.position;
         arrived = true;
         animator.SetBool("WalkingThroughDoor", false);
         walkingThroughDoor = false;
         yield return new WaitForSeconds(.25f);
         arrived = false;
-        // changePosition = true;
-        // yield return new WaitForEndOfFrame();
-        // changePosition = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,6 +41,11 @@ public class DoorwayCheck : MonoBehaviour
         if (collision.CompareTag("Doorway"))
         {
             inDoorway = true;
+
+            if (collision.GetComponent<Doorway>().goesToAbove == true)
+                goesToAboveDoorway = true;
+            if (collision.GetComponent<Doorway>().goesToAbove == false)
+                goesToAboveDoorway = false;
         }
     }
 
@@ -52,6 +55,11 @@ public class DoorwayCheck : MonoBehaviour
         {
             inDoorway = true;
             destination = collision.transform.GetChild(0);
+
+            if (collision.GetComponent<Doorway>().goesToAbove == true)
+                goesToAboveDoorway = true;
+            if (collision.GetComponent<Doorway>().goesToAbove == false)
+                goesToAboveDoorway = false;
         }
     }
 
@@ -74,23 +82,3 @@ public class DoorwayCheck : MonoBehaviour
     }
 
 }
-
-
-
-/*private void OnTriggerStay2D(Collider2D other)
-{
-    if (other.gameObject.CompareTag("ClosestOpenDoorway"))
-        inDoorway = true;
-}
-
-private void OnTriggerExit2D(Collider2D other)
-{
-    if (other.gameObject.CompareTag("OpenDoorway") || other.gameObject.CompareTag("ClosestOpenDoorway"))
-        inDoorway = false;
-}
-
-private void FixedUpdate()
-{
-    if (pmov.horizontalMove == 0 && inDoorway && !pogo.onPogo && !neuralGun.shoot && Input.GetButton("LookUp"))
-        StartCoroutine(WalkingThroughDoor());
-}*/
