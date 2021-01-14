@@ -32,14 +32,6 @@ public class DoorwayCheck : MonoBehaviour
         arrived = false;
     }
 
-    /*IEnumerator FinishWalkingThroughDoor()
-    {
-        animator.SetBool("WalkingThroughDoor", false);
-        walkingThroughDoor = false;
-        yield return new WaitForSeconds(.25f);
-        arrived = false;
-    }*/
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Doorway"))
@@ -78,7 +70,7 @@ public class DoorwayCheck : MonoBehaviour
 
     private void Update()
     {
-        if (neuralGun.shoot == false && inDoorway && Input.GetButtonDown("LookUp"))
+        if (!(neuralGun.shoot || pogo.onPogo) && inDoorway && Input.GetButtonDown("LookUp"))
         {
             animator.SetBool("WalkingThroughDoor", true);
             walkingThroughDoor = true;

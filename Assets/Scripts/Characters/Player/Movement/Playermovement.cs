@@ -143,9 +143,9 @@ public class Playermovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));//------------------------Set the speed parameter for animations to be equal to the absolute value of the character's horizontal velocity
 
-        if (!ledgeClimb.isTouchingWall && groundCheck.grounded && horizontalMove != 0)//If the chaaracter is not touching a wall, is grounded, and is moving horizontally
+        if (!(ledgeClimb.isTouchingWall || pogo.onPogo) && groundCheck.grounded && horizontalMove != 0 )//If the chaaracter is not touching a wall, is grounded, and is moving horizontally
             animator.SetBool("IsRunning", true);//-------------------------------------Allow the running animation to play
-        else if (ledgeClimb.isTouchingWall || horizontalMove == 0)//-------------------If the character is touching a wall or not moving horizontally
+        else if (ledgeClimb.isTouchingWall || horizontalMove == 0 || pogo.onPogo)//-------------------If the character is touching a wall or not moving horizontally
             animator.SetBool("IsRunning", false);//------------------------------------Prevent the running animation from playing
 
         if (!pogo.onPogo && !ledgeClimb.ledgeHang && !neuralGun.shoot && !ledgeClimb.ledgeDetected)//If the character is not on the pogo stick, not hanging from a ledge, not shooting, and there is no ledge detected
