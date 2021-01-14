@@ -20,16 +20,15 @@ public class DoorwayCheck : MonoBehaviour
     public bool inDoorway = false;
     public bool walkingThroughDoor = false;
 
-    void Teleport()
+    IEnumerator TeleportPlayer()
     {
         player.transform.position = new Vector2(destination.transform.position.x, destination.transform.position.y);
+        yield return new WaitForEndOfFrame();
+        arrived = true;
     }
 
-    IEnumerator WalkingThroughDoor()
+    IEnumerator FinishWalkingThroughDoor()
     {
-        walkingThroughDoor = true;
-        yield return new WaitForSeconds(.7f);
-        arrived = true;
         animator.SetBool("WalkingThroughDoor", false);
         walkingThroughDoor = false;
         yield return new WaitForSeconds(.25f);
@@ -74,10 +73,10 @@ public class DoorwayCheck : MonoBehaviour
 
     private void Update()
     {
-        if (inDoorway && Input.GetButtonDown("LookUp"))
+        if (neuralGun.shoot == false && inDoorway && Input.GetButtonDown("LookUp"))
         {
             animator.SetBool("WalkingThroughDoor", true);
-            StartCoroutine(WalkingThroughDoor());
+            walkingThroughDoor = true;
         }
     }
 

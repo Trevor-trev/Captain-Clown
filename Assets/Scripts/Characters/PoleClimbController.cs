@@ -11,6 +11,7 @@ public class PoleClimbController : MonoBehaviour
     public Animator animator;
     public LedgeClimb ledgeClimb;
     public SlopeCheck slopeCheck;
+    public GroundCheck groundcheck;
 
     public bool jumpedFromPole;//----------------Whether or not the character jumped off of a pole
     public bool onPole = false;//----------------Determine whether or not the character is on a pole
@@ -45,7 +46,7 @@ public class PoleClimbController : MonoBehaviour
             pmov.horizontalMove = 0;//---------------------------------------Prevent the character from moving horizontally
             transform.position = new Vector2(GameObject.FindWithTag("ClosestPole").transform.position.x, transform.position.y);//Align character sprite with the closest pole
 
-            if ((pole.makeshiftGrounded && pole.makeshiftGrounded2) && pmov.xdirection != 0)//If the character's feet are touching the ground while on a pole and the player presses the left or right buttons
+            if (((pole.makeshiftGrounded && pole.makeshiftGrounded2) || groundcheck.grounded) && pmov.xdirection != 0)//If the character's feet are touching the ground while on a pole and the player presses the left or right buttons
                 onPole = false;//--------------------------------------------------------Allow the character to get off the pole and walk away
 
             animator.SetBool("IsOnPole", true);//----------------------------------------Play the idle pole animation
