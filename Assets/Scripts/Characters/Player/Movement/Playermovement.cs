@@ -82,17 +82,17 @@ public class Playermovement : MonoBehaviour
     {
         closestmovPlat = GameObject.FindGameObjectWithTag("ClosestMovingPlatform");
         closestGemHolder = GameObject.FindGameObjectWithTag("ClosestGemHolder");
-        #region JUMP CONTROLLER
+#region JUMP CONTROLLER
         ///////////////////////////////////JUMPING//////////////////////////////////////
 
 
-        if ((groundCheck.grounded || recenterTrigger.touchingDroppablePlatform) && (lookDown || lookup)){//If the chracter is on the ground or a droppable platform and is looking up or down            
+        if ((groundCheck.grounded || recenterTrigger.touchingDroppablePlatform) && (lookDown || lookup) || doorwayCheck.walkingThroughDoor){//If the chracter is on the ground or a droppable platform and is looking up or down            
             jumpForce = 0;//---------------------------------------------------Prevent the character from jumping
             isJumping = false;}//----------------------------------------------Prevent isJumping from being true, this prevents the character from slowly falling if the jump button is held when dropping through a platform        
         else if (groundCheck.grounded && !lookDown && !lookup)//---------------If the character is grounded, not looking up, and not looking down
             jumpForce = 12f;//-------------------------------------------------Allow the character to jump
 
-        if (!pogo.onPogo && !ledgeClimb.ledgeClimb)//--------------------------If the character is not on the pogo stick and not climbing a ledge
+        if (!pogo.onPogo && !ledgeClimb.ledgeClimb && !doorwayCheck.walkingThroughDoor)//--------------------------If the character is not on the pogo stick and not climbing a ledge
         {
             if (!neuralGun.shoot && (groundCheck.grounded == true) && Input.GetButtonDown("Jump")){//When the character is grounded and the player presses the jump button            
                 rb.velocity = Vector2.up * jumpForce;//------------------------Create vertical force
@@ -186,7 +186,7 @@ public class Playermovement : MonoBehaviour
 #region RISING AND FALLING ANIMATION
 
         ///////////////////RISING AND FALLING ANIMATION/////////////////        
-        if ((!groundCheck.grounded && rb.velocity.y > 0) || Input.GetButtonDown("Jump")){//If the character is not grounded and is moving upward or if the player presses the jump button
+        if (!doorwayCheck.walkingThroughDoor && ((!groundCheck.grounded && rb.velocity.y > 0) || Input.GetButtonDown("Jump"))){//If the character is not grounded and is moving upward or if the player presses the jump button
             rising = true;//---------------------------------------------------------The character is rising
             falling = false;
             animator.SetBool("IsRising", true);//------------------------------------Set the IsRising animation parameter to true

@@ -25,15 +25,20 @@ public class DoorwayCheck : MonoBehaviour
         player.transform.position = new Vector2(destination.transform.position.x, destination.transform.position.y);
         yield return new WaitForEndOfFrame();
         arrived = true;
-    }
-
-    IEnumerator FinishWalkingThroughDoor()
-    {
+        yield return new WaitForSeconds(.1f);
         animator.SetBool("WalkingThroughDoor", false);
         walkingThroughDoor = false;
         yield return new WaitForSeconds(.25f);
         arrived = false;
     }
+
+    /*IEnumerator FinishWalkingThroughDoor()
+    {
+        animator.SetBool("WalkingThroughDoor", false);
+        walkingThroughDoor = false;
+        yield return new WaitForSeconds(.25f);
+        arrived = false;
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
