@@ -23,13 +23,14 @@ public class CameraMovement : MonoBehaviour
     public SlopeCheck slopeCheck;
     public PoleClimbController poleClimb;
     public DoorwayCheck doorwayCheck;
-    public Playermovement pmov; 
+    public Playermovement pmov;
+    public KeyBindScript keybinds;
     
     public Transform recenterPointFromDown;//-------------A reference to the recenter point positioned above the character
     public Transform recenterPointFromUp;//---------------A reference to the recenter point positioned below the character
     public Transform character;//-------------------------A reference to the whichever game object you designate as "character"
  
-    private float timer;//----------------------------A timer that makes the camera wait a specified time after player input to start moving
+    [SerializeField]private float timer;//----------------------------A timer that makes the camera wait a specified time after player input to start moving
     private float timerStart = .5f;//-----------------The starting point for the timer  
     public float cameraSpeed = 15;//------------------How fast the camera moves upon player input
     public float recenterSpeed;//---------------------How fast the camera recenters itself
@@ -112,7 +113,7 @@ public class CameraMovement : MonoBehaviour
                 tempPos.y -= Time.deltaTime * cameraSpeed;//Move the temporary variable downward according to the specified speed variable
                 transform.position = tempPos;}}//-----------Set the position of the camera's follow target equal to the position of the temporary variable
 
-        if (Input.GetButtonUp("LookUp")){//---------------------If the player releases the look up button
+        if (Input.GetKeyUp(keybinds.keys["Look Up Button"])){//---------------------If the player releases the look up button
             timer = timerStart;//-------------------------------Reset the timer
             LookUpRecenter();
             StartCoroutine("LookUpRecenter");}//----------------Start the look up recenter coroutine
@@ -120,7 +121,7 @@ public class CameraMovement : MonoBehaviour
         if (neuralGun.shoot)//----------------------------------If the character shoots
             timer = timerStart;//-------------------------------Reset the timer
 
-        if (Input.GetButtonUp("LookDown")){//-------------------If the player releases the look down button or goes through a side 1 doorway
+        if (Input.GetKeyUp(keybinds.keys["Look Down Button"])){//-------------------If the player releases the look down button or goes through a side 1 doorway
             timer = timerStart;//-------------------------------Reset the timer
             LookDownRecenter();
             StartCoroutine("LookDownRecenter");}//--------------Start the look down recenter coroutine

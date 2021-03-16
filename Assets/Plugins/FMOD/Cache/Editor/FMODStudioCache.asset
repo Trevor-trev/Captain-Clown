@@ -15,14 +15,32 @@ MonoBehaviour:
   Path: event:/Jump
   guid: 8addb291b803d849850390086af6528f
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 819
+  Length: 350
+--- !u!114 &-8245685947098599154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637482725893445976
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-7636974837827332822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,7 +56,7 @@ MonoBehaviour:
   Path: event:/Slug Village Song
   guid: 03b60e5b35212147a3c37cede8a978fb
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -61,7 +79,7 @@ MonoBehaviour:
   Path: event:/HillVille Song
   guid: 024237a8411a7f499db8b56648e41f8a
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -87,6 +105,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7170650840118337557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level Start
+  m_EditorClassIdentifier: 
+  Path: event:/Level Start
+  guid: 23492c272792584f92c41e2e69d69eaf
+  Banks:
+  - {fileID: -4456135250268656980}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2282
 --- !u!114 &-6633851800027556057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +240,42 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4565304146596424277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637499292816437142
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4456135250268656980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637499304313785560
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4295055036928733944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +327,7 @@ MonoBehaviour:
   Path: event:/GemGrab
   guid: f0b69dbd6d00c748995fb2f4d4add67a
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -276,6 +353,28 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2427605498406302684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/StartLevel
+  m_EditorClassIdentifier: 
+  Path: event:/StartLevel
+  guid: 1f3a7ad157ff9e4ea67bfccadab49276
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2282
 --- !u!114 &-2310794885511515894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +534,7 @@ MonoBehaviour:
   Path: event:/Neural Bullet Shot
   guid: b86d5e343dbe4e4797f5ef7c96042c1c
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -457,7 +556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 796173274527224097}
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   EditorEvents:
   - {fileID: -7636974837827332822}
   - {fileID: -7615876646424495270}
@@ -469,12 +568,13 @@ MonoBehaviour:
   - {fileID: 1373535511781921669}
   - {fileID: -3740936477124782611}
   - {fileID: 6177048377084707835}
+  - {fileID: -7170650840118337557}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   StringsBanks:
   - {fileID: 796173274527224097}
-  stringsBankWriteTime: 637460516015688462
+  stringsBankWriteTime: 637499304313835433
   cacheVersion: 3
 --- !u!114 &796173274527224097
 MonoBehaviour:
@@ -490,11 +590,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637460516015688462
+  lastModified: 637499304313835433
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1148
+    Value: 1190
   Exists: 1
 --- !u!114 &1367355884893900745
 MonoBehaviour:
@@ -529,7 +629,7 @@ MonoBehaviour:
   Path: event:/Helmet Hit
   guid: ddf9a57867d80a46b0fea750c1e12ad1
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -570,7 +670,7 @@ MonoBehaviour:
   Path: event:/Neural Bullet Impact
   guid: 8b4dc62382e9fe4287b78329855fad75
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -647,7 +747,7 @@ MonoBehaviour:
   Path: event:/Pogo Bounce
   guid: bb101a9103e1374d8c356b6755101df4
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -760,7 +860,7 @@ MonoBehaviour:
   Path: event:/Door Open
   guid: 469fdc55c0160740ad423f2bf8aea1a8
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -783,7 +883,7 @@ MonoBehaviour:
   Path: event:/Target Break
   guid: 67ed432d1bef4149b2e8084b6fa3f4c9
   Banks:
-  - {fileID: 8020006232168429789}
+  - {fileID: -4456135250268656980}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -791,6 +891,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 166
+--- !u!114 &7786251734496452239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FMOD Studio/Captain-Clown/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637499289100897253
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &8020006232168429789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,7 +926,7 @@ MonoBehaviour:
   lastModified: 637460516015628735
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8660190491231340082
 MonoBehaviour:
   m_ObjectHideFlags: 0

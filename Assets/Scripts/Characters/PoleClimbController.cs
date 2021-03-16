@@ -12,6 +12,7 @@ public class PoleClimbController : MonoBehaviour
     public LedgeClimb ledgeClimb;
     public SlopeCheck slopeCheck;
     public GroundCheck groundcheck;
+    public KeyBindScript keybinds;
 
     public bool jumpedFromPole;//----------------Whether or not the character jumped off of a pole
     public bool onPole = false;//----------------Determine whether or not the character is on a pole
@@ -54,7 +55,7 @@ public class PoleClimbController : MonoBehaviour
             pmov.jumpForce = 10f;//------------------------------------------------------Decrease the jump force
             rb.velocity = new Vector2(0, verticalMove);//--------------------------------Only allow the character to move vertically
 
-            if (Input.GetButtonDown("Jump"))//-------------------------------------------If the player presses the jump button
+            if (Input.GetKeyDown(keybinds.keys["Jump Button"]))//-------------------------------------------If the player presses the jump button
             {
                 pmov.horizontalMove = 0;//-----------------------------------------------Prevent the character from moving forward without player input
                 rb.velocity = Vector2.up * pmov.jumpForce;//-----------------------------Allow for a seperate jump height when jumping off of a pole

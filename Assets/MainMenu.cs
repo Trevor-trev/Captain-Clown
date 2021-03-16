@@ -5,9 +5,43 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
- public void PlayGame()
+
+    public static bool isPaused;
+    public bool fromMainMenu;
+
+    public GameObject startMenuUI;
+    public GameObject buttonSettingsUI;
+    public GameObject playGameLoadingScreen;
+    public GameObject helpScreen;
+
+    private void Start()
     {
-        SceneManager.LoadScene("world1");
+        isPaused = true;
+        Time.timeScale = 0f;
+        fromMainMenu = true;
+    }
+
+    public void PlayGame()
+    {
+        startMenuUI.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;
+        fromMainMenu = false;
+        playGameLoadingScreen.SetActive(true);
+    }
+
+    public void OpenButtonSettingsMenu()
+    {
+        startMenuUI.SetActive(false);
+        buttonSettingsUI.SetActive(true);
+        fromMainMenu = true;
+    }
+
+    public void OpenHelpScreen()
+    {
+        startMenuUI.SetActive(false);
+        helpScreen.SetActive(true);
+        fromMainMenu = true;
     }
 
     public void QuitGame()

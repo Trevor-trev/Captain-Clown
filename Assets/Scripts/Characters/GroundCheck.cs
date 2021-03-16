@@ -16,7 +16,7 @@ public class GroundCheck : MonoBehaviour
 
 	public Transform groundCheck;//------------------------------A position marking where to check if the player is grounded
 
-	public float groundedRadius = .15f;//-------------------------------Radius of the overlap circle to determine if grounded
+	public float groundedRadius = .15f;//------------------------Radius of the overlap circle to determine if grounded
 	public bool grounded;//--------------------------------------Whether or not the player is grounded
 
     private void Update()
@@ -44,7 +44,7 @@ public class GroundCheck : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
-				if (!poleClimb.jumpedFromPole || !ledgeClimb.ledgeHang)
+				if (!(poleClimb.jumpedFromPole || ledgeClimb.ledgeHang))
 				{
 					grounded = true;
 					animator.SetBool("IsGrounded", true);

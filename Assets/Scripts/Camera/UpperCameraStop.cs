@@ -15,14 +15,15 @@ public class UpperCameraStop : MonoBehaviour
    will be able to climb that pole, even if the character sprite is not touching the pole sprite.*/
 
     public CameraMovement cam;
+    public KeyBindScript keybinds;
 
     private void OnTriggerEnter2D(Collider2D other)//Execute this code when the specified object's collider enters the collider attached to the same game object as this script
     {
         if (other.CompareTag("CameraPosition"))//-----If the oject is tagged as "CameraPosition"
         {
-            if (Input.GetButton("LookUp"))//---------If the player presses the LookUp button
+            if (Input.GetKey(keybinds.keys["Look Up Button"]))//---------If the player presses the LookUp button
                 cam.cameraSpeed = 0;//---------------Set the camera's speed to 0 so it cannot move any farther up.
-            if (Input.GetButton("LookDown"))//-------If the player presses the LookDown button
+            if (Input.GetKey(keybinds.keys["Look Down Button"]))//-------If the player presses the LookDown button
                 cam.cameraSpeed = 15;//--------------Set the camera's speed to 15 so it may once again move
         }
     }
@@ -30,9 +31,9 @@ public class UpperCameraStop : MonoBehaviour
     {
         if (other.CompareTag("CameraPosition"))//-----If the oject is tagged as "CameraPosition"
         {
-            if (Input.GetButton("LookUp"))//---------If the player presses the LookUp button
+            if (Input.GetKey(keybinds.keys["Look Up Button"]))//---------If the player presses the LookUp button
                 cam.cameraSpeed = 0;//---------------Set the camera's speed to 0 so it cannot move any farther up.
-            if (Input.GetButton("LookDown"))//-------If the player presses the LookDown button
+            if (Input.GetKey(keybinds.keys["Look Down Button"]))//-------If the player presses the LookDown button
                 cam.cameraSpeed = 15;//--------------Set the camera's speed to 15 so it may once again move
         }
     }

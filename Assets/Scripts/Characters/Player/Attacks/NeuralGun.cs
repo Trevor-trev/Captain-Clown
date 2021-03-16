@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 public class NeuralGun : MonoBehaviour
-    /*This script is to be placed on the player character*/
+/*This script is to be placed on the player character*/
 {
     public Playermovement pmov;
     public GroundCheck groundCheck;
@@ -14,6 +14,8 @@ public class NeuralGun : MonoBehaviour
     public Animator animator;
     public DoorwayCheck doorwayCheck;
     public GemHolderCheck gemHolderCheck;
+    public KeyBindScript keybinds;
+    public ThumbsUpLoadingScreen loadingScreen;
 
     public GameObject neuralBullet;
 
@@ -26,8 +28,8 @@ public class NeuralGun : MonoBehaviour
     public bool aimDown = false;
     public bool shoot;
     public bool stopMovement;
-    
-    
+
+
 
 
 
@@ -66,35 +68,46 @@ public class NeuralGun : MonoBehaviour
 
     private void Update()
     {
-        if (aimUp)//----------------------------------------------------------------------If the character is aiming up
-            animator.SetBool("IsAimingUp", true);//---------------------------------------Set the IsAimingUp animation parameter to true
+        if (Time.timeScale != 0 && loadingScreen.gameHasStarted)
+        {
+            if (aimUp)//----------------------------------------------------------------------If the character is aiming up
+                animator.SetBool("IsAimingUp", true);//---------------------------------------Set the IsAimingUp animation parameter to true
 
-        if (aimDown)//--------------------------------------------------------------------If the character is aiming down
-            animator.SetBool("IsAimingDown", true);//-------------------------------------Set the IsAimingDown animation parameter to false
+            if (aimDown)//--------------------------------------------------------------------If the character is aiming down
+                animator.SetBool("IsAimingDown", true);//-------------------------------------Set the IsAimingDown animation parameter to false
 
-        if (!shoot && Input.GetButton("LookUp")){//---------------------------------------If the character is not shooting and the player presses the LookUp button
-            aimUp = true;//---------------------------------------------------------------Set the aimUp bool to true
-            aimDown = false;}//-----------------------------------------------------------Set the aimDown bool to false
+            if (!shoot && (Input.GetKey(keybinds.keys["Look Up Button"])))
+            {//---------------------------------------If the character is not shooting and the player presses the LookUp button
+                aimUp = true;//---------------------------------------------------------------Set the aimUp bool to true
+                aimDown = false;
+            }//-----------------------------------------------------------Set the aimDown bool to false
 
-        if (!shoot && Input.GetButton("LookDown")){//-------------------------------------If the character is not shooting and the player presses the LookDown button
-            aimDown = true;//-------------------------------------------------------------Set the aimDown bool to true
-            aimUp = false;}//-------------------------------------------------------------Set the aimUp bool to false
+            if (!shoot && (Input.GetKey(keybinds.keys["Look Down Button"])))
+            {//-------------------------------------If the character is not shooting and the player presses the LookDown button
+                aimDown = true;//-------------------------------------------------------------Set the aimDown bool to true
+                aimUp = false;
+            }//-------------------------------------------------------------Set the aimUp bool to false
 
-        if (!shoot && Input.GetButtonUp("LookUp")){//--------------------------------------If the character is not shooting and the player releases the LookUp button        
-            aimUp = false;//---------------------------------------------------------------Set the aimUp bool to false;
-            animator.SetBool("IsAimingUp", false);}//--------------------------------------Set the IsAimingUp animation parameter to false
-        
+            if (!shoot && (Input.GetKeyUp(keybinds.keys["Look Up Button"])))
+            {//----------------If the character is not shooting and the player releases the LookUp button        
+                aimUp = false;//---------------------------------------------------------------Set the aimUp bool to false;
+                animator.SetBool("IsAimingUp", false);
+            }//--------------------------------------Set the IsAimingUp animation parameter to false
 
-        if (!shoot && Input.GetButtonUp("LookDown")){//------------------------------------If the character is not shooting and the player releases the LookDown button
-            aimDown = false;//-------------------------------------------------------------Set the aimDown bool to false;
-            animator.SetBool("IsAimingDown", false);}//------------------------------------Set the IsAimingDown animation parameter to false
 
-        if (!(ledgeClimb.ledgeClimb || ledgeClimb.ledgeHang) && !(groundCheck.grounded && pmov.lookDown) && !gemHolderCheck.placingBlueGem && !shoot && !pogo.onPogo && !doorwayCheck.walkingThroughDoor && Input.GetButtonDown("Shoot"))//If the character is not climbing or hanging from a ledge, is not shooting, is not on the pogo, and the player presses the Shoot button                               
-            StartCoroutine("Shoot");//-----------------------------------------------------Start the Shoot coroutine
-       
-        if (pmov.falling && pmov.lookDown && !poleClimb.onPole)//-----------------------If the character is falling and looking down and not on a pole
-            neuralBullet.GetComponent<BulletR>().speed += 12.5f * Time.deltaTime;//-----Increase the bullet speed over time so that the falling character doesn't catch up with it
-        else//--------------------------------------------------------------------------Otherwise
-            neuralBullet.GetComponent<BulletR>().speed = 20.5f;//-----------------------Set the bullet speed at it's default, static speed
+            if (!shoot && (Input.GetKeyUp(keybinds.keys["Look Down Button"])))
+            {//--------------If the character is not shooting and the player releases the LookDown button
+                aimDown = false;//-------------------------------------------------------------Set the aimDown bool to false;
+                animator.SetBool("IsAimingDown", false);
+            }//------------------------------------Set the IsAimingDown animation parameter to false
+
+            if (!(ledgeClimb.ledgeClimb || ledgeClimb.ledgeHang) && !(groundCheck.grounded && pmov.lookDown) && !gemHolderCheck.placingBlueGem && !shoot && !pogo.onPogo && !doorwayCheck.walkingThroughDoor && (Input.GetKeyDown(keybinds.keys["Fire Button"])))//If the character is not climbing or hanging from a ledge, is not shooting, is not on the pogo, and the player presses the Shoot button                               
+                StartCoroutine("Shoot");//-----------------------------------------------------Start the Shoot coroutine
+
+            if (pmov.falling && pmov.lookDown && !poleClimb.onPole)//-----------------------If the character is falling and looking down and not on a pole
+                neuralBullet.GetComponent<BulletR>().speed += 12.5f * Time.deltaTime;//-----Increase the bullet speed over time so that the falling character doesn't catch up with it
+            else//--------------------------------------------------------------------------Otherwise
+                neuralBullet.GetComponent<BulletR>().speed = 20.5f;//-----------------------Set the bullet speed at it's default, static speed
+        }
     }
 }

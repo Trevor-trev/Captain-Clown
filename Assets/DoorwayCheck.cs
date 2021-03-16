@@ -10,6 +10,7 @@ public class DoorwayCheck : MonoBehaviour
     public NeuralGun neuralGun;
     public Animator animator;
     public Doorway doorway;
+    public KeyBindScript keybinds;
 
     public Transform destination;
 
@@ -70,7 +71,7 @@ public class DoorwayCheck : MonoBehaviour
 
     private void Update()
     {
-        if (!(neuralGun.shoot || pogo.onPogo) && inDoorway && Input.GetButtonDown("LookUp"))
+        if (!(neuralGun.shoot || pogo.onPogo) && inDoorway && groundCheck.grounded && (Input.GetKeyDown(keybinds.keys["Look Up Button"])))
         {
             animator.SetBool("WalkingThroughDoor", true);
             walkingThroughDoor = true;
